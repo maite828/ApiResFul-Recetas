@@ -1,0 +1,7 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/application.conf,/Users/mayteecheverry/MyGitRepos/play/Recetas/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/evolutions,/Users/mayteecheverry/MyGitRepos/play/Recetas/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/logback.xml,/Users/mayteecheverry/MyGitRepos/play/Recetas/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes,/Users/mayteecheverry/MyGitRepos/play/Recetas/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/evolutions/default,/Users/mayteecheverry/MyGitRepos/play/Recetas/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/evolutions/default/1.sql,/Users/mayteecheverry/MyGitRepos/play/Recetas/target/scala-2.11/classes/evolutions/default/1.sql)[0m

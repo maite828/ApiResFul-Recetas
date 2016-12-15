@@ -1,8 +1,12 @@
 package models;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 import com.avaje.ebean.Model;
 import com.avaje.ebean.annotation.JsonIgnore;
@@ -15,10 +19,10 @@ public class Ingrediente extends Model{
 	private Long id;
 
 	@Required
-	private String ingrediente;
-
-	@ManyToMany
+	private String nombre;
+	
 	@JsonIgnore
-	private RecIngre recingre;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "ingrediente")
+    private Set<RecIngre> recIngrediente = new HashSet<RecIngre>();
 
 }
