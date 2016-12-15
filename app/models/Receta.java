@@ -1,14 +1,17 @@
 package models;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.validation.Valid;
 
 import com.avaje.ebean.Model;
+import com.avaje.ebean.annotation.JsonIgnore;
 
 import play.data.validation.Constraints.Required;
 
@@ -17,37 +20,33 @@ public class Receta extends Model {
 	@Id
 	private Long id;
 	
+	//@Valid
 	@Required
 	private String nombre;
 	
-	@ManyToMany(cascade = CascadeType.ALL, mappedBy = "receta")
-	@Valid
-	private List<RecetaIngredientes> ingredientes;
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "ingrediente")
+    private Set<RecIngre> recIngrediente = new HashSet<RecIngre>();
+
+	
 	
 	private static final Find<Long, Receta> find = new Find<Long, Receta>() {
 	};
+	
+	/*
+	User user = new User();
+	Service service = new Service();
+	UserService userService = new UserService();
 
-	public Long getId() {
-		return id;
-	}
+	user.addUserService(userService);
+	userService.setUser(user);
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+	service.addUserService(userService);
+	userService.setService(service);
 
-	public String getNombre() {
-		return nombre;
-	}
+	session.save(user);
+	session.save(service);
+	session.save(userService);
+	*/
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public List<RecetaIngredientes> getIngredientes() {
-		return ingredientes;
-	}
-
-	public void setIngredientes(List<RecetaIngredientes> ingredientes) {
-		this.ingredientes = ingredientes;
-	}
 }
