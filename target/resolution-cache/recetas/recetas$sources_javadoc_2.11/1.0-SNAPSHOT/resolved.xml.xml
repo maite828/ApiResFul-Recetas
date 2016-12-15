@@ -4,7 +4,7 @@
 		module="recetas$sources_javadoc_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20161215095904"
+		publication="20161215135939"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

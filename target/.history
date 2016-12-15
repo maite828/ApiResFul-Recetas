@@ -9,3 +9,19 @@ reload
 compile
 eclipse
 run
+compile
+h2-browser
+compile
+eclipse
+list
+run
+h2-browse run
+h2-browse 
+h2-browse ls
+ls
+cd ..
+ls
+reload
+compile
+eclipse
+run

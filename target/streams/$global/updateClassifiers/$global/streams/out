@@ -16004,7 +16004,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(doc)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(src)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(doc)[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5437ms :: artifacts dl 148ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 4513ms :: artifacts dl 96ms[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas$sources_javadoc_2.11;1.0-SNAPSHOT compile produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas$sources_javadoc_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas$sources_javadoc_2.11;1.0-SNAPSHOT runtime produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas$sources_javadoc_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas$sources_javadoc_2.11;1.0-SNAPSHOT test produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas$sources_javadoc_2.11-test.xml[0m
@@ -16018,4 +16018,4 @@
 [0m[[0mdebug[0m] [0m	report for recetas#recetas$sources_javadoc_2.11;1.0-SNAPSHOT docs produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas$sources_javadoc_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas$sources_javadoc_2.11;1.0-SNAPSHOT pom produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas$sources_javadoc_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas$sources_javadoc_2.11;1.0-SNAPSHOT scala-tool produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas$sources_javadoc_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (5437ms resolve - 148ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (4513ms resolve - 96ms download)[0m
