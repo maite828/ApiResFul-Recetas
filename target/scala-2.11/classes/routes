@@ -14,3 +14,9 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 # listar todas las recetas
 GET   	/recetas       controllers.RecetasController.list
+
+# obtener datos de una receta
+GET 	/receta/:id      controllers.RecetasController.retrieve(id: Long)
+
+# crear un receta
+POST 	/recetas        controllers.RecetasController.create

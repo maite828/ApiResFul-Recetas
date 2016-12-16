@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Thu Dec 15 13:51:37 CET 2016
+// @DATE:Fri Dec 16 01:56:37 CET 2016
 
 package router
 
@@ -60,6 +60,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """message""", """controllers.AsyncController.message"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recetas""", """controllers.RecetasController.list"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""" + "$" + """id<[^/]+>""", """controllers.RecetasController.retrieve(id:Long)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recetas""", """controllers.RecetasController.create"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -152,6 +154,40 @@ class Routes(
     )
   )
 
+  // @LINE:19
+  private[this] lazy val controllers_RecetasController_retrieve5_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("receta/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_RecetasController_retrieve5_invoker = createInvoker(
+    RecetasController_3.retrieve(fakeValue[Long]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RecetasController",
+      "retrieve",
+      Seq(classOf[Long]),
+      "GET",
+      """ obtener datos de una receta""",
+      this.prefix + """receta/""" + "$" + """id<[^/]+>"""
+    )
+  )
+
+  // @LINE:22
+  private[this] lazy val controllers_RecetasController_create6_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recetas")))
+  )
+  private[this] lazy val controllers_RecetasController_create6_invoker = createInvoker(
+    RecetasController_3.create,
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RecetasController",
+      "create",
+      Nil,
+      "POST",
+      """ crear un receta""",
+      this.prefix + """recetas"""
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -183,6 +219,18 @@ class Routes(
     case controllers_RecetasController_list4_route(params) =>
       call { 
         controllers_RecetasController_list4_invoker.call(RecetasController_3.list)
+      }
+  
+    // @LINE:19
+    case controllers_RecetasController_retrieve5_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_RecetasController_retrieve5_invoker.call(RecetasController_3.retrieve(id))
+      }
+  
+    // @LINE:22
+    case controllers_RecetasController_create6_route(params) =>
+      call { 
+        controllers_RecetasController_create6_invoker.call(RecetasController_3.create)
       }
   }
 }

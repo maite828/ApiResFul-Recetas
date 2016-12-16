@@ -5,7 +5,7 @@
 
 create table ingrediente (
   id                            bigint not null,
-  nombre                        varchar(255),
+  name                          varchar(255),
   constraint pk_ingrediente primary key (id)
 );
 create sequence ingrediente_seq;

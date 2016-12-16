@@ -2,10 +2,19 @@ package controllers;
 
 import javax.inject.Inject;
 
+import com.fasterxml.jackson.databind.JsonNode;
+
+import models.Ingrediente;
+import models.RecIngre;
+import models.Receta;
+
 import play.cache.CacheApi;
+import play.data.Form;
 import play.data.FormFactory;
+import play.db.ebean.Transactional;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Results;
 
 public class RecetasController extends Controller  {
 	
@@ -20,7 +29,28 @@ public class RecetasController extends Controller  {
 		return ok("Fine");
 	}
 
-/*
+	@Transactional
+	public Result create() {
+		Form<Receta> f = formFactory.form(Receta.class).bindFromRequest();
+
+		if (f.hasErrors()) {
+			return Results.badRequest(f.errorsAsJson());
+		}
+
+		Ingrediente ingre = new Ingrediente();
+		ingre.setId(System.currentTimeMillis());
+		ingre.save();
+
+		Receta rec = f.get();
+		rec.setId(System.currentTimeMillis());
+		rec.save();
+		
+		RecIngre recing= new RecIngre(rec, ingre);
+		recing.save();
+
+		return Results.status(CREATED, recing.toJson());
+	}
+
 	public Result retrieve(Long id) {
 		Receta receta = cache.get("Receta-" + id);
 		if (receta == null) {
@@ -46,29 +76,7 @@ public class RecetasController extends Controller  {
 		return Results.status(406);
 	}
 
-	@Transactional
-	public Result create() {
-		Form<Receta> f = formFactory.form(Receta.class).bindFromRequest();
-
-		if (f.hasErrors()) {
-			return Results.badRequest(f.errorsAsJson());
-		}
-
-		Ingrediente ingre = new Ingrediente();
-		ingre.setPasswordHash(String.valueOf(System.currentTimeMillis()));
-		ingre.save();
-
-		Receta rec = f.get();
-
-		rec.setIngrediente(ingre);
-		ingre.setReceta(rec);
-
-		rec.save();
-		ingre.save();
-
-		return Results.status(CREATED, rec.toJson());
-	}
-
+/*
 	public Result update(Integer id) {
 		// TODO
 		return ok();

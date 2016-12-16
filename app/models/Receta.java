@@ -1,5 +1,6 @@
 package models;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -8,7 +9,6 @@ import java.util.TreeSet;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
@@ -19,11 +19,11 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 import play.data.validation.Constraints.Required;
 import play.libs.Json;
-import models.RecIngre;
 import models.Tag;
+import models.RecIngre;
 
 @Entity
-public class Receta extends Model {
+public class Receta extends Model implements Serializable{
 	@Id
 	private Long id;
 
@@ -31,7 +31,7 @@ public class Receta extends Model {
 	@Required
 	private String name;
 
-	@Required
+	//@Required
 	private Date createdAt;
 
 	@JsonIgnore
@@ -46,8 +46,6 @@ public class Receta extends Model {
 		this.name = name;
 		this.createdAt = new Date();
 	}
-
-
 
 	public Long getId() {
 		return id;
@@ -64,19 +62,10 @@ public class Receta extends Model {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public Receta tagItWith(String name) {
 		this.tags.add(Tag.findOrCreateByName(name));
 		return this;
-	}
-
-	public static FetchType findTaggedWith(String tag) {
-		return Receta.find("select distinct p from Receta p join p.tags as t where t.name = ?", tag).fetch();
-	}
-
-	private static ManyToMany find(String string, String tag) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	private static final Find<Long, Receta> find = new Find<Long, Receta>() {
@@ -86,8 +75,8 @@ public class Receta extends Model {
 		return find.byId(id);
 	}
 
-	public static List<Receta> findByNickname(String nickname) {
-		return find.where().eq("nickname", nickname).findList();
+	public static List<Receta> findByName(String name) {
+		return find.where().eq("name", name).findList();
 	}
 
 	public static List<Receta> findPage(Integer page, Integer count) {
@@ -96,6 +85,10 @@ public class Receta extends Model {
 
 	public JsonNode toJson() {
 		return Json.toJson(this);
+	}
+
+	public void setRecIngre(RecIngre ri) {
+		this.recIngrediente.add(ri);
 	}
 
 }
