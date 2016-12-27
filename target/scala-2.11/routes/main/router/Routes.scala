@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Fri Dec 16 01:56:37 CET 2016
+// @DATE:Tue Dec 27 21:09:08 CET 2016
 
 package router
 
@@ -61,6 +61,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recetas""", """controllers.RecetasController.list"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""" + "$" + """id<[^/]+>""", """controllers.RecetasController.retrieve(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recetacache/""" + "$" + """id<[^/]+>""", """controllers.RecetasController.retrieveCache(id:Long)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recetas""", """controllers.RecetasController.create"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -172,10 +173,27 @@ class Routes(
   )
 
   // @LINE:22
-  private[this] lazy val controllers_RecetasController_create6_route = Route("POST",
+  private[this] lazy val controllers_RecetasController_retrieveCache6_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recetacache/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_RecetasController_retrieveCache6_invoker = createInvoker(
+    RecetasController_3.retrieveCache(fakeValue[Long]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RecetasController",
+      "retrieveCache",
+      Seq(classOf[Long]),
+      "GET",
+      """ obtener datos de una receta de la caché""",
+      this.prefix + """recetacache/""" + "$" + """id<[^/]+>"""
+    )
+  )
+
+  // @LINE:25
+  private[this] lazy val controllers_RecetasController_create7_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recetas")))
   )
-  private[this] lazy val controllers_RecetasController_create6_invoker = createInvoker(
+  private[this] lazy val controllers_RecetasController_create7_invoker = createInvoker(
     RecetasController_3.create,
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -228,9 +246,15 @@ class Routes(
       }
   
     // @LINE:22
-    case controllers_RecetasController_create6_route(params) =>
+    case controllers_RecetasController_retrieveCache6_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_RecetasController_retrieveCache6_invoker.call(RecetasController_3.retrieveCache(id))
+      }
+  
+    // @LINE:25
+    case controllers_RecetasController_create7_route(params) =>
       call { 
-        controllers_RecetasController_create6_invoker.call(RecetasController_3.create)
+        controllers_RecetasController_create7_invoker.call(RecetasController_3.create)
       }
   }
 }

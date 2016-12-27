@@ -18,5 +18,8 @@ GET   	/recetas       controllers.RecetasController.list
 # obtener datos de una receta
 GET 	/receta/:id      controllers.RecetasController.retrieve(id: Long)
 
+# obtener datos de una receta de la caché
+GET 	/recetacache/:id      controllers.RecetasController.retrieveCache(id: Long)
+
 # crear un receta
 POST 	/recetas        controllers.RecetasController.create

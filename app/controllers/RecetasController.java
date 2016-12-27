@@ -14,6 +14,7 @@ import play.cache.CacheApi;
 import play.data.Form;
 import play.data.FormFactory;
 import play.db.ebean.Transactional;
+import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
@@ -29,7 +30,8 @@ public class RecetasController extends Controller {
 	public Result list() {
 		List<Receta> recetas = Receta.findAll();
 		if (request().accepts("application/json")){
-			ArrayNode array = new play.libs.Json().newArray();
+			new play.libs.Json();
+			ArrayNode array = Json.newArray();
 			for (Receta receta : recetas){	
 				array.add(receta.toJsonList());
 			}
@@ -50,11 +52,9 @@ public class RecetasController extends Controller {
 		}
 
 		Ingrediente ingre = new Ingrediente();
-		ingre.setId(System.currentTimeMillis());
 		ingre.save();
 
 		Receta rec = f.get();
-		rec.setId(System.currentTimeMillis());
 		rec.save();
 
 		RecIngre recing = new RecIngre(rec, ingre);
@@ -62,8 +62,21 @@ public class RecetasController extends Controller {
 
 		return Results.status(CREATED, recing.toJson());
 	}
-
+	
 	public Result retrieve(Long id) {
+		Receta receta = Receta.findById(id);
+		if (receta != null) {// Recipe Exist
+			if (request().accepts("application/json")){	
+				return ok(receta.toJson());
+			}else if(request().accepts("application/xml")){	
+				return ok(views.xml.receta.render(receta));
+			}else{
+				return Results.status(406);
+			}
+		}return Results.notFound();
+	}
+
+	public Result retrieveCache(Long id) {
 		Receta receta = cache.get("Receta-" + id);
 		if (receta == null) {
 			receta = Receta.findById(id);

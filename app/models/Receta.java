@@ -1,6 +1,7 @@
 package models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -27,29 +28,23 @@ import models.RecIngre;
 
 @Entity
 public class Receta extends Model implements Serializable{
+	
 	@Id
 	private Long id;
 
-	// @Valid
 	@Required
 	private String name;
 	
 	@CreatedTimestamp
 	private Timestamp createdAt;
 
-	@JsonIgnore
-	@OneToMany(mappedBy = "receta")
-	private Set<RecIngre> recIngrediente = new HashSet<RecIngre>();
-
-	@ManyToMany(cascade = CascadeType.PERSIST)
-	private Set<Tag> tags;
+	@ManyToMany(cascade = CascadeType.ALL)
+	private List<Ingrediente> ingredients = new ArrayList<>();
+	
+	@ManyToMany(cascade = CascadeType.ALL)
+	private List<Tag> tags = new ArrayList<>();
 	
 	private static final Find<Long, Receta> find = new Find<Long, Receta>() {};
-
-	private Receta(String name) {
-		this.tags = new TreeSet<Tag>();
-		this.name = name;
-	}
 
 	public Long getId() {
 		return id;
@@ -86,16 +81,36 @@ public class Receta extends Model implements Serializable{
 	public static List<Receta> findByName(String name) {
 		return find.where().eq("name", name).findList();
 	}
+	public static List<Receta> getByName(String recipeName){
+		 return find.where().eq("title",recipeName ).findList();	 
+	}
 	
-	public Receta tagItWith(String name) {
-		this.tags.add(Tag.findOrCreateByName(name));
-		return this;
+	public void addIngredient(Ingrediente ingredient){
+		this.ingredients.add(ingredient);
+		ingredient.recetas.add(this);
 	}
-
-	public static List<Receta> findPage(Integer page, Integer count) {
-		return find.setFirstRow(page * count).setMaxRows(count).findList();
+	
+	public void setIngredients(List<Ingrediente> ingredients) {
+		this.ingredients = ingredients;
 	}
-
+	
+	public List<Ingrediente> getIngredients() {
+		return ingredients;
+	}
+	
+	public void addTag(Tag tag){
+		this.tags.add(tag);
+		tag.recetas.add(this);
+	}
+	
+	public List<Tag> getTags() {
+		return tags;
+	}
+	
+	public static List<Receta> findRecipesByTag(Tag tag){
+		return find.where().eq("tags.name", tag.getName()).findList();
+	}
+	
 	public JsonNode toJson() {
 		return Json.toJson(this);
 	}
@@ -107,11 +122,4 @@ public class Receta extends Model implements Serializable{
 		node.put("date", String.valueOf(this.createdAt));
 		return node;	
 	}
-
-	public void setRecIngre(RecIngre ri) {
-		this.recIngrediente.add(ri);
-	}
-	
-	
-
 }

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Fri Dec 16 01:56:37 CET 2016
+// @DATE:Tue Dec 27 21:09:08 CET 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -92,10 +92,16 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "recetas")
     }
   
-    // @LINE:22
+    // @LINE:25
     def create(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "recetas")
+    }
+  
+    // @LINE:22
+    def retrieveCache(id:Long): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "recetacache/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
   }

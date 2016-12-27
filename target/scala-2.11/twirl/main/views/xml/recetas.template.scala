@@ -40,7 +40,7 @@ Seq[Any](format.raw/*1.25*/("""
 </receta>
 """)))}),format.raw/*10.2*/("""
 
-"""),format.raw/*12.1*/("""</recipes>"""))
+"""),format.raw/*12.1*/("""</recetas>"""))
       }
     }
   }
@@ -60,9 +60,9 @@ Seq[Any](format.raw/*1.25*/("""
 object recetas extends recetas_Scope0.recetas
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 27 18:16:39 CET 2016
+                  DATE: Tue Dec 27 19:24:07 CET 2016
                   SOURCE: /Users/mayteecheverry/MyGitRepos/play/Recetas/app/views/recetas.scala.xml
-                  HASH: e5b2ecd229651e546628073f9bebab32a65831c4
+                  HASH: cd5f8aa6c8cc720309fe751a659a4e1849e3f529
                   MATRIX: 749->1|866->24|894->26|931->38|963->55|1001->56|1028->57|1067->70|1076->71|1104->79|1140->90|1149->91|1177->99|1224->120|1233->121|1269->137|1324->162|1353->164
                   LINES: 27->1|32->1|34->3|36->5|36->5|36->5|37->6|37->6|37->6|37->6|38->7|38->7|38->7|39->8|39->8|39->8|41->10|43->12
                   -- GENERATED --

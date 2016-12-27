@@ -2,6 +2,7 @@ package models;
 
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -25,7 +26,9 @@ public class Ingrediente extends Model implements Serializable{
 
 	@JsonIgnore
 	@OneToMany(mappedBy = "ingrediente")
-	private Set<RecIngre> recIngrediente = new HashSet<RecIngre>();
+	public Set<Receta> recetas;
+	
+	private static final Find<Long,Ingrediente> find =new Find<Long,Ingrediente>(){};
 
 	public Long getId() {
 		return id;
@@ -43,12 +46,12 @@ public class Ingrediente extends Model implements Serializable{
 		this.name = name;
 	}
 
-	public Set<RecIngre> getRecIngrediente() {
-		return recIngrediente;
+	public static List<Ingrediente> getByName(String ingrediente){
+		 return find.where().eq("name",ingrediente ).findList(); 
 	}
-
-	public void setRecIngrediente(Set<RecIngre> recIngrediente) {
-		this.recIngrediente = recIngrediente;
+	
+	public void addReceta(Receta receta){
+		this.recetas.add(receta);
 	}
 
 	public JsonNode toJson() {

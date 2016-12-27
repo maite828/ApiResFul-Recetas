@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Fri Dec 16 01:56:37 CET 2016
+// @DATE:Tue Dec 27 21:09:08 CET 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -123,12 +123,22 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:22
+    // @LINE:25
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.create",
       """
         function() {
           return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "recetas"})
+        }
+      """
+    )
+  
+    // @LINE:22
+    def retrieveCache: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetasController.retrieveCache",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recetacache/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
         }
       """
     )

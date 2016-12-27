@@ -15,9 +15,6 @@ import play.libs.Json;
 @Entity
 public class RecIngre extends Model implements Serializable{
 
-	@Id
-	private Long id;
-
 	@ManyToOne
 	@JsonIgnore
 	private Receta receta;
