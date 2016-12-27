@@ -24,18 +24,23 @@ import play.mvc.Http.Context.Implicit._
 class recetas extends BaseScalaTemplate[play.twirl.api.XmlFormat.Appendable,Format[play.twirl.api.XmlFormat.Appendable]](play.twirl.api.XmlFormat) with play.twirl.api.Template1[List[Receta],play.twirl.api.XmlFormat.Appendable] {
 
   /**/
-  def apply/*2.2*/(recetas: List[Receta]):play.twirl.api.XmlFormat.Appendable = {
+  def apply/*1.2*/(recetas: List[Receta]):play.twirl.api.XmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*2.25*/("""
+Seq[Any](format.raw/*1.25*/("""
 
-"""),format.raw/*4.1*/("""<recetas>
-	"""),_display_(/*5.3*/for(r <- recetas) yield /*5.20*/ {_display_(Seq[Any](format.raw/*5.22*/("""
-	"""),_display_(/*6.3*/receta(r)),format.raw/*6.12*/("""
-	""")))}),format.raw/*7.3*/("""
-"""),format.raw/*8.1*/("""</recetas>"""))
+"""),format.raw/*3.1*/("""<recetas>
+
+"""),_display_(/*5.2*/for(r <- recetas) yield /*5.19*/{_display_(Seq[Any](format.raw/*5.20*/("""
+"""),format.raw/*6.1*/("""<receta id=""""),_display_(/*6.14*/r/*6.15*/.getId()),format.raw/*6.23*/("""">
+	<name>"""),_display_(/*7.9*/r/*7.10*/.getName),format.raw/*7.18*/("""</name>
+	<createdAt>"""),_display_(/*8.14*/r/*8.15*/.getDateCreation),format.raw/*8.31*/("""</createdAt>	
+</receta>
+""")))}),format.raw/*10.2*/("""
+
+"""),format.raw/*12.1*/("""</recipes>"""))
       }
     }
   }
@@ -55,11 +60,11 @@ Seq[Any](format.raw/*2.25*/("""
 object recetas extends recetas_Scope0.recetas
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 16 01:56:37 CET 2016
+                  DATE: Tue Dec 27 18:16:39 CET 2016
                   SOURCE: /Users/mayteecheverry/MyGitRepos/play/Recetas/app/views/recetas.scala.xml
-                  HASH: ee9975a85b1a4c86f9c69b69f4eb18c08875640b
-                  MATRIX: 749->2|866->25|894->27|931->39|963->56|1002->58|1030->61|1059->70|1091->73|1118->74
-                  LINES: 27->2|32->2|34->4|35->5|35->5|35->5|36->6|36->6|37->7|38->8
+                  HASH: e5b2ecd229651e546628073f9bebab32a65831c4
+                  MATRIX: 749->1|866->24|894->26|931->38|963->55|1001->56|1028->57|1067->70|1076->71|1104->79|1140->90|1149->91|1177->99|1224->120|1233->121|1269->137|1324->162|1353->164
+                  LINES: 27->1|32->1|34->3|36->5|36->5|36->5|37->6|37->6|37->6|37->6|38->7|38->7|38->7|39->8|39->8|39->8|41->10|43->12
                   -- GENERATED --
               */
           

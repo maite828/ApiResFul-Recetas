@@ -21,7 +21,7 @@ create sequence rec_ingre_seq;
 create table receta (
   id                            bigint not null,
   name                          varchar(255),
-  created_at                    timestamp,
+  created_at                    timestamp not null,
   constraint pk_receta primary key (id)
 );
 create sequence receta_seq;

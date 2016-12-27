@@ -1,13 +1,15 @@
 package controllers;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 
 import models.Ingrediente;
 import models.RecIngre;
 import models.Receta;
-
 import play.cache.CacheApi;
 import play.data.Form;
 import play.data.FormFactory;
@@ -16,17 +18,27 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
 
-public class RecetasController extends Controller  {
-	
+public class RecetasController extends Controller {
+
 	@Inject
 	private FormFactory formFactory;
 
 	@Inject
 	private CacheApi cache;
-	
-	
+
 	public Result list() {
-		return ok("Fine");
+		List<Receta> recetas = Receta.findAll();
+		if (request().accepts("application/json")){
+			ArrayNode array = new play.libs.Json().newArray();
+			for (Receta receta : recetas){	
+				array.add(receta.toJsonList());
+			}
+			return ok (array);
+		}else if(request().accepts("application/xml")){	
+			return ok(views.xml.recetas.render(recetas));
+		}else{	
+			return Results.status(406);
+		}
 	}
 
 	@Transactional
@@ -44,8 +56,8 @@ public class RecetasController extends Controller  {
 		Receta rec = f.get();
 		rec.setId(System.currentTimeMillis());
 		rec.save();
-		
-		RecIngre recing= new RecIngre(rec, ingre);
+
+		RecIngre recing = new RecIngre(rec, ingre);
 		recing.save();
 
 		return Results.status(CREATED, recing.toJson());
@@ -72,56 +84,29 @@ public class RecetasController extends Controller  {
 			}
 			return ok(node);
 		}
-
 		return Results.status(406);
 	}
 
-/*
-	public Result update(Integer id) {
-		// TODO
-		return ok();
-	}
-
-	public Result remove(Integer id) {
-		Receta receta = Receta.findById(Long.valueOf(id));
-		if (receta == null) {
-			return notFound();
-		}
-
-		if (receta.delete()) {
-			cache.remove("receta-" + id);
-			return ok();
-		} else {
-			return internalServerError();
-		}
-	}*/
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	/*
-	User user = new User();
-	Service service = new Service();
-	UserService userService = new UserService();
+	 * public Result update(Integer id) { // TODO return ok(); }
+	 * 
+	 * public Result remove(Integer id) { Receta receta =
+	 * Receta.findById(Long.valueOf(id)); if (receta == null) { return
+	 * notFound(); }
+	 * 
+	 * if (receta.delete()) { cache.remove("receta-" + id); return ok(); } else
+	 * { return internalServerError(); } }
+	 */
 
-	user.addUserService(userService);
-	userService.setUser(user);
-
-	service.addUserService(userService);
-	userService.setService(service);
-
-	session.save(user);
-	session.save(service);
-	session.save(userService);
-	*/
-	
-
+	/*
+	 * User user = new User(); Service service = new Service(); UserService
+	 * userService = new UserService();
+	 * 
+	 * user.addUserService(userService); userService.setUser(user);
+	 * 
+	 * service.addUserService(userService); userService.setService(service);
+	 * 
+	 * session.save(user); session.save(service); session.save(userService);
+	 */
 
 }
