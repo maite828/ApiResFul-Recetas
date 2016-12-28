@@ -1,0 +1,5 @@
+@(ingrediente: Ingrediente)
+
+<ingrediente id="@ingrediente.getId()">
+	<name>@ingrediente.getName</name>
+</ingrediente>

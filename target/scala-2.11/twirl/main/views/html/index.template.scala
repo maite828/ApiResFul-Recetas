@@ -64,7 +64,7 @@ Seq[Any](format.raw/*5.19*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 16 01:56:37 CET 2016
+                  DATE: Wed Dec 28 17:01:51 CET 2016
                   SOURCE: /Users/mayteecheverry/MyGitRepos/play/Recetas/app/views/index.scala.html
                   HASH: c00f1c05d68754c3b12a2a3ffaafe456cbad7d39
                   MATRIX: 834->95|946->112|975->308|1003->310|1035->333|1075->335|1108->464|1140->470|1155->476|1209->509|1242->512

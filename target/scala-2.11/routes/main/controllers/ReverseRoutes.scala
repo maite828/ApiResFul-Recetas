@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Tue Dec 27 21:09:08 CET 2016
+// @DATE:Wed Dec 28 17:01:51 CET 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -80,10 +80,28 @@ package controllers {
     }
 
   
+    // @LINE:36
+    def getRecipesByTag(name:String): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "receta/tag/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
+    }
+  
     // @LINE:19
     def retrieve(id:Long): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "receta/" + implicitly[PathBindable[Long]].unbind("id", id))
+    }
+  
+    // @LINE:24
+    def create(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "recetas")
+    }
+  
+    // @LINE:33
+    def update(id:Long): Call = {
+      import ReverseRouteContext.empty
+      Call("PUT", _prefix + { _defaultPrefix } + "receta/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
     // @LINE:16
@@ -92,16 +110,16 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "recetas")
     }
   
-    // @LINE:25
-    def create(): Call = {
+    // @LINE:30
+    def remove(id:Long): Call = {
       import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "recetas")
+      Call("DELETE", _prefix + { _defaultPrefix } + "receta/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
-    // @LINE:22
-    def retrieveCache(id:Long): Call = {
+    // @LINE:27
+    def getByName(name:String): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "recetacache/" + implicitly[PathBindable[Long]].unbind("id", id))
+      Call("GET", _prefix + { _defaultPrefix } + "receta/name/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
   }

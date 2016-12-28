@@ -1,19 +1,14 @@
 package models;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
-
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 
 import com.avaje.ebean.Model;
 import com.avaje.ebean.annotation.CreatedTimestamp;
@@ -23,53 +18,55 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import play.data.validation.Constraints.Required;
 import play.libs.Json;
-import models.Tag;
-import models.RecIngre;
 
 @Entity
 public class Receta extends Model implements Serializable{
-	
 	@Id
 	private Long id;
 
 	@Required
+	@JsonIgnore
 	private String name;
 	
 	@CreatedTimestamp
+	@JsonIgnore
 	private Timestamp createdAt;
 
 	@ManyToMany(cascade = CascadeType.ALL)
-	private List<Ingrediente> ingredients = new ArrayList<>();
+	@JsonIgnore
+	private List<Ingrediente> ingredientes;
 	
 	@ManyToMany(cascade = CascadeType.ALL)
-	private List<Tag> tags = new ArrayList<>();
+	@JsonIgnore
+	private List<Tag> tags;
 	
 	private static final Find<Long, Receta> find = new Find<Long, Receta>() {};
-
+	
+	public Receta(){
+		this.ingredientes = new ArrayList<>();
+		this.tags = new ArrayList<>();
+	}
+	
 	public Long getId() {
 		return id;
 	}
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
 	public String getName() {
 		return this.name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public Timestamp getDateCreation() {
-		return createdAt;
+	public String getDateCreation() {
+		return String.valueOf(createdAt);
 	}
-
 	public void setDateCreation(Timestamp fechaCreacion) {
 		this.createdAt = fechaCreacion;
 	}
 	
+	//GESTIÓN RECETAS
  	public static List<Receta> findAll() {
 		return find.all();
 	}
@@ -81,23 +78,25 @@ public class Receta extends Model implements Serializable{
 	public static List<Receta> findByName(String name) {
 		return find.where().eq("name", name).findList();
 	}
-	public static List<Receta> getByName(String recipeName){
-		 return find.where().eq("title",recipeName ).findList();	 
+	public static List<Receta> getByName(String name){
+		 return find.where().eq("name", name).findList();	 
 	}
 	
-	public void addIngredient(Ingrediente ingredient){
-		this.ingredients.add(ingredient);
-		ingredient.recetas.add(this);
+	//GESTIÓN INGREDIENTES
+	public void addIngredient(Ingrediente ingrediente){
+		this.ingredientes.add(ingrediente);
+		ingrediente.addReceta(this);
 	}
 	
 	public void setIngredients(List<Ingrediente> ingredients) {
-		this.ingredients = ingredients;
+		this.ingredientes = ingredients;
 	}
 	
-	public List<Ingrediente> getIngredients() {
-		return ingredients;
+	public List<Ingrediente> getIngredientes() {
+		return ingredientes;
 	}
 	
+	//GESTION DE TAGS
 	public void addTag(Tag tag){
 		this.tags.add(tag);
 		tag.recetas.add(this);
@@ -111,6 +110,7 @@ public class Receta extends Model implements Serializable{
 		return find.where().eq("tags.name", tag.getName()).findList();
 	}
 	
+	//TRATAMIENTO
 	public JsonNode toJson() {
 		return Json.toJson(this);
 	}
@@ -122,4 +122,6 @@ public class Receta extends Model implements Serializable{
 		node.put("date", String.valueOf(this.createdAt));
 		return node;	
 	}
+	
+	
 }

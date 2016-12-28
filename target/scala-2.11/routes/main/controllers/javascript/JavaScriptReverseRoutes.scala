@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Tue Dec 27 21:09:08 CET 2016
+// @DATE:Wed Dec 28 17:01:51 CET 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -103,12 +103,42 @@ package controllers.javascript {
     }
 
   
+    // @LINE:36
+    def getRecipesByTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetasController.getRecipesByTag",
+      """
+        function(name0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/tag/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name0))})
+        }
+      """
+    )
+  
     // @LINE:19
     def retrieve: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.retrieve",
       """
         function(id0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
+        }
+      """
+    )
+  
+    // @LINE:24
+    def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetasController.create",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "recetas"})
+        }
+      """
+    )
+  
+    // @LINE:33
+    def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetasController.update",
+      """
+        function(id0) {
+          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
         }
       """
     )
@@ -123,22 +153,22 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:25
-    def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.RecetasController.create",
+    // @LINE:30
+    def remove: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetasController.remove",
       """
-        function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "recetas"})
+        function(id0) {
+          return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
         }
       """
     )
   
-    // @LINE:22
-    def retrieveCache: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.RecetasController.retrieveCache",
+    // @LINE:27
+    def getByName: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetasController.getByName",
       """
-        function(id0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recetacache/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
+        function(name0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/name/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name0))})
         }
       """
     )

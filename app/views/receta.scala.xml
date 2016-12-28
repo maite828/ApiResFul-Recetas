@@ -1,11 +1,11 @@
-@(receta: Receta)
+@(rec: Receta)
 
-<receta id="@receta.getId()">
-	<name>@receta.getName</name>
-	<createdAt>@receta.getDateCreation</createdAt>
-	<recIngrediente>
-	@for(i <- receta.getRecIngredientes){
-	@i  
+<receta id="@rec.getId()">
+	<name>@rec.getName</name>
+	<createdAt>@rec.getDateCreation</createdAt>
+	<ingredientes>
+	@for(item  <- rec.getIngredientes){
+		@ingrediente(item)
 	}
-	</recIngrediente>
+	</ingredientes>
 </receta>
