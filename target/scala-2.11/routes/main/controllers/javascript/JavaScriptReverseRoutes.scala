@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Wed Dec 28 17:01:51 CET 2016
+// @DATE:Wed Dec 28 22:19:41 CET 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -11,11 +11,11 @@ import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamic
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:6
+// @LINE:2
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:13
+  // @LINE:4
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:13
+    // @LINE:4
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -36,7 +36,7 @@ package controllers.javascript {
   }
 
   // @LINE:8
-  class ReverseCountController(_prefix: => String) {
+  class ReverseTasksController(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
@@ -44,18 +44,18 @@ package controllers.javascript {
 
   
     // @LINE:8
-    def count: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.CountController.count",
+    def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.TasksController.list",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "count"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tasks"})
         }
       """
     )
   
   }
 
-  // @LINE:6
+  // @LINE:2
   class ReverseHomeController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -63,7 +63,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:6
+    // @LINE:2
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
       """
@@ -75,27 +75,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:10
-  class ReverseAsyncController(_prefix: => String) {
-
-    def _defaultPrefix: String = {
-      if (_prefix.endsWith("/")) "" else "/"
-    }
-
-  
-    // @LINE:10
-    def message: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.AsyncController.message",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "message"})
-        }
-      """
-    )
-  
-  }
-
-  // @LINE:16
+  // @LINE:11
   class ReverseRecetasController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -103,7 +83,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:36
+    // @LINE:32
     def getRecipesByTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.getRecipesByTag",
       """
@@ -113,7 +93,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:14
     def retrieve: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.retrieve",
       """
@@ -123,7 +103,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:24
+    // @LINE:20
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.create",
       """
@@ -133,7 +113,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:33
+    // @LINE:29
     def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.update",
       """
@@ -143,7 +123,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:16
+    // @LINE:11
     def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.list",
       """
@@ -153,7 +133,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:30
+    // @LINE:26
     def remove: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.remove",
       """
@@ -163,12 +143,42 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:27
+    // @LINE:23
     def getByName: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.getByName",
       """
         function(name0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/name/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name0))})
+        }
+      """
+    )
+  
+    // @LINE:17
+    def retrieveCache: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetasController.retrieveCache",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recetacache/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:6
+  class ReverseIngredientesController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:6
+    def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.IngredientesController.list",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ingredientes"})
         }
       """
     )

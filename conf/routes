@@ -1,24 +1,20 @@
-# Routes
-# This file defines all application routes (Higher priority routes first)
-# ~~~~
-
 # An example controller showing a sample home page
 GET     /                       controllers.HomeController.index
-# An example controller showing how to use dependency injection
-GET     /count                  controllers.CountController.count
-# An example controller showing how to write asynchronous code
-GET     /message                controllers.AsyncController.message
 
-# Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file           controllers.Assets.versioned(path="/public", file: Asset)
+
+GET     /ingredientes           controllers.IngredientesController.list
+
+GET     /tasks                  controllers.TasksController.list
 
 # listar todas las recetas
 GET   	/recetas       			controllers.RecetasController.list
 
 # obtener datos de una receta
 GET 	/receta/:id      controllers.RecetasController.retrieve(id: Long)
+
 # obtener datos de una receta de la caché
-#GET 	/recetacache/:id      	controllers.RecetasController.retrieveCache(id: Long)
+GET 	/recetacache/:id      	controllers.RecetasController.retrieveCache(id: Long)
 
 # crear un receta
 POST 	/recetas        		controllers.RecetasController.create

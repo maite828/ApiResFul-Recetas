@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Wed Dec 28 17:01:51 CET 2016
+// @DATE:Wed Dec 28 22:19:41 CET 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -10,17 +10,17 @@ import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamic
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:6
+// @LINE:2
 package controllers {
 
-  // @LINE:13
+  // @LINE:4
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:13
+    // @LINE:4
     def versioned(file:Asset): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[Asset]].unbind("file", file))
@@ -29,28 +29,28 @@ package controllers {
   }
 
   // @LINE:8
-  class ReverseCountController(_prefix: => String) {
+  class ReverseTasksController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
     // @LINE:8
-    def count(): Call = {
+    def list(): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "count")
+      Call("GET", _prefix + { _defaultPrefix } + "tasks")
     }
   
   }
 
-  // @LINE:6
+  // @LINE:2
   class ReverseHomeController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:6
+    // @LINE:2
     def index(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix)
@@ -58,68 +58,74 @@ package controllers {
   
   }
 
-  // @LINE:10
-  class ReverseAsyncController(_prefix: => String) {
-    def _defaultPrefix: String = {
-      if (_prefix.endsWith("/")) "" else "/"
-    }
-
-  
-    // @LINE:10
-    def message(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "message")
-    }
-  
-  }
-
-  // @LINE:16
+  // @LINE:11
   class ReverseRecetasController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:36
+    // @LINE:32
     def getRecipesByTag(name:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "receta/tag/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
-    // @LINE:19
+    // @LINE:14
     def retrieve(id:Long): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "receta/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
-    // @LINE:24
+    // @LINE:20
     def create(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "recetas")
     }
   
-    // @LINE:33
+    // @LINE:29
     def update(id:Long): Call = {
       import ReverseRouteContext.empty
       Call("PUT", _prefix + { _defaultPrefix } + "receta/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
-    // @LINE:16
+    // @LINE:11
     def list(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "recetas")
     }
   
-    // @LINE:30
+    // @LINE:26
     def remove(id:Long): Call = {
       import ReverseRouteContext.empty
       Call("DELETE", _prefix + { _defaultPrefix } + "receta/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
-    // @LINE:27
+    // @LINE:23
     def getByName(name:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "receta/name/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
+    }
+  
+    // @LINE:17
+    def retrieveCache(id:Long): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "recetacache/" + implicitly[PathBindable[Long]].unbind("id", id))
+    }
+  
+  }
+
+  // @LINE:6
+  class ReverseIngredientesController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:6
+    def list(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "ingredientes")
     }
   
   }

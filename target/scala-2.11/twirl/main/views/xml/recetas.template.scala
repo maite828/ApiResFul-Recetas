@@ -58,7 +58,7 @@ Seq[Any](format.raw/*1.25*/("""
 object recetas extends recetas_Scope0.recetas
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 28 17:01:51 CET 2016
+                  DATE: Wed Dec 28 22:19:41 CET 2016
                   SOURCE: /Users/mayteecheverry/MyGitRepos/play/Recetas/app/views/recetas.scala.xml
                   HASH: fa425d5373688b8390f7ae06debbceb4124123dd
                   MATRIX: 749->1|866->24|894->26|931->38|966->58|1004->59|1033->62|1072->75|1084->79|1112->87|1151->100|1163->104|1191->112|1240->135|1252->139|1288->155|1345->183|1373->184

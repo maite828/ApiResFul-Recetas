@@ -13,7 +13,6 @@ import models.Receta;
 import models.Tag;
 import play.cache.CacheApi;
 import play.data.FormFactory;
-import play.db.ebean.Transactional;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -21,8 +20,8 @@ import play.mvc.Results;
 
 public class RecetasController extends Controller {
 
-	@Inject
-	private FormFactory formFactory;
+	//@Inject
+	//private FormFactory formFactory;
 
 	@Inject
 	private CacheApi cache;
@@ -33,7 +32,7 @@ public class RecetasController extends Controller {
 			new play.libs.Json();
 			ArrayNode array = Json.newArray();
 			for (Receta receta : recetas) {
-				array.add(receta.toJsonList());
+				array.add(receta.toJson());
 			}
 			return ok(array);
 		} else if (request().accepts("application/xml")) {
@@ -44,27 +43,23 @@ public class RecetasController extends Controller {
 	}
 
 	public Result create() {
-/*
-		JsonNode json = request().body().asJson();
-		Receta rec = new Receta();
-		rec.setName(json.findPath("name").asText());
 		/*
-		 * for (JsonNode ingrediente : json.withArray("ingredientes")) {
-		 * Ingrediente ingre = new Ingrediente();
-		 * ingre.setName(ingrediente.get("name").asText()); ingre.save();
+		 * JsonNode json = request().body().asJson(); Receta rec = new Receta();
+		 * rec.setName(json.findPath("name").asText()); /* for (JsonNode
+		 * ingrediente : json.withArray("ingredientes")) { Ingrediente ingre =
+		 * new Ingrediente(); ingre.setName(ingrediente.get("name").asText());
+		 * ingre.save();
 		 * 
 		 * //ingre.addReceta(rec); rec.addIngredient(ingre); }
-		 
-		rec.save();
-
-		Form<Receta> f = formFactory.form(Receta.class).bindFromRequest();
-		if (f.hasErrors()) {
-			return Results.badRequest(ControllerHelper.errorJson(2, "Datos incorrectos", f.errorsAsJson()));
-		}
-		Ingrediente ingre = new Ingrediente();
-		ingre.save();
-		Receta rec = f.get();
-*/
+		 * 
+		 * rec.save();
+		 * 
+		 * Form<Receta> f = formFactory.form(Receta.class).bindFromRequest(); if
+		 * (f.hasErrors()) { return
+		 * Results.badRequest(ControllerHelper.errorJson(2, "Datos incorrectos",
+		 * f.errorsAsJson())); } Ingrediente ingre = new Ingrediente();
+		 * ingre.save(); Receta rec = f.get();
+		 */
 		JsonNode body = request().body().asJson();
 		if (body.isNull()) {
 			return Results.badRequest();
@@ -93,13 +88,13 @@ public class RecetasController extends Controller {
 				recipe.addIngredient(ingredientList.get(0));
 			}
 		}
-		
+
 		ArrayNode arrayTags = (ArrayNode) body.get("tags");
 		for (JsonNode node2 : arrayTags) {
-			List<Tag> tagsList = Tag.getByName(node2.asText().trim().toLowerCase());
+			List<Tag> tagsList = Tag.getByName(node2.get("name").asText().trim().toLowerCase());
 			if (tagsList.isEmpty()) {
 				Tag tag = new Tag();
-				tag.setName(node2.asText().trim().toLowerCase());
+				tag.setName(node2.get("name").asText().trim().toLowerCase());
 				tag.save();
 				recipe.addTag(tag);
 			} else {
@@ -107,7 +102,7 @@ public class RecetasController extends Controller {
 				recipe.addTag(tagsList.get(0));
 			}
 		}
-		
+
 		recipe.save();
 
 		if (request().accepts("application/json")) {
@@ -123,7 +118,7 @@ public class RecetasController extends Controller {
 		Receta receta = Receta.findById(id);
 		if (receta != null) {// Recipe Exist
 			if (request().accepts("application/json")) {
-				return ok(receta.toJson());
+				return ok(receta.toJsonList());
 			} else if (request().accepts("application/xml")) {
 				return ok(views.xml.receta.render(receta));
 			} else {
@@ -132,20 +127,30 @@ public class RecetasController extends Controller {
 		}
 		return Results.notFound();
 	}
-	/*
-	 * public Result retrieveCache(Long id) { Receta receta =
-	 * cache.get("Receta-" + id); if (receta == null) { receta =
-	 * Receta.findById(id); cache.set("Receta-" + id, receta); }
-	 * 
-	 * if (receta == null) { return notFound(); }
-	 * 
-	 * if (request().accepts("application/xml")) { return
-	 * ok(views.xml.receta.render(receta)); } else if
-	 * (request().accepts("application/json")) { JsonNode node =
-	 * cache.get("receta-" + id + "-json"); if (node == null) { node =
-	 * receta.toJson(); cache.set("receta-" + id + "-json", node, 60); } return
-	 * ok(node); } return Results.status(406); }
-	 */
+
+	public Result retrieveCache(Long id) {
+		Receta receta = cache.get("Receta-" + id);
+		if (receta == null) {
+			receta = Receta.findById(id);
+			cache.set("Receta-" + id, receta);
+		}
+
+		if (receta == null) {
+			return notFound();
+		}
+
+		if (request().accepts("application/xml")) {
+			return ok(views.xml.receta.render(receta));
+		} else if (request().accepts("application/json")) {
+			JsonNode node = cache.get("receta-" + id + "-json");
+			if (node == null) {
+				node = receta.toJsonList();
+				cache.set("receta-" + id + "-json", node, 60);
+			}
+			return ok(node);
+		}
+		return Results.status(406);
+	}
 
 	public Result remove(Long id) {
 		Receta recipe = Receta.findById(id);
@@ -183,8 +188,8 @@ public class RecetasController extends Controller {
 		if (recipe == null) {
 			return Results.notFound();
 		}
-		if (body.has("title")) {
-			recipe.setName(body.get("title").asText());
+		if (body.has("name")) {
+			recipe.setName(body.get("name").asText());
 		}
 		/*
 		 * if (body.has("preparationTime")) {
@@ -193,35 +198,29 @@ public class RecetasController extends Controller {
 		 * recipe.setDescription(body.get("description").asText());
 		 * System.out.println("Description"); }
 		 */
-		if (body.has("ingredients")) {
-			System.out.println("Ingredients");
-			ArrayNode array = (ArrayNode) body.get("ingredients");
+		if (body.has("ingredientes")) {
+			ArrayNode array = (ArrayNode) body.get("ingredientes");
 			List<Ingrediente> listIngredients = new LinkedList<>();
 			for (JsonNode node1 : array) {
 
-				List<Ingrediente> ingredientList = Ingrediente
-						.getByName(node1.get("name").asText().trim().toLowerCase());
+				List<Ingrediente> ingredientList = Ingrediente.getByName(node1.get("name").asText().trim().toLowerCase());
 				if (ingredientList.isEmpty()) {
-					System.out.println("Ingredient añadido a la db");
 					Ingrediente newIngredient = new Ingrediente();
 					newIngredient.setName(node1.get("name").asText().trim().toLowerCase());
 					newIngredient.save();
 
 					listIngredients.add(newIngredient);
 				} else {
-					System.out.println("Ingredient ya en la db");
 					listIngredients.add(ingredientList.get(0));
 				}
 			}
 			recipe.setIngredients(listIngredients);
-			System.out.println(recipe.getIngredientes().get(0));
 		}
 		recipe.save();
 		return ok();
 	}
 
 	public Result getByName(String name) {
-		System.out.println(name);
 		List<Receta> listRecipes = Receta.getByName(name);
 
 		if (listRecipes.isEmpty()) { // No hemos encontrado la receta
@@ -239,7 +238,6 @@ public class RecetasController extends Controller {
 	}
 
 	public Result getRecipesByTag(String tagName) {
-
 		List<Tag> tag = Tag.getByName(tagName);
 		if (tag.isEmpty()) {
 			return Results.notFound();
@@ -247,7 +245,7 @@ public class RecetasController extends Controller {
 			List<Receta> recipes = Receta.findRecipesByTag(tag.get(0));
 
 			if (request().accepts("application/json")) {
-				ArrayNode array = new play.libs.Json().newArray();
+				ArrayNode array = new Json().newArray();
 
 				for (Receta recipe1 : recipes) {
 					array.add(recipe1.toJsonList());
