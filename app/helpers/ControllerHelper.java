@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import models.Ingredient;
 import models.Recipe;
+import models.Task;
 import play.cache.CacheApi;
 import play.libs.Json;
 import play.mvc.Http.Request;
@@ -84,6 +85,35 @@ public class ControllerHelper {
 		ArrayNode array = Json.newArray();
 		for (Ingredient ingredient : ingredients) {
 			array.add(ingredient.toJsonList());
+		}
+		return play.mvc.Results.ok(array);
+	}
+	
+	public static Result taskJsonXml(Request request, Task task){
+		if (request.accepts("application/json")) {
+			return play.mvc.Results.ok(task.toJsonList());
+		} else if (request.accepts("application/xml")) {
+			return play.mvc.Results.ok();
+		} else {
+			return Results.badRequest("Unsupported format");
+		}
+	}
+	
+	public static Result tasksJsonXml(Request request, List<Task> tasks) {
+		if (request.accepts("application/json")) {
+			return showAllTaskJson(tasks);
+		} else if (request.accepts("application/xml")) {
+			return play.mvc.Results.ok();
+		} else {
+			return Results.status(406);
+		}
+	}
+	
+	public static Result showAllTaskJson(List<Task> tasks){
+		new play.libs.Json();
+		ArrayNode array = Json.newArray();
+		for (Task task : tasks) {
+			array.add(task.toJsonList());
 		}
 		return play.mvc.Results.ok(array);
 	}

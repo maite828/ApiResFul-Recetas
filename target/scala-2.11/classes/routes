@@ -1,30 +1,42 @@
-GET     					/assets/*file           controllers.Assets.versioned(path="/public", file: Asset)
-GET     					/                       controllers.App.index()
+GET     					/assets/*file           			controllers.Assets.versioned(path="/public", file: Asset)
+GET     					/                       			controllers.App.index()
 
-# CREAR RECETA
-POST 						/recipes        		controllers.RecipesController.create
 
-# RECETA POR ID EN CACHÉ
-GET 						/recipecache/:id      	controllers.RecipesController.retrieveCache(id: Long)
+# Recipes
 
-# LISTA DE RECETAS
-GET   						/recipes       			controllers.RecipesController.list
+POST 						/recipesJ        					controllers.RecipesController.createJson
 
-# RECETAS POR ID
-GET 						/recipe/:id      		controllers.RecipesController.retrieve(id: Long)
+POST   						/recipesF                			controllers.RecipesController.createFactory
 
-# RECETAS POR NOMBRE
-GET							/recipe/name/:name		controllers.RecipesController.recipesByName(name: String)
+GET 						/recipe_cache/:id      				controllers.RecipesController.retrieveCache(id: Long)
 
-# ELEIMINAR RECETA POR ID
-DELETE						/recipe/:id				controllers.RecipesController.remove(id: Long)
+GET   						/recipes       						controllers.RecipesController.list
 
-# ACTUALIZAR RECETA POR ID
-PUT							/recipe/:id				controllers.RecipesController.update(id: Long)
+GET 						/recipe/:id      					controllers.RecipesController.retrieve(id: Long)
 
-# RECETAS POR TAG
-GET 						/recipe/tag/:name		controllers.RecipesController.recipesByTag(name: String)
+GET							/recipe/name/:name					controllers.RecipesController.recipesByName(name: String)
 
-GET     					/ingredients            controllers.IngredientsController.list
+DELETE						/recipe/:id							controllers.RecipesController.remove(id: Long)
 
-GET     					/tasks                  controllers.TasksController.list
+PUT							/recipe/:id							controllers.RecipesController.update(id: Long)
+
+GET 						/recipe/tag/:name					controllers.RecipesController.recipesByTag(name: String)
+
+
+# Ingredients
+
+POST   						/ingredients            			controllers.IngredientsController.createF
+
+GET    						/ingredients/:id        			controllers.IngredientsController.getIngId(id: Long)
+
+GET    						/ingredients            			controllers.IngredientsController.getIngredients
+
+POST   						/ingredients/:idIng/task/:idTask   	controllers.IngredientsController.createIngTask(idIng: Long, idTask: Long)
+
+PUT    						/ingredients/:idIng/recipe/:idRec  	controllers.IngredientsController.addRecipe(idIng: Long, idRec: Long)
+
+	
+# Tasks
+
+POST   						/recipes/:idRec/createTask         	controllers.TasksController.createTask(idRec: Long)
+

@@ -9,23 +9,21 @@ import javax.persistence.ManyToOne;
 import com.avaje.ebean.Model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import play.data.validation.Constraints.Required;
-
 @Entity
-public class IngredientTask extends Model implements Serializable{
-	
+public class IngredientTask extends Model implements Serializable {
+
 	@Id
 	public Long id;
-	
-	@JsonIgnore
+
 	@ManyToOne
+	@JsonIgnore
 	public Task task;
-	
-	@JsonIgnore
+
 	@ManyToOne
+	@JsonIgnore
 	public Ingredient ingredient;
-	
-	public static final Find<Long,IngredientTask> find = new Find<Long,IngredientTask>(){};
-	
-	
+
+	public static final Find<Long, IngredientTask> find = new Find<Long, IngredientTask>() {
+	};
+
 }

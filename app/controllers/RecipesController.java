@@ -24,19 +24,18 @@ import play.mvc.Results;
 public class RecipesController extends Controller {
 	@Inject
 	private FormFactory f;
-	
+
 	@Inject
 	private CacheApi cache;
-	
 
 	public Result list() {
 		List<Recipe> recipes = Recipe.findAll();
 		if (recipes.isEmpty()) {
 			return Results.badRequest("No data");
 		}
-		
+
 		Request request = request();
-		return ControllerHelper.recipesJsonXml(request,recipes);
+		return ControllerHelper.recipesJsonXml(request, recipes);
 	}
 
 	public Result createJson() {
@@ -44,14 +43,14 @@ public class RecipesController extends Controller {
 		if (json.isNull()) {
 			return Results.badRequest("incorrect data");
 		}
-		
+
 		Recipe recipe = new Recipe();
 		recipe.setName(json.get("name").asText().trim().toUpperCase());
-		//Ingredients
+		// Ingredients
 		ArrayNode arrayIngr = (ArrayNode) json.get("ingredients");
 		if (arrayIngr.isNull()) {
 			return Results.badRequest("incorrect data");
-		}else{
+		} else {
 			for (JsonNode nodeIng : arrayIngr) {
 				Ingredient ingredient = new Ingredient();
 				ingredient.setName(nodeIng.get("name").asText().trim().toLowerCase());
@@ -59,24 +58,24 @@ public class RecipesController extends Controller {
 				recipe.addIngrRec(ingredient);
 			}
 		}
-		//tags
+		// tags
 		ArrayNode arrayTags = (ArrayNode) json.get("tags");
 		if (arrayTags.isNull()) {
 			return Results.badRequest("incorrect data");
-		}else{
+		} else {
 			for (JsonNode nodeTag : arrayTags) {
 				Tag tag = new Tag();
 				tag.setName(nodeTag.get("name").asText().trim().toLowerCase());
 				tag.save();
 				recipe.addTagRec(tag);
-			}	
+			}
 		}
 		recipe.save();
 
 		Request request = request();
-		return ControllerHelper.recipeJsonXml(request,recipe);
+		return ControllerHelper.recipeJsonXml(request, recipe);
 	}
-	
+
 	public Result createFactory() {
 		Form<Recipe> form = f.form(Recipe.class).bindFromRequest();
 		if (form.hasErrors()) {
@@ -84,22 +83,20 @@ public class RecipesController extends Controller {
 		}
 		Recipe recipe = form.get();
 		recipe.save();
-		if(request().accepts("application/json")){
-    		return ok(Json.toJson(recipe));
-    	}
-    	return badRequest("Unsupported format");
-    }
-	
+		if (request().accepts("application/json")) {
+			return ok(Json.toJson(recipe));
+		}
+		return badRequest("Unsupported format");
+	}
 
 	public Result retrieve(Long id) {
 		Recipe recipe = Recipe.findById(id);
 		if (recipe != null) {
 			Request request = request();
-			return ControllerHelper.recipeJsonXml(request,recipe);
+			return ControllerHelper.recipeJsonXml(request, recipe);
 		}
 		return Results.notFound();
 	}
-	
 
 	public Result retrieveCache(Long id) {
 		Recipe recipe = cache.get("Recipe-" + id);
@@ -111,22 +108,20 @@ public class RecipesController extends Controller {
 		if (recipe == null) {
 			return notFound();
 		}
-		
+
 		Request request = request();
-		return ControllerHelper.recipeCacheJsonXml(request,recipe,id,cache);	
+		return ControllerHelper.recipeCacheJsonXml(request, recipe, id, cache);
 	}
-	
 
 	public Result recipesByName(String name) {
 		List<Recipe> recipes = Recipe.findByName(name.trim().toUpperCase());
 		if (recipes.isEmpty()) {
 			return Results.notFound();
-		}else{
+		} else {
 			Request request = request();
-			return ControllerHelper.recipesJsonXml(request,recipes);
+			return ControllerHelper.recipesJsonXml(request, recipes);
 		}
 	}
-	
 
 	public Result recipesByTag(String name) {
 		List<Tag> tag = Tag.findByName(name.trim().toLowerCase());
@@ -135,32 +130,32 @@ public class RecipesController extends Controller {
 		} else {
 			List<Recipe> recipes = Recipe.findRecipesByTag(tag.get(0));
 			Request request = request();
-			return ControllerHelper.recipesJsonXml(request,recipes);
+			return ControllerHelper.recipesJsonXml(request, recipes);
 		}
 	}
-	
 
 	public Result update(Long id) {
 		Recipe recipe = Recipe.findById(id);
 		if (recipe == null) {
 			return Results.notFound();
 		}
-		
+
 		JsonNode json = request().body().asJson();
 		if (json.has("name")) {
 			recipe.setName(json.get("name").asText().trim().toLowerCase());
 		}
-		
+
 		if (json.has("portions")) {
 			recipe.setPortions(json.get("portions").asInt());
-		} 
-		 
+		}
+
 		if (json.has("ingredients")) {
 			List<Ingredient> ingredients = new LinkedList<>();
 			ArrayNode array = (ArrayNode) json.get("ingredients");
 			for (JsonNode nodeIng : array) {
 
-				List<Ingredient> ingredients2 = Ingredient.findByName(nodeIng.get("name").asText().trim().toLowerCase());
+				List<Ingredient> ingredients2 = Ingredient
+						.findByName(nodeIng.get("name").asText().trim().toLowerCase());
 				if (ingredients2.isEmpty()) {
 					Ingredient ingredient = new Ingredient();
 					ingredient.setName(nodeIng.get("name").asText().trim().toLowerCase());
@@ -172,7 +167,7 @@ public class RecipesController extends Controller {
 			}
 			recipe.setIngredients(ingredients);
 		}
-		
+
 		if (json.has("tags")) {
 			List<Tag> tags = new LinkedList<>();
 			ArrayNode array = (ArrayNode) json.get("tags");
@@ -190,25 +185,23 @@ public class RecipesController extends Controller {
 			recipe.setTags(tags);
 		}
 		recipe.save();
-		
+
 		Request request = request();
-		return ControllerHelper.recipeJsonXml(request,recipe);
+		return ControllerHelper.recipeJsonXml(request, recipe);
 	}
-	
-	
+
 	public Result remove(Long id) {
 		Recipe recipe = Recipe.findById(id);
 		if (recipe != null) {
 			if (recipe.delete()) {
 				List<Recipe> recipes = Recipe.findAll();
 				Request request = request();
-				return ControllerHelper.recipesJsonXml(request,recipes);
+				return ControllerHelper.recipesJsonXml(request, recipes);
 			} else {
 				return internalServerError();
 			}
 		}
 		return Results.notFound();
 	}
-	
-	
+
 }

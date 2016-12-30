@@ -6,6 +6,7 @@
 create table ingredient (
   id                            bigint not null,
   name                          varchar(255),
+  quantity                      float,
   constraint pk_ingredient primary key (id)
 );
 create sequence ingredient_seq;
@@ -14,8 +15,6 @@ create table ingredient_task (
   id                            bigint not null,
   task_id                       bigint,
   ingredient_id                 bigint,
-  measure                       varchar(255),
-  quantity                      float,
   constraint pk_ingredient_task primary key (id)
 );
 create sequence ingredient_task_seq;
@@ -23,6 +22,7 @@ create sequence ingredient_task_seq;
 create table recipe (
   id                            bigint not null,
   name                          varchar(255),
+  portions                      integer,
   created_at                    timestamp not null,
   constraint pk_recipe primary key (id)
 );
@@ -50,7 +50,6 @@ create sequence tag_seq;
 create table task (
   id                            bigint not null,
   description                   varchar(255),
-  seconds                       integer,
   recipe_id                     bigint,
   constraint pk_task primary key (id)
 );
