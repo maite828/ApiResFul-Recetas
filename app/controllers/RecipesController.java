@@ -44,7 +44,7 @@ public class RecipesController extends Controller {
 		Recipe recipe = new Recipe();
 		recipe.setName(json.get("name").asText().trim().toUpperCase());
 
-		ArrayNode arrayIngr = (ArrayNode) json.get("ingredient");
+		ArrayNode arrayIngr = (ArrayNode) json.get("ingredients");
 		if (arrayIngr.isNull()) {
 			return Results.badRequest("incorrect data");
 		}else{

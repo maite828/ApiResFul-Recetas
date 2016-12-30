@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Fri Dec 30 02:31:56 CET 2016
+// @DATE:Fri Dec 30 02:55:28 CET 2016
 
 package router
 
@@ -17,33 +17,37 @@ import _root_.play.libs.F
 class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:1
-  Assets_0: controllers.Assets,
-  // @LINE:4
-  RecipesController_2: controllers.RecipesController,
-  // @LINE:27
-  IngredientsController_1: controllers.IngredientsController,
-  // @LINE:29
-  TasksController_3: controllers.TasksController,
+  Assets_3: controllers.Assets,
+  // @LINE:2
+  App_1: controllers.App,
+  // @LINE:5
+  RecipesController_0: controllers.RecipesController,
+  // @LINE:28
+  IngredientsController_2: controllers.IngredientsController,
+  // @LINE:30
+  TasksController_4: controllers.TasksController,
   val prefix: String
 ) extends GeneratedRouter {
 
    @javax.inject.Inject()
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:1
-    Assets_0: controllers.Assets,
-    // @LINE:4
-    RecipesController_2: controllers.RecipesController,
-    // @LINE:27
-    IngredientsController_1: controllers.IngredientsController,
-    // @LINE:29
-    TasksController_3: controllers.TasksController
-  ) = this(errorHandler, Assets_0, RecipesController_2, IngredientsController_1, TasksController_3, "/")
+    Assets_3: controllers.Assets,
+    // @LINE:2
+    App_1: controllers.App,
+    // @LINE:5
+    RecipesController_0: controllers.RecipesController,
+    // @LINE:28
+    IngredientsController_2: controllers.IngredientsController,
+    // @LINE:30
+    TasksController_4: controllers.TasksController
+  ) = this(errorHandler, Assets_3, App_1, RecipesController_0, IngredientsController_2, TasksController_4, "/")
 
   import ReverseRouteContext.empty
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, Assets_0, RecipesController_2, IngredientsController_1, TasksController_3, prefix)
+    new Routes(errorHandler, Assets_3, App_1, RecipesController_0, IngredientsController_2, TasksController_4, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -52,6 +56,7 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
+    ("""GET""", this.prefix, """controllers.App.index()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recipes""", """controllers.RecipesController.create"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recipecache/""" + "$" + """id<[^/]+>""", """controllers.RecipesController.retrieveCache(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recipes""", """controllers.RecipesController.list"""),
@@ -74,7 +79,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
   private[this] lazy val controllers_Assets_versioned0_invoker = createInvoker(
-    Assets_0.versioned(fakeValue[String], fakeValue[Asset]),
+    Assets_3.versioned(fakeValue[String], fakeValue[Asset]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Assets",
@@ -86,12 +91,29 @@ class Routes(
     )
   )
 
-  // @LINE:4
-  private[this] lazy val controllers_RecipesController_create1_route = Route("POST",
+  // @LINE:2
+  private[this] lazy val controllers_App_index1_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix)))
+  )
+  private[this] lazy val controllers_App_index1_invoker = createInvoker(
+    App_1.index(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.App",
+      "index",
+      Nil,
+      "GET",
+      """""",
+      this.prefix + """"""
+    )
+  )
+
+  // @LINE:5
+  private[this] lazy val controllers_RecipesController_create2_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recipes")))
   )
-  private[this] lazy val controllers_RecipesController_create1_invoker = createInvoker(
-    RecipesController_2.create,
+  private[this] lazy val controllers_RecipesController_create2_invoker = createInvoker(
+    RecipesController_0.create,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.RecipesController",
@@ -103,12 +125,12 @@ class Routes(
     )
   )
 
-  // @LINE:7
-  private[this] lazy val controllers_RecipesController_retrieveCache2_route = Route("GET",
+  // @LINE:8
+  private[this] lazy val controllers_RecipesController_retrieveCache3_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recipecache/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_RecipesController_retrieveCache2_invoker = createInvoker(
-    RecipesController_2.retrieveCache(fakeValue[Long]),
+  private[this] lazy val controllers_RecipesController_retrieveCache3_invoker = createInvoker(
+    RecipesController_0.retrieveCache(fakeValue[Long]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.RecipesController",
@@ -120,12 +142,12 @@ class Routes(
     )
   )
 
-  // @LINE:10
-  private[this] lazy val controllers_RecipesController_list3_route = Route("GET",
+  // @LINE:11
+  private[this] lazy val controllers_RecipesController_list4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recipes")))
   )
-  private[this] lazy val controllers_RecipesController_list3_invoker = createInvoker(
-    RecipesController_2.list,
+  private[this] lazy val controllers_RecipesController_list4_invoker = createInvoker(
+    RecipesController_0.list,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.RecipesController",
@@ -137,12 +159,12 @@ class Routes(
     )
   )
 
-  // @LINE:13
-  private[this] lazy val controllers_RecipesController_retrieve4_route = Route("GET",
+  // @LINE:14
+  private[this] lazy val controllers_RecipesController_retrieve5_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recipe/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_RecipesController_retrieve4_invoker = createInvoker(
-    RecipesController_2.retrieve(fakeValue[Long]),
+  private[this] lazy val controllers_RecipesController_retrieve5_invoker = createInvoker(
+    RecipesController_0.retrieve(fakeValue[Long]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.RecipesController",
@@ -154,12 +176,12 @@ class Routes(
     )
   )
 
-  // @LINE:16
-  private[this] lazy val controllers_RecipesController_recipesByName5_route = Route("GET",
+  // @LINE:17
+  private[this] lazy val controllers_RecipesController_recipesByName6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recipe/name/"), DynamicPart("name", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_RecipesController_recipesByName5_invoker = createInvoker(
-    RecipesController_2.recipesByName(fakeValue[String]),
+  private[this] lazy val controllers_RecipesController_recipesByName6_invoker = createInvoker(
+    RecipesController_0.recipesByName(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.RecipesController",
@@ -171,12 +193,12 @@ class Routes(
     )
   )
 
-  // @LINE:19
-  private[this] lazy val controllers_RecipesController_remove6_route = Route("DELETE",
+  // @LINE:20
+  private[this] lazy val controllers_RecipesController_remove7_route = Route("DELETE",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recipe/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_RecipesController_remove6_invoker = createInvoker(
-    RecipesController_2.remove(fakeValue[Long]),
+  private[this] lazy val controllers_RecipesController_remove7_invoker = createInvoker(
+    RecipesController_0.remove(fakeValue[Long]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.RecipesController",
@@ -188,12 +210,12 @@ class Routes(
     )
   )
 
-  // @LINE:22
-  private[this] lazy val controllers_RecipesController_update7_route = Route("PUT",
+  // @LINE:23
+  private[this] lazy val controllers_RecipesController_update8_route = Route("PUT",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recipe/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_RecipesController_update7_invoker = createInvoker(
-    RecipesController_2.update(fakeValue[Long]),
+  private[this] lazy val controllers_RecipesController_update8_invoker = createInvoker(
+    RecipesController_0.update(fakeValue[Long]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.RecipesController",
@@ -205,12 +227,12 @@ class Routes(
     )
   )
 
-  // @LINE:25
-  private[this] lazy val controllers_RecipesController_recipesByTag8_route = Route("GET",
+  // @LINE:26
+  private[this] lazy val controllers_RecipesController_recipesByTag9_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recipe/tag/"), DynamicPart("name", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_RecipesController_recipesByTag8_invoker = createInvoker(
-    RecipesController_2.recipesByTag(fakeValue[String]),
+  private[this] lazy val controllers_RecipesController_recipesByTag9_invoker = createInvoker(
+    RecipesController_0.recipesByTag(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.RecipesController",
@@ -222,12 +244,12 @@ class Routes(
     )
   )
 
-  // @LINE:27
-  private[this] lazy val controllers_IngredientsController_list9_route = Route("GET",
+  // @LINE:28
+  private[this] lazy val controllers_IngredientsController_list10_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("ingredients")))
   )
-  private[this] lazy val controllers_IngredientsController_list9_invoker = createInvoker(
-    IngredientsController_1.list,
+  private[this] lazy val controllers_IngredientsController_list10_invoker = createInvoker(
+    IngredientsController_2.list,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.IngredientsController",
@@ -239,12 +261,12 @@ class Routes(
     )
   )
 
-  // @LINE:29
-  private[this] lazy val controllers_TasksController_list10_route = Route("GET",
+  // @LINE:30
+  private[this] lazy val controllers_TasksController_list11_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tasks")))
   )
-  private[this] lazy val controllers_TasksController_list10_invoker = createInvoker(
-    TasksController_3.list,
+  private[this] lazy val controllers_TasksController_list11_invoker = createInvoker(
+    TasksController_4.list,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.TasksController",
@@ -262,67 +284,73 @@ class Routes(
     // @LINE:1
     case controllers_Assets_versioned0_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned0_invoker.call(Assets_0.versioned(path, file))
+        controllers_Assets_versioned0_invoker.call(Assets_3.versioned(path, file))
       }
   
-    // @LINE:4
-    case controllers_RecipesController_create1_route(params) =>
+    // @LINE:2
+    case controllers_App_index1_route(params) =>
       call { 
-        controllers_RecipesController_create1_invoker.call(RecipesController_2.create)
+        controllers_App_index1_invoker.call(App_1.index())
       }
   
-    // @LINE:7
-    case controllers_RecipesController_retrieveCache2_route(params) =>
-      call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_RecipesController_retrieveCache2_invoker.call(RecipesController_2.retrieveCache(id))
-      }
-  
-    // @LINE:10
-    case controllers_RecipesController_list3_route(params) =>
+    // @LINE:5
+    case controllers_RecipesController_create2_route(params) =>
       call { 
-        controllers_RecipesController_list3_invoker.call(RecipesController_2.list)
+        controllers_RecipesController_create2_invoker.call(RecipesController_0.create)
       }
   
-    // @LINE:13
-    case controllers_RecipesController_retrieve4_route(params) =>
+    // @LINE:8
+    case controllers_RecipesController_retrieveCache3_route(params) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_RecipesController_retrieve4_invoker.call(RecipesController_2.retrieve(id))
+        controllers_RecipesController_retrieveCache3_invoker.call(RecipesController_0.retrieveCache(id))
       }
   
-    // @LINE:16
-    case controllers_RecipesController_recipesByName5_route(params) =>
+    // @LINE:11
+    case controllers_RecipesController_list4_route(params) =>
+      call { 
+        controllers_RecipesController_list4_invoker.call(RecipesController_0.list)
+      }
+  
+    // @LINE:14
+    case controllers_RecipesController_retrieve5_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_RecipesController_retrieve5_invoker.call(RecipesController_0.retrieve(id))
+      }
+  
+    // @LINE:17
+    case controllers_RecipesController_recipesByName6_route(params) =>
       call(params.fromPath[String]("name", None)) { (name) =>
-        controllers_RecipesController_recipesByName5_invoker.call(RecipesController_2.recipesByName(name))
+        controllers_RecipesController_recipesByName6_invoker.call(RecipesController_0.recipesByName(name))
       }
   
-    // @LINE:19
-    case controllers_RecipesController_remove6_route(params) =>
+    // @LINE:20
+    case controllers_RecipesController_remove7_route(params) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_RecipesController_remove6_invoker.call(RecipesController_2.remove(id))
+        controllers_RecipesController_remove7_invoker.call(RecipesController_0.remove(id))
       }
   
-    // @LINE:22
-    case controllers_RecipesController_update7_route(params) =>
+    // @LINE:23
+    case controllers_RecipesController_update8_route(params) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
-        controllers_RecipesController_update7_invoker.call(RecipesController_2.update(id))
+        controllers_RecipesController_update8_invoker.call(RecipesController_0.update(id))
       }
   
-    // @LINE:25
-    case controllers_RecipesController_recipesByTag8_route(params) =>
+    // @LINE:26
+    case controllers_RecipesController_recipesByTag9_route(params) =>
       call(params.fromPath[String]("name", None)) { (name) =>
-        controllers_RecipesController_recipesByTag8_invoker.call(RecipesController_2.recipesByTag(name))
+        controllers_RecipesController_recipesByTag9_invoker.call(RecipesController_0.recipesByTag(name))
       }
   
-    // @LINE:27
-    case controllers_IngredientsController_list9_route(params) =>
+    // @LINE:28
+    case controllers_IngredientsController_list10_route(params) =>
       call { 
-        controllers_IngredientsController_list9_invoker.call(IngredientsController_1.list)
+        controllers_IngredientsController_list10_invoker.call(IngredientsController_2.list)
       }
   
-    // @LINE:29
-    case controllers_TasksController_list10_route(params) =>
+    // @LINE:30
+    case controllers_TasksController_list11_route(params) =>
       call { 
-        controllers_TasksController_list10_invoker.call(TasksController_3.list)
+        controllers_TasksController_list11_invoker.call(TasksController_4.list)
       }
   }
 }
