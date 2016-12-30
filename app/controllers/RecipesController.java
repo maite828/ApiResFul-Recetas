@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 
 import helpers.ControllerHelper;
-import models.Ingrediente;
+import models.Ingredient;
 import models.Recipe;
 import models.Tag;
 import play.cache.CacheApi;
@@ -44,15 +44,15 @@ public class RecipesController extends Controller {
 		Recipe recipe = new Recipe();
 		recipe.setName(json.get("name").asText().trim().toUpperCase());
 
-		ArrayNode arrayIngr = (ArrayNode) json.get("ingredientes");
+		ArrayNode arrayIngr = (ArrayNode) json.get("ingredient");
 		if (arrayIngr.isNull()) {
 			return Results.badRequest("incorrect data");
 		}else{
 			for (JsonNode nodeIng : arrayIngr) {
-				Ingrediente ingrediente = new Ingrediente();
-				ingrediente.setName(nodeIng.get("name").asText().trim().toLowerCase());
-				ingrediente.save();
-				recipe.addIngrRec(ingrediente);
+				Ingredient ingredient = new Ingredient();
+				ingredient.setName(nodeIng.get("name").asText().trim().toLowerCase());
+				ingredient.save();
+				recipe.addIngrRec(ingredient);
 			}
 		}
 		
@@ -139,22 +139,22 @@ public class RecipesController extends Controller {
 		 * (body.has("description")) {
 		 * recipe.setDescription(body.get("description").asText());
 		 */
-		if (json.has("ingredientes")) {
-			List<Ingrediente> ingredientes = new LinkedList<>();
-			ArrayNode array = (ArrayNode) json.get("ingredientes");
+		if (json.has("ingredient")) {
+			List<Ingredient> ingredients = new LinkedList<>();
+			ArrayNode array = (ArrayNode) json.get("ingredient");
 			for (JsonNode nodeIng : array) {
 
-				List<Ingrediente> ingredientes2 = Ingrediente.findByName(nodeIng.get("name").asText().trim().toLowerCase());
-				if (ingredientes2.isEmpty()) {
-					Ingrediente ingrediente = new Ingrediente();
-					ingrediente.setName(nodeIng.get("name").asText().trim().toLowerCase());
-					ingrediente.save();
-					ingredientes.add(ingrediente);
+				List<Ingredient> ingredients2 = Ingredient.findByName(nodeIng.get("name").asText().trim().toLowerCase());
+				if (ingredients2.isEmpty()) {
+					Ingredient ingredient = new Ingredient();
+					ingredient.setName(nodeIng.get("name").asText().trim().toLowerCase());
+					ingredient.save();
+					ingredients.add(ingredient);
 				} else {
-					ingredientes.add(ingredientes2.get(0));
+					ingredients.add(ingredients2.get(0));
 				}
 			}
-			recipe.setIngredientes(ingredientes);
+			recipe.setIngredients(ingredients);
 		}
 		
 		if (json.has("tags")) {

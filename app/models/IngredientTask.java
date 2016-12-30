@@ -5,7 +5,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 import com.avaje.ebean.Model;
-import com.avaje.ebean.Model.Find;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import play.data.validation.Constraints.Required;

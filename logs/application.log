@@ -1,165 +1,22 @@
-2016-12-30 01:31:01,719 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-12-30 01:31:01,730 [INFO] from com.zaxxer.hikari.HikariDataSource in ForkJoinPool-1-worker-1 - HikariPool-1 - Started.
-2016-12-30 01:31:01,929 [INFO] from org.jdbcdslog.ConnectionLogger in ForkJoinPool-1-worker-1 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:01,944 [INFO] from org.jdbcdslog.ConnectionLogger in ForkJoinPool-1-worker-1 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:01,944 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:~/recetario.db
-2016-12-30 01:31:02,039 [DEBUG] from com.avaje.ebean.config.PropertyMapLoader in ForkJoinPool-1-worker-1 - ebean.properties found in classpath
-2016-12-30 01:31:02,104 [INFO] from org.reflections.Reflections in ForkJoinPool-1-worker-1 - Reflections took 44 ms to scan 2 urls, producing 20 keys and 283 values 
-2016-12-30 01:31:02,120 [DEBUG] from com.avaje.ebean.config.PropertyMapLoader in ForkJoinPool-1-worker-1 - ebean.properties found in classpath
-2016-12-30 01:31:02,136 [INFO] from org.jdbcdslog.ConnectionLogger in ForkJoinPool-1-worker-1 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:02,140 [INFO] from org.jdbcdslog.ConnectionLogger in ForkJoinPool-1-worker-1 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:02,152 [INFO] from com.avaje.ebean.internal.DefaultContainer in ForkJoinPool-1-worker-1 - DatabasePlatform name:default platform:h2
-2016-12-30 01:31:02,456 [INFO] from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager in ForkJoinPool-1-worker-1 - Entities enhanced[5]
-2016-12-30 01:31:02,592 [INFO] from org.jdbcdslog.ConnectionLogger in ForkJoinPool-1-worker-1 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:02,592 [INFO] from org.jdbcdslog.ConnectionLogger in ForkJoinPool-1-worker-1 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:02,635 [INFO] from org.jdbcdslog.StatementLogger in ForkJoinPool-1-worker-1 - java.sql.Statement.executeQuery: select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%';
-2016-12-30 01:31:02,638 [INFO] from org.jdbcdslog.StatementLogger in ForkJoinPool-1-worker-1 - java.sql.Statement.executeQuery: 
+2016-12-30 02:32:19,391 [INFO] from application in ForkJoinPool-3-worker-1 - Creating Pool for datasource 'default'
+2016-12-30 02:32:19,400 [INFO] from com.zaxxer.hikari.HikariDataSource in ForkJoinPool-3-worker-1 - HikariPool-5 - Started.
+2016-12-30 02:32:19,435 [INFO] from org.jdbcdslog.ConnectionLogger in ForkJoinPool-3-worker-1 - connect to URL jdbc:h2:~/recetario.db for user SA
+2016-12-30 02:32:19,442 [INFO] from org.jdbcdslog.ConnectionLogger in ForkJoinPool-3-worker-1 - connect to URL jdbc:h2:~/recetario.db for user SA
+2016-12-30 02:32:19,442 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-3-worker-1 - Database [default] connected at jdbc:h2:~/recetario.db
+2016-12-30 02:32:19,669 [DEBUG] from com.avaje.ebean.config.PropertyMapLoader in ForkJoinPool-3-worker-1 - ebean.properties found in classpath
+2016-12-30 02:32:19,727 [INFO] from org.reflections.Reflections in ForkJoinPool-3-worker-1 - Reflections took 38 ms to scan 2 urls, producing 20 keys and 283 values 
+2016-12-30 02:32:19,737 [DEBUG] from com.avaje.ebean.config.PropertyMapLoader in ForkJoinPool-3-worker-1 - ebean.properties found in classpath
+2016-12-30 02:32:19,750 [INFO] from org.jdbcdslog.ConnectionLogger in ForkJoinPool-3-worker-1 - connect to URL jdbc:h2:~/recetario.db for user SA
+2016-12-30 02:32:19,753 [INFO] from org.jdbcdslog.ConnectionLogger in ForkJoinPool-3-worker-1 - connect to URL jdbc:h2:~/recetario.db for user SA
+2016-12-30 02:32:19,762 [INFO] from com.avaje.ebean.internal.DefaultContainer in ForkJoinPool-3-worker-1 - DatabasePlatform name:default platform:h2
+2016-12-30 02:32:19,936 [INFO] from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager in ForkJoinPool-3-worker-1 - Entities enhanced[5]
+2016-12-30 02:32:20,010 [INFO] from org.jdbcdslog.ConnectionLogger in ForkJoinPool-3-worker-1 - connect to URL jdbc:h2:~/recetario.db for user SA
+2016-12-30 02:32:20,010 [INFO] from org.jdbcdslog.ConnectionLogger in ForkJoinPool-3-worker-1 - connect to URL jdbc:h2:~/recetario.db for user SA
+2016-12-30 02:32:20,036 [INFO] from org.jdbcdslog.StatementLogger in ForkJoinPool-3-worker-1 - java.sql.Statement.executeQuery: select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%';
+2016-12-30 02:32:20,038 [INFO] from org.jdbcdslog.StatementLogger in ForkJoinPool-3-worker-1 - java.sql.Statement.executeQuery: 
             select id, hash, apply_script, revert_script from play_evolutions order by id
         ;
-2016-12-30 01:31:02,640 [INFO] from org.jdbcdslog.ResultSetLogger in ForkJoinPool-1-worker-1 - java.sql.ResultSet.next {1, 'f1c0fbcff547f1cce09b49c73f37ecb5a6353c2c', clob0: SPACE(3132 /* table: -3 id: 19 */), clob1: SPACE(1313 /* table: -3 id: 20 */)}
-2016-12-30 01:31:02,646 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Starting application at 2016-12-30T00:31:02.645Z
-2016-12-30 01:31:02,818 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-4 - Slf4jLogger started
-2016-12-30 01:31:02,828 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2016-12-30 01:31:02,929 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-2 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:02,966 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-2 - select t0.id c0, t0.name c1, t0.created_at c2 from receta t0;
-2016-12-30 01:31:02,969 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-2 - java.sql.ResultSet.next {44, 'albondigas', to_timestamp('2016-12-30 01:17:53.234', 'yyyy-MM-dd hh24:mi:ss.ff3')}
-2016-12-30 01:31:02,972 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-2 - java.sql.ResultSet.next {45, 'pasta boloñesa', to_timestamp('2016-12-30 01:18:13.642', 'yyyy-MM-dd hh24:mi:ss.ff3')}
-2016-12-30 01:31:31,729 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-5 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:31,730 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - select t0.id c0, t0.name c1, t0.created_at c2 from receta t0 where t0.id = 44  ;
-2016-12-30 01:31:31,731 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {44, 'albondigas', to_timestamp('2016-12-30 01:17:53.234', 'yyyy-MM-dd hh24:mi:ss.ff3')}
-2016-12-30 01:31:31,734 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-5 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:31,740 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - delete from receta_ingrediente where receta_id = 44;
-2016-12-30 01:31:31,743 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - delete from receta_tag where receta_id = 44;
-2016-12-30 01:31:31,747 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - delete from receta where id=44;
-2016-12-30 01:31:31,750 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-5 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:31,750 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - select t0.id c0, t0.name c1, t0.created_at c2 from receta t0;
-2016-12-30 01:31:31,750 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {45, 'pasta boloñesa', to_timestamp('2016-12-30 01:18:13.642', 'yyyy-MM-dd hh24:mi:ss.ff3')}
-2016-12-30 01:31:35,760 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-7 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:35,760 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-7 - select t0.id c0, t0.name c1, t0.created_at c2 from receta t0 where t0.id = 45  ;
-2016-12-30 01:31:35,761 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-7 - java.sql.ResultSet.next {45, 'pasta boloñesa', to_timestamp('2016-12-30 01:18:13.642', 'yyyy-MM-dd hh24:mi:ss.ff3')}
-2016-12-30 01:31:35,761 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-7 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:35,764 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-7 - delete from receta_ingrediente where receta_id = 45;
-2016-12-30 01:31:35,767 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-7 - delete from receta_tag where receta_id = 45;
-2016-12-30 01:31:35,768 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-7 - delete from receta where id=45;
-2016-12-30 01:31:35,769 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-7 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:35,769 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-7 - select t0.id c0, t0.name c1, t0.created_at c2 from receta t0;
-2016-12-30 01:31:54,826 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-5 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:54,832 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval union select ingrediente_seq.nextval;
-2016-12-30 01:31:54,833 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {161}
-2016-12-30 01:31:54,833 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {162}
-2016-12-30 01:31:54,833 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {163}
-2016-12-30 01:31:54,833 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {164}
-2016-12-30 01:31:54,833 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {165}
-2016-12-30 01:31:54,833 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {166}
-2016-12-30 01:31:54,833 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {167}
-2016-12-30 01:31:54,833 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {168}
-2016-12-30 01:31:54,833 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {169}
-2016-12-30 01:31:54,833 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {170}
-2016-12-30 01:31:54,834 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {171}
-2016-12-30 01:31:54,834 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {172}
-2016-12-30 01:31:54,834 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {173}
-2016-12-30 01:31:54,834 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {174}
-2016-12-30 01:31:54,834 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {175}
-2016-12-30 01:31:54,834 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {176}
-2016-12-30 01:31:54,834 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {177}
-2016-12-30 01:31:54,834 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {178}
-2016-12-30 01:31:54,834 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {179}
-2016-12-30 01:31:54,834 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {180}
-2016-12-30 01:31:54,837 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - insert into ingrediente (id, name) values (161,'pasta larga');
-2016-12-30 01:31:54,839 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-5 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:54,839 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - insert into ingrediente (id, name) values (162,'tomate');
-2016-12-30 01:31:54,839 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-5 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:54,840 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - insert into ingrediente (id, name) values (163,'carne');
-2016-12-30 01:31:54,840 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-5 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:54,845 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval union select tag_seq.nextval;
-2016-12-30 01:31:54,845 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {141}
-2016-12-30 01:31:54,845 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {142}
-2016-12-30 01:31:54,845 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {143}
-2016-12-30 01:31:54,845 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {144}
-2016-12-30 01:31:54,845 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {145}
-2016-12-30 01:31:54,845 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {146}
-2016-12-30 01:31:54,845 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {147}
-2016-12-30 01:31:54,845 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {148}
-2016-12-30 01:31:54,845 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {149}
-2016-12-30 01:31:54,845 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {150}
-2016-12-30 01:31:54,845 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {151}
-2016-12-30 01:31:54,846 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {152}
-2016-12-30 01:31:54,846 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {153}
-2016-12-30 01:31:54,846 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {154}
-2016-12-30 01:31:54,846 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {155}
-2016-12-30 01:31:54,846 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {156}
-2016-12-30 01:31:54,846 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {157}
-2016-12-30 01:31:54,846 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {158}
-2016-12-30 01:31:54,846 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {159}
-2016-12-30 01:31:54,846 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {160}
-2016-12-30 01:31:54,847 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - insert into tag (id, name) values (141,'carbohidratos');
-2016-12-30 01:31:54,847 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-5 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:54,847 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - insert into tag (id, name) values (142,'facil');
-2016-12-30 01:31:54,848 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-5 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:31:54,850 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval union select receta_seq.nextval;
-2016-12-30 01:31:54,850 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {65}
-2016-12-30 01:31:54,850 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {66}
-2016-12-30 01:31:54,850 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {67}
-2016-12-30 01:31:54,850 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {68}
-2016-12-30 01:31:54,850 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {69}
-2016-12-30 01:31:54,850 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {70}
-2016-12-30 01:31:54,850 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {71}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {72}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {73}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {74}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {75}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {76}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {77}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {78}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {79}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {80}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {61}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {62}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {63}
-2016-12-30 01:31:54,851 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-5 - java.sql.ResultSet.next {64}
-2016-12-30 01:31:54,852 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - insert into receta (id, name, created_at) values (65,'PASTA BOLOÑESA',to_timestamp('2016-12-30 01:31:54.851', 'yyyy-MM-dd hh24:mi:ss.ff3'));
-2016-12-30 01:31:54,854 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - insert into receta_ingrediente (receta_id, ingrediente_id) values (65, 161);
-2016-12-30 01:31:54,855 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - insert into receta_ingrediente (receta_id, ingrediente_id) values (65, 162);
-2016-12-30 01:31:54,855 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - insert into receta_ingrediente (receta_id, ingrediente_id) values (65, 163);
-2016-12-30 01:31:54,856 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - insert into receta_tag (receta_id, tag_id) values (65, 141);
-2016-12-30 01:31:54,856 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-5 - insert into receta_tag (receta_id, tag_id) values (65, 142);
-2016-12-30 01:32:11,998 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-8 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:32:11,999 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-8 - insert into ingrediente (id, name) values (164,'tomate');
-2016-12-30 01:32:11,999 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-8 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:32:12,000 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-8 - insert into ingrediente (id, name) values (165,'cebolla');
-2016-12-30 01:32:12,000 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-8 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:32:12,001 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-8 - insert into ingrediente (id, name) values (166,'pan rallado');
-2016-12-30 01:32:12,001 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-8 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:32:12,002 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-8 - insert into tag (id, name) values (143,'proteinas');
-2016-12-30 01:32:12,002 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-8 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:32:12,002 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-8 - insert into tag (id, name) values (144,'facil');
-2016-12-30 01:32:12,003 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-8 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:32:12,003 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-8 - insert into receta (id, name, created_at) values (66,'ALBONDIGAS',to_timestamp('2016-12-30 01:32:12.003', 'yyyy-MM-dd hh24:mi:ss.ff3'));
-2016-12-30 01:32:12,004 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-8 - insert into receta_ingrediente (receta_id, ingrediente_id) values (66, 164);
-2016-12-30 01:32:12,005 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-8 - insert into receta_ingrediente (receta_id, ingrediente_id) values (66, 165);
-2016-12-30 01:32:12,005 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-8 - insert into receta_ingrediente (receta_id, ingrediente_id) values (66, 166);
-2016-12-30 01:32:12,006 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-8 - insert into receta_tag (receta_id, tag_id) values (66, 143);
-2016-12-30 01:32:12,006 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-8 - insert into receta_tag (receta_id, tag_id) values (66, 144);
-2016-12-30 01:32:44,240 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-9 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:32:44,241 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-9 - select t0.id c0, t0.name c1, t0.created_at c2 from receta t0;
-2016-12-30 01:32:44,241 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-9 - java.sql.ResultSet.next {65, 'PASTA BOLOÑESA', to_timestamp('2016-12-30 01:31:54.851', 'yyyy-MM-dd hh24:mi:ss.ff3')}
-2016-12-30 01:32:44,241 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-9 - java.sql.ResultSet.next {66, 'ALBONDIGAS', to_timestamp('2016-12-30 01:32:12.003', 'yyyy-MM-dd hh24:mi:ss.ff3')}
-2016-12-30 01:32:57,730 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-11 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:32:57,732 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-11 - select t0.id c0, t0.name c1, t0.created_at c2 from receta t0 where t0.name = 'ALBONDIGAS' ;
-2016-12-30 01:32:57,733 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-11 - java.sql.ResultSet.next {66, 'ALBONDIGAS', to_timestamp('2016-12-30 01:32:12.003', 'yyyy-MM-dd hh24:mi:ss.ff3')}
-2016-12-30 01:32:57,741 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-11 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:32:57,749 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-11 - select int_.receta_id c0, t0.id c1, t0.name c2 from ingrediente t0 left outer join receta_ingrediente int_ on int_.ingrediente_id = t0.id  where (int_.receta_id) in (66) ;
-2016-12-30 01:32:57,749 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-11 - java.sql.ResultSet.next {66, 164, 'tomate'}
-2016-12-30 01:32:57,749 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-11 - java.sql.ResultSet.next {66, 165, 'cebolla'}
-2016-12-30 01:32:57,750 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-11 - java.sql.ResultSet.next {66, 166, 'pan rallado'}
-2016-12-30 01:32:57,751 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-11 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:32:57,753 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-11 - select int_.receta_id c0, t0.id c1, t0.name c2 from tag t0 left outer join receta_tag int_ on int_.tag_id = t0.id  where (int_.receta_id) in (66) ;
-2016-12-30 01:32:57,753 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-11 - java.sql.ResultSet.next {66, 143, 'proteinas'}
-2016-12-30 01:32:57,754 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-11 - java.sql.ResultSet.next {66, 144, 'facil'}
-2016-12-30 01:33:13,093 [INFO] from org.jdbcdslog.ConnectionLogger in application-akka.actor.default-dispatcher-3 - connect to URL jdbc:h2:~/recetario.db for user SA
-2016-12-30 01:33:13,094 [INFO] from org.jdbcdslog.StatementLogger in application-akka.actor.default-dispatcher-3 - select t0.id c0, t0.name c1, t0.created_at c2 from receta t0 where t0.name = 'ALBONDIGAS' ;
-2016-12-30 01:33:13,094 [INFO] from org.jdbcdslog.ResultSetLogger in application-akka.actor.default-dispatcher-3 - java.sql.ResultSet.next {66, 'ALBONDIGAS', to_timestamp('2016-12-30 01:32:12.003', 'yyyy-MM-dd hh24:mi:ss.ff3')}
-2016-12-30 01:40:00,860 [INFO] from application in pool-5-thread-8 - ApplicationTimer demo: Stopping application at 2016-12-30T00:40:00.860Z after 538s.
-2016-12-30 01:40:00,864 [INFO] from application in pool-5-thread-8 - Shutting down connection pool.
-2016-12-30 01:40:00,864 [INFO] from com.zaxxer.hikari.pool.HikariPool in pool-5-thread-8 - HikariPool-1 - Close initiated...
-2016-12-30 01:40:00,873 [INFO] from com.zaxxer.hikari.pool.HikariPool in pool-5-thread-8 - HikariPool-1 - Closed.
+2016-12-30 02:32:20,039 [INFO] from org.jdbcdslog.ResultSetLogger in ForkJoinPool-3-worker-1 - java.sql.ResultSet.next {1, 'a7deed47df10b48c4609936aca74c91bc7b8ded1', clob10: SPACE(3112 /* table: -3 id: 31 */), clob11: SPACE(1302 /* table: -3 id: 32 */)}
+2016-12-30 02:32:20,044 [INFO] from application in ForkJoinPool-3-worker-1 - ApplicationTimer demo: Starting application at 2016-12-30T01:32:20.043Z
+2016-12-30 02:32:20,216 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-5 - Slf4jLogger started
+2016-12-30 02:32:20,240 [INFO] from play.api.Play in ForkJoinPool-3-worker-1 - Application started (Dev)

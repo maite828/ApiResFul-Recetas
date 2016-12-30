@@ -3,11 +3,11 @@
 <recipe id="@rec.getId()">
 	<name>@rec.getName</name>
 	<createdAt>@rec.getDateCreation</createdAt>
-	<ingredientes>
-	@for(i  <- rec.getIngredientes){
-		@ingrediente(i)
+	<ingredients>
+	@for(i  <- rec.getIngredients){
+		@ingredient(i)
 	}
-	</ingredientes>
+	</ingredients>
 	<tags>
 	@for(t  <- rec.getTags){
 		@tag(t)

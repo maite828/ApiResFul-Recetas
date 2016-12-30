@@ -9,7 +9,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import com.avaje.ebean.Model;
-import com.avaje.ebean.Model.Find;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import play.data.validation.Constraints.Required;
@@ -30,7 +29,7 @@ public class Task extends Model{
 	
 	@JsonIgnore
 	@ManyToOne
-	public Receta recipe;
+	public Recipe recipe;
 	
 	public static final Find<Long,Task> find = new Find<Long,Task>(){};
 	
