@@ -9,6 +9,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 import com.avaje.ebean.Model;
 import com.avaje.ebean.annotation.CreatedTimestamp;
@@ -28,17 +29,24 @@ public class Recipe extends Model implements Serializable{
 	@JsonIgnore
 	private String name;
 	
+	@Required
+	@JsonIgnore
+	public Integer portions;
+	
 	@CreatedTimestamp
 	@JsonIgnore
 	private Timestamp createdAt;
 
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JsonIgnore
-	private List<Ingredient> ingredients;
+	public List<Ingredient> ingredients;
 	
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JsonIgnore
 	private List<Tag> tags;
+	
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="recipe")
+	public List<Task> tasks;
 	
 	private static final Find<Long, Recipe> find = new Find<Long, Recipe>() {};
 	
@@ -65,7 +73,13 @@ public class Recipe extends Model implements Serializable{
 	public void setDateCreation(Timestamp fechaCreacion) {
 		this.createdAt = fechaCreacion;
 	}
-	
+	public Integer getPortions() {
+		return portions;
+	}
+	public void setPortions(Integer portions) {
+		this.portions = portions;
+	}
+
 	//GESTIÓN RECETAS
  	public static List<Recipe> findAll() {
 		return find.all();
@@ -120,6 +134,7 @@ public class Recipe extends Model implements Serializable{
 		ObjectNode nodeRecipe = play.libs.Json.newObject();
 		nodeRecipe.put("id", this.id);
 		nodeRecipe.put("name", this.name);
+		nodeRecipe.put("portions", this.portions);
 		nodeRecipe.put("date", String.valueOf(this.createdAt));
 		return nodeRecipe;	
 	}

@@ -67,7 +67,7 @@ Seq[Any](format.raw/*1.32*/("""
 object main extends main_Scope0.main
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 30 02:52:23 CET 2016
+                  DATE: Fri Dec 30 07:17:31 CET 2016
                   SOURCE: /Users/mayteecheverry/MyGitRepos/play/Recetas/app/views/main.scala.html
                   HASH: acb5bfb8d47f7cfd6826735d5ee184d84283831a
                   MATRIX: 748->1|873->31|901->33|988->94|1013->99|1366->425|1381->431|1442->470|1527->528|1555->535

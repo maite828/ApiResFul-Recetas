@@ -13,13 +13,18 @@ import models.Ingredient;
 import models.Recipe;
 import models.Tag;
 import play.cache.CacheApi;
+import play.data.Form;
+import play.data.FormFactory;
+import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Http.Request;
 import play.mvc.Result;
 import play.mvc.Results;
 
 public class RecipesController extends Controller {
-
+	@Inject
+	private FormFactory f;
+	
 	@Inject
 	private CacheApi cache;
 	
@@ -27,23 +32,22 @@ public class RecipesController extends Controller {
 	public Result list() {
 		List<Recipe> recipes = Recipe.findAll();
 		if (recipes.isEmpty()) {
-			return Results.notFound();
+			return Results.badRequest("No data");
 		}
 		
 		Request request = request();
 		return ControllerHelper.recipesJsonXml(request,recipes);
 	}
-	
 
-	public Result create() {
+	public Result createJson() {
 		JsonNode json = request().body().asJson();
 		if (json.isNull()) {
 			return Results.badRequest("incorrect data");
 		}
-
+		
 		Recipe recipe = new Recipe();
 		recipe.setName(json.get("name").asText().trim().toUpperCase());
-
+		//Ingredients
 		ArrayNode arrayIngr = (ArrayNode) json.get("ingredients");
 		if (arrayIngr.isNull()) {
 			return Results.badRequest("incorrect data");
@@ -55,7 +59,7 @@ public class RecipesController extends Controller {
 				recipe.addIngrRec(ingredient);
 			}
 		}
-		
+		//tags
 		ArrayNode arrayTags = (ArrayNode) json.get("tags");
 		if (arrayTags.isNull()) {
 			return Results.badRequest("incorrect data");
@@ -72,6 +76,19 @@ public class RecipesController extends Controller {
 		Request request = request();
 		return ControllerHelper.recipeJsonXml(request,recipe);
 	}
+	
+	public Result createFactory() {
+		Form<Recipe> form = f.form(Recipe.class).bindFromRequest();
+		if (form.hasErrors()) {
+			return badRequest(ControllerHelper.errorJson(2, "Datos incorrectos", form.errorsAsJson()));
+		}
+		Recipe recipe = form.get();
+		recipe.save();
+		if(request().accepts("application/json")){
+    		return ok(Json.toJson(recipe));
+    	}
+    	return badRequest("Unsupported format");
+    }
 	
 
 	public Result retrieve(Long id) {
@@ -133,15 +150,14 @@ public class RecipesController extends Controller {
 		if (json.has("name")) {
 			recipe.setName(json.get("name").asText().trim().toLowerCase());
 		}
-		/*
-		 * if (body.has("preparationTime")) {
-		 * recipe.setPreparationTime(body.get("preparationTime").asText()); } if
-		 * (body.has("description")) {
-		 * recipe.setDescription(body.get("description").asText());
-		 */
-		if (json.has("ingredient")) {
+		
+		if (json.has("portions")) {
+			recipe.setPortions(json.get("portions").asInt());
+		} 
+		 
+		if (json.has("ingredients")) {
 			List<Ingredient> ingredients = new LinkedList<>();
-			ArrayNode array = (ArrayNode) json.get("ingredient");
+			ArrayNode array = (ArrayNode) json.get("ingredients");
 			for (JsonNode nodeIng : array) {
 
 				List<Ingredient> ingredients2 = Ingredient.findByName(nodeIng.get("name").asText().trim().toLowerCase());

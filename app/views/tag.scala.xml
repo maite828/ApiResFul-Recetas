@@ -1,5 +1,5 @@
-@(tag: Tag)
+@(t: Tag)
 
 <tag>
-	<name>@tag.getName</name>
+	<name>@t.getName</name>
 </tag>

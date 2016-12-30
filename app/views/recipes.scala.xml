@@ -1,11 +1,12 @@
 @(recipes: List[Recipe])
 <!-- lista -->
 <recipes>
-	@for(item <- recipes){
-		<recipe id="@item.getId()">
-			<name>@item.getName</name>
-			<createdAt>@item.getDateCreation</createdAt>	
-		</recipe>
+	@for(r <- recipes){
+	<recipe id="@r.getId()">
+		<name>@r.getName</name>
+		<createdAt>@r.getDateCreation</createdAt>
+		<portions>@r.getPortions</portions>	
+	</recipe>
 	}
 </recipes>	
 

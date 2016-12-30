@@ -1,15 +1,15 @@
-@(rec: Recipe)
+@(r: Recipe)
 
-<recipe id="@rec.getId()">
-	<name>@rec.getName</name>
-	<createdAt>@rec.getDateCreation</createdAt>
+<recipe id="@r.getId()">
+	<name>@r.getName</name>
+	<createdAt>@r.getDateCreation</createdAt>
 	<ingredients>
-	@for(i  <- rec.getIngredients){
+	@for(i  <- r.getIngredients){
 		@ingredient(i)
 	}
 	</ingredients>
 	<tags>
-	@for(t  <- rec.getTags){
+	@for(t  <- r.getTags){
 		@tag(t)
 	}
 	</tags>

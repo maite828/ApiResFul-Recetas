@@ -24,23 +24,23 @@ import play.mvc.Http.Context.Implicit._
 class recipe extends BaseScalaTemplate[play.twirl.api.XmlFormat.Appendable,Format[play.twirl.api.XmlFormat.Appendable]](play.twirl.api.XmlFormat) with play.twirl.api.Template1[Recipe,play.twirl.api.XmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(rec: Recipe):play.twirl.api.XmlFormat.Appendable = {
+  def apply/*1.2*/(r: Recipe):play.twirl.api.XmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.15*/("""
+Seq[Any](format.raw/*1.13*/("""
 
-"""),format.raw/*3.1*/("""<recipe id=""""),_display_(/*3.14*/rec/*3.17*/.getId()),format.raw/*3.25*/("""">
-	<name>"""),_display_(/*4.9*/rec/*4.12*/.getName),format.raw/*4.20*/("""</name>
-	<createdAt>"""),_display_(/*5.14*/rec/*5.17*/.getDateCreation),format.raw/*5.33*/("""</createdAt>
+"""),format.raw/*3.1*/("""<recipe id=""""),_display_(/*3.14*/r/*3.15*/.getId()),format.raw/*3.23*/("""">
+	<name>"""),_display_(/*4.9*/r/*4.10*/.getName),format.raw/*4.18*/("""</name>
+	<createdAt>"""),_display_(/*5.14*/r/*5.15*/.getDateCreation),format.raw/*5.31*/("""</createdAt>
 	<ingredients>
-	"""),_display_(/*7.3*/for(i  <- rec.getIngredients) yield /*7.32*/{_display_(Seq[Any](format.raw/*7.33*/("""
+	"""),_display_(/*7.3*/for(i  <- r.getIngredients) yield /*7.30*/{_display_(Seq[Any](format.raw/*7.31*/("""
 		"""),_display_(/*8.4*/ingredient(i)),format.raw/*8.17*/("""
 	""")))}),format.raw/*9.3*/("""
 	"""),format.raw/*10.2*/("""</ingredients>
 	<tags>
-	"""),_display_(/*12.3*/for(t  <- rec.getTags) yield /*12.25*/{_display_(Seq[Any](format.raw/*12.26*/("""
+	"""),_display_(/*12.3*/for(t  <- r.getTags) yield /*12.23*/{_display_(Seq[Any](format.raw/*12.24*/("""
 		"""),_display_(/*13.4*/tag(t)),format.raw/*13.10*/("""
 	""")))}),format.raw/*14.3*/("""
 	"""),format.raw/*15.2*/("""</tags>
@@ -49,9 +49,9 @@ Seq[Any](format.raw/*1.15*/("""
     }
   }
 
-  def render(rec:Recipe): play.twirl.api.XmlFormat.Appendable = apply(rec)
+  def render(r:Recipe): play.twirl.api.XmlFormat.Appendable = apply(r)
 
-  def f:((Recipe) => play.twirl.api.XmlFormat.Appendable) = (rec) => apply(rec)
+  def f:((Recipe) => play.twirl.api.XmlFormat.Appendable) = (r) => apply(r)
 
   def ref: this.type = this
 
@@ -64,10 +64,10 @@ Seq[Any](format.raw/*1.15*/("""
 object recipe extends recipe_Scope0.recipe
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 30 02:52:23 CET 2016
+                  DATE: Fri Dec 30 07:17:31 CET 2016
                   SOURCE: /Users/mayteecheverry/MyGitRepos/play/Recetas/app/views/recipe.scala.xml
-                  HASH: baad77a9085b5b28cf50b6dbfde99e2c677d9bbd
-                  MATRIX: 741->1|848->14|876->16|915->29|926->32|954->40|990->51|1001->54|1029->62|1076->83|1087->86|1123->102|1178->132|1222->161|1260->162|1289->166|1322->179|1354->182|1383->184|1434->209|1472->231|1511->232|1541->236|1568->242|1601->245|1630->247
+                  HASH: 67ce18e674cc77fbe8a865f0b053875a70922d9d
+                  MATRIX: 741->1|846->12|874->14|913->27|922->28|950->36|986->47|995->48|1023->56|1070->77|1079->78|1115->94|1170->124|1212->151|1250->152|1279->156|1312->169|1344->172|1373->174|1424->199|1460->219|1499->220|1529->224|1556->230|1589->233|1618->235
                   LINES: 27->1|32->1|34->3|34->3|34->3|34->3|35->4|35->4|35->4|36->5|36->5|36->5|38->7|38->7|38->7|39->8|39->8|40->9|41->10|43->12|43->12|43->12|44->13|44->13|45->14|46->15
                   -- GENERATED --
               */

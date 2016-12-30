@@ -1,5 +1,6 @@
 package models;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -14,16 +15,14 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import play.data.validation.Constraints.Required;
 
 @Entity
-public class Task extends Model{
+public class Task extends Model implements Serializable{
 
 	@Id
 	public Long id;
 	
 	@Required
 	public String description;
-	
-	public Integer seconds;
-	
+		
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="task")
 	public List<IngredientTask> taskIngredients;
 	
@@ -32,8 +31,6 @@ public class Task extends Model{
 	public Recipe recipe;
 	
 	public static final Find<Long,Task> find = new Find<Long,Task>(){};
-	
-	//PHOTO?
 	
 	public static Task findById (Long id){
 		return find.byId(id);

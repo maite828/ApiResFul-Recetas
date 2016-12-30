@@ -24,23 +24,23 @@ import play.mvc.Http.Context.Implicit._
 class tag extends BaseScalaTemplate[play.twirl.api.XmlFormat.Appendable,Format[play.twirl.api.XmlFormat.Appendable]](play.twirl.api.XmlFormat) with play.twirl.api.Template1[Tag,play.twirl.api.XmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(tag: Tag):play.twirl.api.XmlFormat.Appendable = {
+  def apply/*1.2*/(t: Tag):play.twirl.api.XmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.12*/("""
+Seq[Any](format.raw/*1.10*/("""
 
 """),format.raw/*3.1*/("""<tag>
-	<name>"""),_display_(/*4.9*/tag/*4.12*/.getName),format.raw/*4.20*/("""</name>
+	<name>"""),_display_(/*4.9*/t/*4.10*/.getName),format.raw/*4.18*/("""</name>
 </tag>"""))
       }
     }
   }
 
-  def render(tag:Tag): play.twirl.api.XmlFormat.Appendable = apply(tag)
+  def render(t:Tag): play.twirl.api.XmlFormat.Appendable = apply(t)
 
-  def f:((Tag) => play.twirl.api.XmlFormat.Appendable) = (tag) => apply(tag)
+  def f:((Tag) => play.twirl.api.XmlFormat.Appendable) = (t) => apply(t)
 
   def ref: this.type = this
 
@@ -53,10 +53,10 @@ Seq[Any](format.raw/*1.12*/("""
 object tag extends tag_Scope0.tag
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 30 02:52:23 CET 2016
+                  DATE: Fri Dec 30 07:17:31 CET 2016
                   SOURCE: /Users/mayteecheverry/MyGitRepos/play/Recetas/app/views/tag.scala.xml
-                  HASH: 0dab98b9d7340a063d96db31e74a383c89d62ba6
-                  MATRIX: 732->1|836->11|864->13|903->27|914->30|942->38
+                  HASH: be2258631cb87187d6f7c65e083e6a8291abcc95
+                  MATRIX: 732->1|834->9|862->11|901->25|910->26|938->34
                   LINES: 27->1|32->1|34->3|35->4|35->4|35->4
                   -- GENERATED --
               */

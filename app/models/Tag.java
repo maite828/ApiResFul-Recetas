@@ -1,5 +1,6 @@
 package models;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
@@ -16,7 +17,7 @@ import play.data.validation.Constraints.Required;
 import play.libs.Json;
 
 @Entity
-public class Tag extends Model{
+public class Tag extends Model implements Serializable{
 	@Id
 	private Long id;
 	
