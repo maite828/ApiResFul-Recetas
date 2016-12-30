@@ -26,7 +26,7 @@ public class Tag extends Model{
     
 	@ManyToMany(mappedBy = "tags")
 	@JsonIgnore
-    public Set<Receta> recetas;
+    public Set<Recipe> recipes;
 	
 	private static final Find<Long,Tag> find =new Find<Long,Tag>(){};
 	
@@ -38,12 +38,12 @@ public class Tag extends Model{
 	}
     
 	//GESTIÓN TAGS
-	public void addReceta(Receta receta){
-		this.recetas.add(receta);
+	public void addRecipe(Recipe recipe){
+		this.recipes.add(recipe);
 	}
 
-	public static List<Tag> getByName(String tagName){
-		 return find.where().eq("name",tagName ).findList(); 
+	public static List<Tag> findByName(String name){
+		 return find.where().eq("name", name ).findList(); 
 	}
 	
 	public JsonNode toJson() {
@@ -56,6 +56,7 @@ public class Tag extends Model{
 		node.put("name", this.name);
 		return node;	
 	}
+	
 	@Override
 	public String toString() {
 		return "Tag [name=" + name + "]";

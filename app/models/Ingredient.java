@@ -17,7 +17,7 @@ import play.data.validation.Constraints.Required;
 import play.libs.Json;
 
 @Entity
-public class Ingrediente extends Model implements Serializable{
+public class Ingredient extends Model implements Serializable{
 	@Id
 	private Long id;
 
@@ -25,11 +25,11 @@ public class Ingrediente extends Model implements Serializable{
 	@JsonIgnore
 	private String name;
 
-	@ManyToMany(mappedBy =  "ingredientes")
+	@ManyToMany(mappedBy =  "ingredients")
 	@JsonIgnore
-	public Set<Receta> recetas;
+	public Set<Recipe> recipes;
 	
-	private static final Find<Long,Ingrediente> find =new Find<Long,Ingrediente>(){};
+	private static final Find<Long,Ingredient> find =new Find<Long,Ingredient>(){};
 
 	public Long getId() {
 		return id;
@@ -45,12 +45,12 @@ public class Ingrediente extends Model implements Serializable{
 	}
 	
 	//GESTIÓN INGREDIENTE
-	public static List<Ingrediente> getByName(String ingrediente){
-		 return find.where().eq("name",ingrediente ).findList(); 
+	public static List<Ingredient> findByName(String ingredient){
+		 return find.where().eq("name",ingredient ).findList(); 
 	}
 	
-	public void addReceta(Receta receta){
-		this.recetas.add(receta);
+	public void addRecipe(Recipe recipe){
+		this.recipes.add(recipe);
 	}
 
 	public JsonNode toJson() {
@@ -66,8 +66,7 @@ public class Ingrediente extends Model implements Serializable{
 	
 	@Override
 	public String toString() {
-		return "Ingrediente [id=" + id + ", name=" + name + "]";
-	}
-	
+		return "Ingredient [id=" + id + ", name=" + name + "]";
+	}	
 	
 }

@@ -35,10 +35,15 @@ Seq[Any](format.raw/*1.15*/("""
 	<name>"""),_display_(/*4.9*/rec/*4.12*/.getName),format.raw/*4.20*/("""</name>
 	<createdAt>"""),_display_(/*5.14*/rec/*5.17*/.getDateCreation),format.raw/*5.33*/("""</createdAt>
 	<ingredientes>
-	"""),_display_(/*7.3*/for(item  <- rec.getIngredientes) yield /*7.36*/{_display_(Seq[Any](format.raw/*7.37*/("""
-		"""),_display_(/*8.4*/ingrediente(item)),format.raw/*8.21*/("""
+	"""),_display_(/*7.3*/for(i  <- rec.getIngredientes) yield /*7.33*/{_display_(Seq[Any](format.raw/*7.34*/("""
+		"""),_display_(/*8.4*/ingrediente(i)),format.raw/*8.18*/("""
 	""")))}),format.raw/*9.3*/("""
 	"""),format.raw/*10.2*/("""</ingredientes>
+	<tags>
+	"""),_display_(/*12.3*/for(t  <- rec.getTags) yield /*12.25*/{_display_(Seq[Any](format.raw/*12.26*/("""
+		"""),_display_(/*13.4*/tag(t)),format.raw/*13.10*/("""
+	""")))}),format.raw/*14.3*/("""
+	"""),format.raw/*15.2*/("""</tags>
 </receta>"""))
       }
     }
@@ -59,11 +64,11 @@ Seq[Any](format.raw/*1.15*/("""
 object receta extends receta_Scope0.receta
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 28 22:19:41 CET 2016
+                  DATE: Fri Dec 30 01:03:30 CET 2016
                   SOURCE: /Users/mayteecheverry/MyGitRepos/play/Recetas/app/views/receta.scala.xml
-                  HASH: b8019c812249735a30d9555479a662bfb2affd02
-                  MATRIX: 741->1|848->14|876->16|915->29|926->32|954->40|990->51|1001->54|1029->62|1076->83|1087->86|1123->102|1179->133|1227->166|1265->167|1294->171|1331->188|1363->191|1392->193
-                  LINES: 27->1|32->1|34->3|34->3|34->3|34->3|35->4|35->4|35->4|36->5|36->5|36->5|38->7|38->7|38->7|39->8|39->8|40->9|41->10
+                  HASH: 1be1f460e67165c9dcfbf9ce26e0b192b9108c1b
+                  MATRIX: 741->1|848->14|876->16|915->29|926->32|954->40|990->51|1001->54|1029->62|1076->83|1087->86|1123->102|1179->133|1224->163|1262->164|1291->168|1325->182|1357->185|1386->187|1438->213|1476->235|1515->236|1545->240|1572->246|1605->249|1634->251
+                  LINES: 27->1|32->1|34->3|34->3|34->3|34->3|35->4|35->4|35->4|36->5|36->5|36->5|38->7|38->7|38->7|39->8|39->8|40->9|41->10|43->12|43->12|43->12|44->13|44->13|45->14|46->15
                   -- GENERATED --
               */
           

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Wed Dec 28 22:19:41 CET 2016
+// @DATE:Fri Dec 30 01:03:30 CET 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -11,31 +11,31 @@ import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamic
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:2
+// @LINE:1
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:4
-  class ReverseAssets(_prefix: => String) {
+  // @LINE:27
+  class ReverseIngredientesController(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:4
-    def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Assets.versioned",
+    // @LINE:27
+    def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.IngredientesController.list",
       """
-        function(file1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[Asset]].javascriptUnbind + """)("file", file1)})
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ingredientes"})
         }
       """
     )
   
   }
 
-  // @LINE:8
+  // @LINE:29
   class ReverseTasksController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -43,7 +43,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:8
+    // @LINE:29
     def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.TasksController.list",
       """
@@ -55,27 +55,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:2
-  class ReverseHomeController(_prefix: => String) {
-
-    def _defaultPrefix: String = {
-      if (_prefix.endsWith("/")) "" else "/"
-    }
-
-  
-    // @LINE:2
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.index",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + """"})
-        }
-      """
-    )
-  
-  }
-
-  // @LINE:11
+  // @LINE:4
   class ReverseRecetasController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -83,17 +63,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:32
-    def getRecipesByTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.RecetasController.getRecipesByTag",
-      """
-        function(name0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/tag/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name0))})
-        }
-      """
-    )
-  
-    // @LINE:14
+    // @LINE:13
     def retrieve: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.retrieve",
       """
@@ -103,7 +73,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:20
+    // @LINE:4
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.create",
       """
@@ -113,7 +83,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:29
+    // @LINE:22
     def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.update",
       """
@@ -123,7 +93,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:11
+    // @LINE:16
+    def recetasByName: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetasController.recetasByName",
+      """
+        function(name0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/name/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name0))})
+        }
+      """
+    )
+  
+    // @LINE:10
     def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.list",
       """
@@ -133,7 +113,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:26
+    // @LINE:25
+    def recetasByTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetasController.recetasByTag",
+      """
+        function(name0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/tag/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name0))})
+        }
+      """
+    )
+  
+    // @LINE:19
     def remove: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.remove",
       """
@@ -143,17 +133,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:23
-    def getByName: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.RecetasController.getByName",
-      """
-        function(name0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/name/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name0))})
-        }
-      """
-    )
-  
-    // @LINE:17
+    // @LINE:7
     def retrieveCache: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetasController.retrieveCache",
       """
@@ -165,20 +145,20 @@ package controllers.javascript {
   
   }
 
-  // @LINE:6
-  class ReverseIngredientesController(_prefix: => String) {
+  // @LINE:1
+  class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:6
-    def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.IngredientesController.list",
+    // @LINE:1
+    def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Assets.versioned",
       """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ingredientes"})
+        function(file1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[Asset]].javascriptUnbind + """)("file", file1)})
         }
       """
     )

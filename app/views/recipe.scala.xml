@@ -1,0 +1,16 @@
+@(rec: Recipe)
+
+<recipe id="@rec.getId()">
+	<name>@rec.getName</name>
+	<createdAt>@rec.getDateCreation</createdAt>
+	<ingredientes>
+	@for(i  <- rec.getIngredientes){
+		@ingrediente(i)
+	}
+	</ingredientes>
+	<tags>
+	@for(t  <- rec.getTags){
+		@tag(t)
+	}
+	</tags>
+</recipe>

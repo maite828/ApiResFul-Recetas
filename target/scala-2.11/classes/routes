@@ -1,32 +1,29 @@
-# An example controller showing a sample home page
-GET     /                       controllers.HomeController.index
-
 GET     /assets/*file           controllers.Assets.versioned(path="/public", file: Asset)
 
-GET     /ingredientes           controllers.IngredientesController.list
+# CREAR RECETA
+POST 						/recetas        		controllers.RecetasController.create
 
-GET     /tasks                  controllers.TasksController.list
+# RECETA POR ID EN CACHÉ
+GET 						/recetacache/:id      	controllers.RecetasController.retrieveCache(id: Long)
 
-# listar todas las recetas
-GET   	/recetas       			controllers.RecetasController.list
+# LISTA DE RECETAS
+GET   						/recetas       			controllers.RecetasController.list
 
-# obtener datos de una receta
-GET 	/receta/:id      controllers.RecetasController.retrieve(id: Long)
+# RECETAS POR ID
+GET 						/receta/:id      		controllers.RecetasController.retrieve(id: Long)
 
-# obtener datos de una receta de la caché
-GET 	/recetacache/:id      	controllers.RecetasController.retrieveCache(id: Long)
+# RECETAS POR NOMBRE
+GET							/receta/name/:name		controllers.RecetasController.recetasByName(name: String)
 
-# crear un receta
-POST 	/recetas        		controllers.RecetasController.create
+# ELEIMINAR RECETA POR ID
+DELETE						/receta/:id				controllers.RecetasController.remove(id: Long)
 
-#Return the recipe with the given name
-GET		/receta/name/:name		controllers.RecetasController.getByName(name: String)
+# ACTUALIZAR RECETA POR ID
+PUT							/receta/:id				controllers.RecetasController.update(id: Long)
 
-#Delete the recipe with the given id
-DELETE	/receta/:id				controllers.RecetasController.remove(id: Long)
+# RECETAS POR TAG
+GET 						/receta/tag/:name		controllers.RecetasController.recetasByTag(name: String)
 
-#Update the recipe with the given id
-PUT		/receta/:id				controllers.RecetasController.update(id: Long)
+GET     					/ingredientes           controllers.IngredientesController.list
 
-#Return a list of recipes with the given tag
-GET 	/receta/tag/:name		controllers.RecetasController.getRecipesByTag(name: String)
+GET     					/tasks                  controllers.TasksController.list
