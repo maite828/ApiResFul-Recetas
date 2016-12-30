@@ -36,7 +36,7 @@ public class IngredientsController extends Controller {
 	public Result getIngId(Long id) {
 		Ingredient ingredient = Ingredient.findById(id);
 		if (ingredient == null) {
-			return badRequest("El ingrediente no existe");
+			return badRequest("The ingredient does not exist");
 		}
 
 		Request request = request();
@@ -61,11 +61,11 @@ public class IngredientsController extends Controller {
 		}
 		Ingredient ingredient = Ingredient.findById(idIng);
 		if (ingredient == null) {
-			return notFound("El ingrediente no existe");
+			return notFound("The ingredient does not exist");
 		}
 		Task task = Task.findById(idTask);
 		if (task == null) {
-			return notFound("La tarea no existe");
+			return notFound("The task does not exist");
 		}
 		IngredientTask ingTask = form.get();
 		ingTask.ingredient = ingredient;
@@ -76,15 +76,16 @@ public class IngredientsController extends Controller {
 		return ControllerHelper.ingredientJsonXml(request, ingredient);
 	}
 
+	//relacion de receta e ingrediente
 	public Result addRecipe(Long idIng, Long idRec) {
 		Recipe recipe = Recipe.findById(idRec);
 		if (recipe == null) {
-			return notFound("La receta no existe");
+			return notFound("The recipe does not exist");
 		}
 
 		Ingredient ingredient = Ingredient.findById(idIng);
 		if (ingredient == null) {
-			return notFound("El ingrediente no existe");
+			return notFound("The ingredient does not exist");
 		}
 
 		recipe.ingredients.add(ingredient);

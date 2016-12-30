@@ -23,7 +23,6 @@ public class IngredientTask extends Model implements Serializable {
 	@JsonIgnore
 	public Ingredient ingredient;
 
-	public static final Find<Long, IngredientTask> find = new Find<Long, IngredientTask>() {
-	};
+	public static final Find<Long, IngredientTask> find = new Find<Long, IngredientTask>() {};
 
 }

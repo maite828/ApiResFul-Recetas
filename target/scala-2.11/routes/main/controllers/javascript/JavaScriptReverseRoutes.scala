@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Fri Dec 30 07:23:31 CET 2016
+// @DATE:Fri Dec 30 20:53:33 CET 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -55,7 +55,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:7
+  // @LINE:8
   class ReverseRecipesController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -63,7 +63,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:15
+    // @LINE:14
     def retrieve: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecipesController.retrieve",
       """
@@ -73,7 +73,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:23
+    // @LINE:22
     def recipesByTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecipesController.recipesByTag",
       """
@@ -83,7 +83,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:9
+    // @LINE:29
     def createFactory: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecipesController.createFactory",
       """
@@ -93,7 +93,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:7
+    // @LINE:8
     def createJson: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecipesController.createJson",
       """
@@ -103,7 +103,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:20
     def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecipesController.update",
       """
@@ -113,7 +113,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:13
+    // @LINE:12
     def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecipesController.list",
       """
@@ -123,7 +123,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:18
     def remove: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecipesController.remove",
       """
@@ -133,7 +133,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:11
+    // @LINE:10
     def retrieveCache: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecipesController.retrieveCache",
       """
@@ -143,7 +143,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:17
+    // @LINE:16
     def recipesByName: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecipesController.recipesByName",
       """
@@ -155,7 +155,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:41
+  // @LINE:43
   class ReverseTasksController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -163,19 +163,19 @@ package controllers.javascript {
     }
 
   
-    // @LINE:41
+    // @LINE:43
     def createTask: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.TasksController.createTask",
       """
         function(idRec0) {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "recipes/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("idRec", idRec0) + "/createTask"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "recipes/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("idRec", idRec0) + "/task"})
         }
       """
     )
   
   }
 
-  // @LINE:28
+  // @LINE:32
   class ReverseIngredientsController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -183,17 +183,17 @@ package controllers.javascript {
     }
 
   
-    // @LINE:34
+    // @LINE:40
     def createIngTask: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.IngredientsController.createIngTask",
       """
-        function(idIng0,idTask1) {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "ingredients/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("idIng", idIng0) + "/task/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("idTask", idTask1)})
+        function(idI0,idT1) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "ingredients/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("idI", idI0) + "/task/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("idT", idT1)})
         }
       """
     )
   
-    // @LINE:30
+    // @LINE:34
     def getIngId: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.IngredientsController.getIngId",
       """
@@ -203,7 +203,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:28
+    // @LINE:32
     def createF: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.IngredientsController.createF",
       """
@@ -213,7 +213,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:32
+    // @LINE:36
     def getIngredients: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.IngredientsController.getIngredients",
       """
@@ -223,12 +223,12 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:36
+    // @LINE:38
     def addRecipe: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.IngredientsController.addRecipe",
       """
-        function(idIng0,idRec1) {
-          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "ingredients/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("idIng", idIng0) + "/recipe/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("idRec", idRec1)})
+        function(idI0,idR1) {
+          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "ingredients/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("idI", idI0) + "/recipe/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("idR", idR1)})
         }
       """
     )

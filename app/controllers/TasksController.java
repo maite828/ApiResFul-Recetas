@@ -21,15 +21,16 @@ public class TasksController extends Controller {
 	public Result createTask(Long idRecipe) {
 		Form<Task> form = f.form(Task.class).bindFromRequest();
 		if (form.hasErrors()) {
-			return badRequest(ControllerHelper.errorJson(2, "Datos incorrectos", form.errorsAsJson()));
+			return badRequest(ControllerHelper.errorJson(2, "incorrect data", form.errorsAsJson()));
 		}
 		Recipe recipe = Recipe.findById(idRecipe);
 		if (recipe == null) {
-			return notFound("La receta no existe");
+			return notFound("The recipe does not exist");
 		}
 		Task task = form.get();
 		task.recipe = recipe;
 		task.save();
+		
 		Request request = request();
 		return ControllerHelper.taskJsonXml(request, task);
 	}
@@ -37,7 +38,7 @@ public class TasksController extends Controller {
 	public Result getTask(Long idTask) {
 		Task task = Task.findById(idTask);
 		if (task == null) {
-			return badRequest("La tarea no existe");
+			return badRequest("The task does not exist");
 		}
 		Request request = request();
 		return ControllerHelper.taskJsonXml(request, task);
@@ -47,12 +48,12 @@ public class TasksController extends Controller {
 
 		Recipe recipe = Recipe.findById(idRecipe);
 		if (recipe == null) {
-			return badRequest("La receta no existe");
+			return badRequest("The recipe does not exist");
 		}
 
 		List<Task> tasks = recipe.tasks;
 		if (tasks.isEmpty()) {
-			return badRequest("No se han encontrado resultados en la búsqueda");
+			return badRequest("Have not been results in the search");
 		} else {
 			Request request = request();
 			return ControllerHelper.tasksJsonXml(request, tasks);

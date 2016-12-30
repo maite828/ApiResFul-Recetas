@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Fri Dec 30 07:23:31 CET 2016
+// @DATE:Fri Dec 30 20:53:33 CET 2016
 
 
 package router {

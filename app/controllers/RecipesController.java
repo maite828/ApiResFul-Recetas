@@ -79,7 +79,7 @@ public class RecipesController extends Controller {
 	public Result createFactory() {
 		Form<Recipe> form = f.form(Recipe.class).bindFromRequest();
 		if (form.hasErrors()) {
-			return badRequest(ControllerHelper.errorJson(2, "Datos incorrectos", form.errorsAsJson()));
+			return badRequest(ControllerHelper.errorJson(2, "incorrect data", form.errorsAsJson()));
 		}
 		Recipe recipe = form.get();
 		recipe.save();

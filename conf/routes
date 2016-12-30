@@ -2,11 +2,10 @@ GET     					/assets/*file           			controllers.Assets.versioned(path="/publ
 GET     					/                       			controllers.App.index()
 
 
+# BODY
+
 # Recipes
-
 POST 						/recipesJ        					controllers.RecipesController.createJson
-
-POST   						/recipesF                			controllers.RecipesController.createFactory
 
 GET 						/recipe_cache/:id      				controllers.RecipesController.retrieveCache(id: Long)
 
@@ -23,20 +22,26 @@ PUT							/recipe/:id							controllers.RecipesController.update(id: Long)
 GET 						/recipe/tag/:name					controllers.RecipesController.recipesByTag(name: String)
 
 
-# Ingredients
 
+# FORMFACTORY
+
+# Recipes
+POST   						/recipesF                			controllers.RecipesController.createFactory
+
+# Ingredients
 POST   						/ingredients            			controllers.IngredientsController.createF
 
 GET    						/ingredients/:id        			controllers.IngredientsController.getIngId(id: Long)
 
 GET    						/ingredients            			controllers.IngredientsController.getIngredients
 
-POST   						/ingredients/:idIng/task/:idTask   	controllers.IngredientsController.createIngTask(idIng: Long, idTask: Long)
+PUT    						/ingredients/:idI/recipe/:idR  		controllers.IngredientsController.addRecipe(idI: Long, idR: Long)
 
-PUT    						/ingredients/:idIng/recipe/:idRec  	controllers.IngredientsController.addRecipe(idIng: Long, idRec: Long)
+POST   						/ingredients/:idI/task/:idT   		controllers.IngredientsController.createIngTask(idI: Long, idT: Long)
+
+# Tasks
+POST   						/recipes/:idRec/task         		controllers.TasksController.createTask(idRec: Long)
 
 	
-# Tasks
 
-POST   						/recipes/:idRec/createTask         	controllers.TasksController.createTask(idRec: Long)
 

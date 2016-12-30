@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Fri Dec 30 07:23:31 CET 2016
+// @DATE:Fri Dec 30 20:53:33 CET 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -43,62 +43,62 @@ package controllers {
   
   }
 
-  // @LINE:7
+  // @LINE:8
   class ReverseRecipesController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:15
+    // @LINE:14
     def retrieve(id:Long): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "recipe/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
-    // @LINE:23
+    // @LINE:22
     def recipesByTag(name:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "recipe/tag/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
-    // @LINE:9
+    // @LINE:29
     def createFactory(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "recipesF")
     }
   
-    // @LINE:7
+    // @LINE:8
     def createJson(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "recipesJ")
     }
   
-    // @LINE:21
+    // @LINE:20
     def update(id:Long): Call = {
       import ReverseRouteContext.empty
       Call("PUT", _prefix + { _defaultPrefix } + "recipe/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
-    // @LINE:13
+    // @LINE:12
     def list(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "recipes")
     }
   
-    // @LINE:19
+    // @LINE:18
     def remove(id:Long): Call = {
       import ReverseRouteContext.empty
       Call("DELETE", _prefix + { _defaultPrefix } + "recipe/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
-    // @LINE:11
+    // @LINE:10
     def retrieveCache(id:Long): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "recipe_cache/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
-    // @LINE:17
+    // @LINE:16
     def recipesByName(name:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "recipe/name/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
@@ -106,56 +106,56 @@ package controllers {
   
   }
 
-  // @LINE:41
+  // @LINE:43
   class ReverseTasksController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:41
+    // @LINE:43
     def createTask(idRec:Long): Call = {
       import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "recipes/" + implicitly[PathBindable[Long]].unbind("idRec", idRec) + "/createTask")
+      Call("POST", _prefix + { _defaultPrefix } + "recipes/" + implicitly[PathBindable[Long]].unbind("idRec", idRec) + "/task")
     }
   
   }
 
-  // @LINE:28
+  // @LINE:32
   class ReverseIngredientsController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:34
-    def createIngTask(idIng:Long, idTask:Long): Call = {
+    // @LINE:40
+    def createIngTask(idI:Long, idT:Long): Call = {
       import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "ingredients/" + implicitly[PathBindable[Long]].unbind("idIng", idIng) + "/task/" + implicitly[PathBindable[Long]].unbind("idTask", idTask))
+      Call("POST", _prefix + { _defaultPrefix } + "ingredients/" + implicitly[PathBindable[Long]].unbind("idI", idI) + "/task/" + implicitly[PathBindable[Long]].unbind("idT", idT))
     }
   
-    // @LINE:30
+    // @LINE:34
     def getIngId(id:Long): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "ingredients/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
-    // @LINE:28
+    // @LINE:32
     def createF(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "ingredients")
     }
   
-    // @LINE:32
+    // @LINE:36
     def getIngredients(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "ingredients")
     }
   
-    // @LINE:36
-    def addRecipe(idIng:Long, idRec:Long): Call = {
+    // @LINE:38
+    def addRecipe(idI:Long, idR:Long): Call = {
       import ReverseRouteContext.empty
-      Call("PUT", _prefix + { _defaultPrefix } + "ingredients/" + implicitly[PathBindable[Long]].unbind("idIng", idIng) + "/recipe/" + implicitly[PathBindable[Long]].unbind("idRec", idRec))
+      Call("PUT", _prefix + { _defaultPrefix } + "ingredients/" + implicitly[PathBindable[Long]].unbind("idI", idI) + "/recipe/" + implicitly[PathBindable[Long]].unbind("idR", idR))
     }
   
   }
