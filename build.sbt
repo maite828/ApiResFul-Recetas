@@ -7,10 +7,11 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava)
 scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
-  javaJdbc,
+  jdbc,
   cache,
   javaWs
 )
 
 enablePlugins(PlayEbean)
 libraryDependencies += evolutions
+routesGenerator := InjectedRoutesGenerator

@@ -2,7 +2,7 @@ GET     					/assets/*file           			controllers.Assets.versioned(path="/publ
 GET     					/                       			controllers.App.index()
 
 
-# BODY
+# --------- BODY JSON--------------
 
 # Recipes
 POST 						/recipesJ        					controllers.RecipesController.createJson
@@ -23,7 +23,7 @@ GET 						/recipe/tag/:name					controllers.RecipesController.recipesByTag(name:
 
 
 
-# FORMFACTORY
+# -----  FORMFACTORY REQUEST---------
 
 # Recipes
 POST   						/recipesF                			controllers.RecipesController.createFactory
@@ -40,7 +40,7 @@ PUT    						/ingredients/:idI/recipe/:idR  		controllers.IngredientsController.
 POST   						/ingredients/:idI/task/:idT   		controllers.IngredientsController.createIngTask(idI: Long, idT: Long)
 
 # Tasks
-POST   						/recipes/:idRec/task         	controllers.TasksController.createTask(idRec: Long)
+POST   						/recipes/:idRec/task         		controllers.TasksController.createTask(idRec: Long)
 
 	
 

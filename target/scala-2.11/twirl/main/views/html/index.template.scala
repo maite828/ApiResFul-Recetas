@@ -43,30 +43,69 @@ Seq[Any](format.raw/*1.19*/("""
                 <tr>
                     <th>Acción</th>
                     <th>URI</th>
-                    <th class="center">Login</th>
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td><a href="">CREO LA RECETA PASANDO LOS DATOS EN JSON MEDIANTE BODY (xml/json)</a></td>
+                    <td><strong>POST</strong> curl -H "Content-Type: application/json" -H "Accept: application/xml" -X POST -d '"""),format.raw/*20.129*/("""{"""),format.raw/*20.130*/(""""name": "albondigas",
+					"ingredients": ["""),format.raw/*21.22*/("""{"""),format.raw/*21.23*/(""""name": "tomate""""),format.raw/*21.39*/("""}"""),format.raw/*21.40*/(""","""),format.raw/*21.41*/("""{"""),format.raw/*21.42*/(""""name": "cebolla""""),format.raw/*21.59*/("""}"""),format.raw/*21.60*/(""","""),format.raw/*21.61*/("""{"""),format.raw/*21.62*/(""""name": "pan rallado""""),format.raw/*21.83*/("""}"""),format.raw/*21.84*/("""],
+					"tags": ["""),format.raw/*22.15*/("""{"""),format.raw/*22.16*/(""""name": "proteinas""""),format.raw/*22.35*/("""}"""),format.raw/*22.36*/(""","""),format.raw/*22.37*/("""{"""),format.raw/*22.38*/(""""name": "facil""""),format.raw/*22.53*/("""}"""),format.raw/*22.54*/("""]"""),format.raw/*22.55*/("""}"""),format.raw/*22.56*/("""' http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes</td>
+                </tr>
+                <tr>
+                    <td><a href="">RECETA GUARDADA EN CACHÉ</a></td>
+                    <td><strong>GET</strong> curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipecache/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">MUESTRA LA LISTA DE RECETAS (xml/json)</a></td>
+                    <td><strong>GET</strong> curl -i -H "Accept: application/json" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes</td>
+                </tr>
+                <tr>
+                    <td><a href="">RECETAS POR ID (xml/json)</a></td>
+                    <td><strong>GET</strong>curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">RECETAS POR NOMBRE (xml/json)</a></td>
+                    <td><strong>GET</strong>curl -i -H "Accept: application/json" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/name/albondigas</td>
+                </tr>
+                <tr>
+                    <td><a href="">ACTUALIZAR RECETAS (xml/json)</a></td>
+                    <td><strong>PUT</strong>curl -H "Content-Type: application/json" -H "Accept: application/xml" -X PUT -d '"""),format.raw/*42.126*/("""{"""),format.raw/*42.127*/(""""name": "Rodaballo",
+					"ingredients": ["""),format.raw/*43.22*/("""{"""),format.raw/*43.23*/(""""name": "m""""),format.raw/*43.34*/("""}"""),format.raw/*43.35*/(""","""),format.raw/*43.36*/("""{"""),format.raw/*43.37*/(""""name": "e""""),format.raw/*43.48*/("""}"""),format.raw/*43.49*/(""","""),format.raw/*43.50*/("""{"""),format.raw/*43.51*/(""""name": "ii""""),format.raw/*43.63*/("""}"""),format.raw/*43.64*/("""],
+					"tags": ["""),format.raw/*44.15*/("""{"""),format.raw/*44.16*/(""""name": "ym""""),format.raw/*44.28*/("""}"""),format.raw/*44.29*/(""","""),format.raw/*44.30*/("""{"""),format.raw/*44.31*/(""""name": "y""""),format.raw/*44.42*/("""}"""),format.raw/*44.43*/("""]"""),format.raw/*44.44*/("""}"""),format.raw/*44.45*/("""' http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">ELIMINAR RECETAS POR ID (xml/json)</a></td>
+                    <td><strong>DELETE</strong>curl -i -H "Accept: application/json" -X DELETE http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">CREO RECETA PASANDO MEDIANTE FORMFACTORY</a></td>
+                    <td><strong>POST</strong>curl -i -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipesF\?name\=pan\&portions\=4</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="divider"></div>
 
+        <h4>Ingredientes</h4>
+        <table class="responsive-table highlight striped">
+            <thead>
                 <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/recetas-doc.md#obtener-una-receta-por-slug">Obtener por slug</a></td>
-                    <td><strong>GET</strong> /recipes/"""),format.raw/*22.55*/("""{"""),format.raw/*22.56*/("""slug"""),format.raw/*22.60*/("""}"""),format.raw/*22.61*/("""</td>
-                    <td class="center">-</td>
+                    <th>Acción</th>
+                    <th>URI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="">CREO INGREDIENTE PASANDO MEDIANTE FORMFACTORY</a></td>
+                    <td><strong>POST</strong>curl -i -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients\?name\=harina\&quantity\=450</td>
+                </tr>
+                 <tr>
+                    <td><a href="">RELACION MANUAL ManyToMany RECETAS_INGREDIENTES</a></td>
+                    <td><strong>PUT</strong>curl -i -H "Accept: application/xml" -X PUT http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/recipe/1</td>
                 </tr>
                 <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/recetas-doc.md#crear-una-receta-nueva">Crear</a></td>
-                    <td><strong>POST</strong> /recipes</td>
-                    <td class="center">OWNER</td>
-                </tr>
-                <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/recetas-doc.md#borrar-un-ingrediente-de-una-receta">Borrar un ingrediente</a></td>
-                    <td><strong>DELETE</strong> /recipes/"""),format.raw/*32.58*/("""{"""),format.raw/*32.59*/("""id-receta"""),format.raw/*32.68*/("""}"""),format.raw/*32.69*/("""/ingredient/"""),format.raw/*32.81*/("""{"""),format.raw/*32.82*/("""id"""),format.raw/*32.84*/("""}"""),format.raw/*32.85*/("""</td>
-                    <td class="center">OWNER / ADMIN</td>
-                </tr>
-                <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/recetas-doc.md#a%C3%B1adir-o-quitar-de-favoritos">Añadir/Borrar a favoritos</a></td>
-                    <td><strong>PUT</strong> /recipes/"""),format.raw/*37.55*/("""{"""),format.raw/*37.56*/("""id"""),format.raw/*37.58*/("""}"""),format.raw/*37.59*/("""/fav</td>
-                    <td class="center">COMUN</td>
+                    <td><a href="">MUESTRA LA LISTA DE INGREDIENTES (xml/json)</a></td>
+                    <td><strong>GET</strong>curl -i -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients</td>
                 </tr>
             </tbody>
         </table>
@@ -78,44 +117,43 @@ Seq[Any](format.raw/*1.19*/("""
                 <tr>
                     <th>Acción</th>
                     <th>URI</th>
-                    <th class="center">Login</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/tag-doc.md#buscar-etiquetas-por-cadena">Buscar tags</a></td>
-                    <td><strong>GET</strong>  /tags(?search=*)</td>
-                    <td class="center">-</td>
+                    <td><a href="">RECETAS POR TAG (xml/json)</a></td>
+                    <td><strong>GET</strong>curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/tag/facil</td>
                 </tr>
-                <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/tag-doc.md#obtener-una-etiqueta-por-id">Obtener por id</a></td>
-                    <td><strong>GET</strong>    /tags/"""),format.raw/*61.55*/("""{"""),format.raw/*61.56*/("""id"""),format.raw/*61.58*/("""}"""),format.raw/*61.59*/("""</td>
-                    <td class="center">-</td>
-                </tr>
+
             </tbody>
         </table>
-        <div class="divider"></div>
-
-        <h4>Archivos</h4>
+        
+        <h4>Tasks</h4>
         <table class="responsive-table highlight striped">
             <thead>
                 <tr>
                     <th>Acción</th>
                     <th>URI</th>
-                    <th class="center">Login</th>
                 </tr>
             </thead>
             <tbody>
+            	<tr>
+                    <td><a href="">RELACION MANUAL ManyToMany RECETAS_INGREDIENTES</a></td>
+                    <td><strong>POST</strong>"Accept: application/xml" -X PUT http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/recipe/1</td>
+                </tr>
+            	<tr>
+                    <td><a href="">RELACION MANUAL OneToMany RECETA_TASKS</a></td>
+                    <td><strong>POST</strong>curl -i -H "Accept: application/xml" -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes/1/task\?description\=bbbb</td>
+                </tr>
                 <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/archivos-doc.md#todas-las-imagenes">Todas las imagenes</a></td>
-                    <td><strong>GET</strong>  /users/"""),format.raw/*80.54*/("""{"""),format.raw/*80.55*/("""user-id"""),format.raw/*80.62*/("""}"""),format.raw/*80.63*/("""/files</td>
-                    <td class="center">COMUN</td>
+                    <td><a href="">//RELAICION MANUAL OneToMany INGREDIENTE_TASKS</a></td>
+                    <td><strong>POST</strong>curl -i -H "Accept: application/xml" -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/task/1</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-""")))}),format.raw/*87.2*/("""
+""")))}),format.raw/*125.2*/("""
 """))
       }
     }
@@ -136,11 +174,11 @@ Seq[Any](format.raw/*1.19*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 30 07:17:31 CET 2016
+                  DATE: Sat Dec 31 23:19:46 CET 2016
                   SOURCE: /Users/mayteecheverry/MyGitRepos/play/Recetas/app/views/index.scala.html
-                  HASH: 52be4d41572140135186937eb6bd1972edd474b4
-                  MATRIX: 745->1|857->18|885->21|906->34|945->36|976->41|1007->46|1034->53|1695->686|1724->687|1756->691|1785->692|2437->1316|2466->1317|2503->1326|2532->1327|2572->1339|2601->1340|2631->1342|2660->1343|3025->1680|3054->1681|3084->1683|3113->1684|4141->2684|4170->2685|4200->2687|4229->2688|4943->3374|4972->3375|5007->3382|5036->3383|5201->3518
-                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|35->4|35->4|53->22|53->22|53->22|53->22|63->32|63->32|63->32|63->32|63->32|63->32|63->32|63->32|68->37|68->37|68->37|68->37|92->61|92->61|92->61|92->61|111->80|111->80|111->80|111->80|118->87
+                  HASH: 036dee7f14988226b8766ee9fd5823fb4a91405a
+                  MATRIX: 745->1|857->18|885->21|906->34|945->36|976->41|1007->46|1034->53|1668->658|1698->659|1769->702|1798->703|1842->719|1871->720|1900->721|1929->722|1974->739|2003->740|2032->741|2061->742|2110->763|2139->764|2184->781|2213->782|2260->801|2289->802|2318->803|2347->804|2390->819|2419->820|2448->821|2477->822|3966->2282|3996->2283|4066->2325|4095->2326|4134->2337|4163->2338|4192->2339|4221->2340|4260->2351|4289->2352|4318->2353|4347->2354|4387->2366|4416->2367|4461->2384|4490->2385|4530->2397|4559->2398|4588->2399|4617->2400|4656->2411|4685->2412|4714->2413|4743->2414|8563->6203
+                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|35->4|35->4|51->20|51->20|52->21|52->21|52->21|52->21|52->21|52->21|52->21|52->21|52->21|52->21|52->21|52->21|53->22|53->22|53->22|53->22|53->22|53->22|53->22|53->22|53->22|53->22|73->42|73->42|74->43|74->43|74->43|74->43|74->43|74->43|74->43|74->43|74->43|74->43|74->43|74->43|75->44|75->44|75->44|75->44|75->44|75->44|75->44|75->44|75->44|75->44|156->125
                   -- GENERATED --
               */
           

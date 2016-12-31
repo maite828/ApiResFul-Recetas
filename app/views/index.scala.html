@@ -12,30 +12,69 @@
                 <tr>
                     <th>Acción</th>
                     <th>URI</th>
-                    <th class="center">Login</th>
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td><a href="">CREO LA RECETA PASANDO LOS DATOS EN JSON MEDIANTE BODY (xml/json)</a></td>
+                    <td><strong>POST</strong> curl -H "Content-Type: application/json" -H "Accept: application/xml" -X POST -d '{"name": "albondigas",
+					"ingredients": [{"name": "tomate"},{"name": "cebolla"},{"name": "pan rallado"}],
+					"tags": [{"name": "proteinas"},{"name": "facil"}]}' http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes</td>
+                </tr>
+                <tr>
+                    <td><a href="">RECETA GUARDADA EN CACHÉ</a></td>
+                    <td><strong>GET</strong> curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipecache/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">MUESTRA LA LISTA DE RECETAS (xml/json)</a></td>
+                    <td><strong>GET</strong> curl -i -H "Accept: application/json" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes</td>
+                </tr>
+                <tr>
+                    <td><a href="">RECETAS POR ID (xml/json)</a></td>
+                    <td><strong>GET</strong>curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">RECETAS POR NOMBRE (xml/json)</a></td>
+                    <td><strong>GET</strong>curl -i -H "Accept: application/json" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/name/albondigas</td>
+                </tr>
+                <tr>
+                    <td><a href="">ACTUALIZAR RECETAS (xml/json)</a></td>
+                    <td><strong>PUT</strong>curl -H "Content-Type: application/json" -H "Accept: application/xml" -X PUT -d '{"name": "Rodaballo",
+					"ingredients": [{"name": "m"},{"name": "e"},{"name": "ii"}],
+					"tags": [{"name": "ym"},{"name": "y"}]}' http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">ELIMINAR RECETAS POR ID (xml/json)</a></td>
+                    <td><strong>DELETE</strong>curl -i -H "Accept: application/json" -X DELETE http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">CREO RECETA PASANDO MEDIANTE FORMFACTORY</a></td>
+                    <td><strong>POST</strong>curl -i -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipesF\?name\=pan\&portions\=4</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="divider"></div>
 
+        <h4>Ingredientes</h4>
+        <table class="responsive-table highlight striped">
+            <thead>
                 <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/recetas-doc.md#obtener-una-receta-por-slug">Obtener por slug</a></td>
-                    <td><strong>GET</strong> /recipes/{slug}</td>
-                    <td class="center">-</td>
+                    <th>Acción</th>
+                    <th>URI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="">CREO INGREDIENTE PASANDO MEDIANTE FORMFACTORY</a></td>
+                    <td><strong>POST</strong>curl -i -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients\?name\=harina\&quantity\=450</td>
+                </tr>
+                 <tr>
+                    <td><a href="">RELACION MANUAL ManyToMany RECETAS_INGREDIENTES</a></td>
+                    <td><strong>PUT</strong>curl -i -H "Accept: application/xml" -X PUT http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/recipe/1</td>
                 </tr>
                 <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/recetas-doc.md#crear-una-receta-nueva">Crear</a></td>
-                    <td><strong>POST</strong> /recipes</td>
-                    <td class="center">OWNER</td>
-                </tr>
-                <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/recetas-doc.md#borrar-un-ingrediente-de-una-receta">Borrar un ingrediente</a></td>
-                    <td><strong>DELETE</strong> /recipes/{id-receta}/ingredient/{id}</td>
-                    <td class="center">OWNER / ADMIN</td>
-                </tr>
-                <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/recetas-doc.md#a%C3%B1adir-o-quitar-de-favoritos">Añadir/Borrar a favoritos</a></td>
-                    <td><strong>PUT</strong> /recipes/{id}/fav</td>
-                    <td class="center">COMUN</td>
+                    <td><a href="">MUESTRA LA LISTA DE INGREDIENTES (xml/json)</a></td>
+                    <td><strong>GET</strong>curl -i -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients</td>
                 </tr>
             </tbody>
         </table>
@@ -47,38 +86,37 @@
                 <tr>
                     <th>Acción</th>
                     <th>URI</th>
-                    <th class="center">Login</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/tag-doc.md#buscar-etiquetas-por-cadena">Buscar tags</a></td>
-                    <td><strong>GET</strong>  /tags(?search=*)</td>
-                    <td class="center">-</td>
+                    <td><a href="">RECETAS POR TAG (xml/json)</a></td>
+                    <td><strong>GET</strong>curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/tag/facil</td>
                 </tr>
-                <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/tag-doc.md#obtener-una-etiqueta-por-id">Obtener por id</a></td>
-                    <td><strong>GET</strong>    /tags/{id}</td>
-                    <td class="center">-</td>
-                </tr>
+
             </tbody>
         </table>
-        <div class="divider"></div>
-
-        <h4>Archivos</h4>
+        
+        <h4>Tasks</h4>
         <table class="responsive-table highlight striped">
             <thead>
                 <tr>
                     <th>Acción</th>
                     <th>URI</th>
-                    <th class="center">Login</th>
                 </tr>
             </thead>
             <tbody>
+            	<tr>
+                    <td><a href="">RELACION MANUAL ManyToMany RECETAS_INGREDIENTES</a></td>
+                    <td><strong>POST</strong>"Accept: application/xml" -X PUT http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/recipe/1</td>
+                </tr>
+            	<tr>
+                    <td><a href="">RELACION MANUAL OneToMany RECETA_TASKS</a></td>
+                    <td><strong>POST</strong>curl -i -H "Accept: application/xml" -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes/1/task\?description\=bbbb</td>
+                </tr>
                 <tr>
-                    <td><a href="https://github.com/JoseVte/tfg-recetarium/tree/master/doc/archivos-doc.md#todas-las-imagenes">Todas las imagenes</a></td>
-                    <td><strong>GET</strong>  /users/{user-id}/files</td>
-                    <td class="center">COMUN</td>
+                    <td><a href="">//RELAICION MANUAL OneToMany INGREDIENTE_TASKS</a></td>
+                    <td><strong>POST</strong>curl -i -H "Accept: application/xml" -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/task/1</td>
                 </tr>
             </tbody>
         </table>

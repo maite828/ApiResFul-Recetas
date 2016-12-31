@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for recetas#recetas_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@351c87[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@797677fa[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -84,7 +84,23 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.play#play-java-jdbc_2.11;2.5.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-java-jdbc_2.11;2.5.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-java-jdbc_2.11;2.5.2[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.play#play-java-jdbc_2.11;2.5.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.2 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.2 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.avaje.ebeanorm#avaje-ebeanorm;7.6.1 [compile->master(compile)][0m
@@ -223,6 +239,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.avaje.ebeanorm#avaje-ebeanorm;7.6.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.avaje.ebeanorm#avaje-ebeanorm;7.6.1 [runtime->compile][0m
@@ -961,6 +978,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.apache.tomcat#tomcat-servlet-api;8.0.33 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.apache.tomcat#tomcat-servlet-api;8.0.33 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-netty-server_2.11;2.5.10 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-netty-server_2.11;2.5.10 {compile=[default(compile)]}[0m
@@ -1128,21 +1149,13 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-logback_2.11;2.5.10->ch.qos.logback#logback-classic;1.1.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-logback_2.11;2.5.10->ch.qos.logback#logback-classic;1.1.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving com.typesafe.play#play-java-jdbc_2.11;2.5.10 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-java-jdbc_2.11;2.5.10 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-java-jdbc_2.11;2.5.10[0m
-[0m[[0mdebug[0m] [0m	found com.typesafe.play#play-java-jdbc_2.11;2.5.10 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-jdbc_2.11;2.5.10 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-jdbc_2.11;2.5.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-jdbc_2.11;2.5.10 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-jdbc_2.11;2.5.10[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-jdbc_2.11;2.5.10 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->master(compile)][0m
@@ -1155,6 +1168,12 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-api_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-api_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-api_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-api_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-api_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-api_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-api_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.jolbox#bonecp;0.8.0.RELEASE ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.jolbox#bonecp;0.8.0.RELEASE {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -1169,6 +1188,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;[1.7.1,1.7.99) [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;[1.7.1,1.7.99) [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.zaxxer#HikariCP;2.5.1 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.zaxxer#HikariCP;2.5.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.zaxxer#HikariCP;2.5.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -1179,6 +1206,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.zaxxer#HikariCP;2.5.1->org.slf4j#slf4j-api;[1.7.1,1.7.99) [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.zaxxer#HikariCP;2.5.1->org.slf4j#slf4j-api;1.7.21 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.zaxxer#HikariCP;2.5.1->org.slf4j#slf4j-api;[1.7.1,1.7.99) [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.zaxxer#HikariCP;2.5.1 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.zaxxer#HikariCP;2.5.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.zaxxer#HikariCP;2.5.1->org.slf4j#slf4j-api;1.7.21 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.zaxxer#HikariCP;2.5.1->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.zaxxer#HikariCP;2.5.1->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.googlecode.usc#jdbcdslog;1.0.6.2 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.googlecode.usc#jdbcdslog;1.0.6.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.googlecode.usc#jdbcdslog;1.0.6.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -1189,65 +1221,46 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.googlecode.usc#jdbcdslog;1.0.6.2->org.slf4j#slf4j-api;[1.7.1,1.7.99) [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.googlecode.usc#jdbcdslog;1.0.6.2->org.slf4j#slf4j-api;1.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.googlecode.usc#jdbcdslog;1.0.6.2->org.slf4j#slf4j-api;[1.7.1,1.7.99) [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.googlecode.usc#jdbcdslog;1.0.6.2 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.googlecode.usc#jdbcdslog;1.0.6.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.googlecode.usc#jdbcdslog;1.0.6.2->org.slf4j#slf4j-api;1.5.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.googlecode.usc#jdbcdslog;1.0.6.2->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.googlecode.usc#jdbcdslog;1.0.6.2->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.h2database#h2;1.4.192 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.h2database#h2;1.4.192 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.h2database#h2;1.4.192[0m
 [0m[[0mdebug[0m] [0m	found com.h2database#h2;1.4.192 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving tyrex#tyrex;1.0.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: tyrex#tyrex;1.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: tyrex#tyrex;1.0.1[0m
 [0m[[0mdebug[0m] [0m	found tyrex#tyrex;1.0.1 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-api_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-api_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-api_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-api_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.zaxxer#HikariCP;2.5.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.zaxxer#HikariCP;2.5.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.zaxxer#HikariCP;2.5.1->org.slf4j#slf4j-api;1.7.21 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.zaxxer#HikariCP;2.5.1->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.zaxxer#HikariCP;2.5.1->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.googlecode.usc#jdbcdslog;1.0.6.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.googlecode.usc#jdbcdslog;1.0.6.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.googlecode.usc#jdbcdslog;1.0.6.2->org.slf4j#slf4j-api;1.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.googlecode.usc#jdbcdslog;1.0.6.2->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.googlecode.usc#jdbcdslog;1.0.6.2->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-cache_2.11;2.5.10 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-cache_2.11;2.5.10 {compile=[default(compile)]}[0m
@@ -1335,7 +1348,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.asynchttpclient#netty-resolver;2.0.11->io.netty#netty-common;4.0.39.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.asynchttpclient#netty-resolver;2.0.11->io.netty#netty-common;4.0.41.Final [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.asynchttpclient#netty-resolver;2.0.11->org.slf4j#slf4j-api;1.7.21 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.asynchttpclient#netty-resolver;2.0.11->org.slf4j#slf4j-api;[1.7.1,1.7.99) [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.asynchttpclient#netty-resolver;2.0.11->org.slf4j#slf4j-api;1.7.21 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.asynchttpclient#netty-resolver;2.0.11->org.slf4j#slf4j-api;[1.7.1,1.7.99) [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.asynchttpclient#netty-resolver-dns;2.0.11->org.asynchttpclient#netty-codec-dns;2.0.11 [compile->master(compile)][0m
@@ -1589,13 +1601,13 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->master(compile)][0m
@@ -1819,8 +1831,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)][0m
@@ -1856,9 +1870,13 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;18.0 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;19.0 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.google.guava#guava;18.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.google.guava#guava;18.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.google.guava#guava;18.0[0m
+[0m[[0mdebug[0m] [0m	found com.google.guava#guava;18.0 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;18.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;19.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;18.0 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;18.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->org.javassist#javassist;3.18.2-GA [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->org.javassist#javassist;3.18.2-GA [compile->compile(*)][0m
@@ -1927,12 +1945,12 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [runtime->runtime(*)][0m
@@ -2147,8 +2165,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [runtime->runtime(*)][0m
@@ -2371,10 +2390,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->compile][0m
@@ -2633,13 +2652,13 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->master(compile)][0m
@@ -2859,8 +2878,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)][0m
@@ -2896,9 +2917,7 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;18.0 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;19.0 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;18.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;19.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->org.javassist#javassist;3.18.2-GA [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->org.javassist#javassist;3.18.2-GA [compile->compile(*)][0m
@@ -2967,12 +2986,12 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [runtime->runtime(*)][0m
@@ -3187,8 +3206,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [runtime->runtime(*)][0m
@@ -3411,10 +3431,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->compile][0m
@@ -4199,13 +4219,13 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->master(compile)][0m
@@ -4425,8 +4445,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)][0m
@@ -4462,9 +4484,7 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;18.0 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;19.0 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;18.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;19.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->org.javassist#javassist;3.18.2-GA [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->org.javassist#javassist;3.18.2-GA [compile->compile(*)][0m
@@ -4533,12 +4553,12 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [runtime->runtime(*)][0m
@@ -4753,8 +4773,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [runtime->runtime(*)][0m
@@ -4977,10 +4998,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->compile][0m
@@ -5241,13 +5262,13 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->master(compile)][0m
@@ -5467,8 +5488,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)][0m
@@ -5504,9 +5527,7 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;18.0 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;19.0 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;18.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;19.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->org.javassist#javassist;3.18.2-GA [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->org.javassist#javassist;3.18.2-GA [compile->compile(*)][0m
@@ -5575,12 +5596,12 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [runtime->runtime(*)][0m
@@ -5795,8 +5816,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [runtime->runtime(*)][0m
@@ -6019,10 +6041,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->compile][0m
@@ -6283,13 +6305,13 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->master(compile)][0m
@@ -6509,8 +6531,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)][0m
@@ -6546,9 +6570,7 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;18.0 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;19.0 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;18.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->com.google.guava#guava;19.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->org.javassist#javassist;3.18.2-GA [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.reflections#reflections;0.9.10->org.javassist#javassist;3.18.2-GA [compile->compile(*)][0m
@@ -6617,12 +6639,12 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.11;3.0.2->com.typesafe.play#play-java-jdbc_2.11;2.5.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-jdbc_2.11;2.5.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [runtime->runtime(*)][0m
@@ -6837,8 +6859,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.h2database#h2;1.4.192 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->tyrex#tyrex;1.0.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.2->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [runtime->runtime(*)][0m
@@ -7061,10 +7084,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.11;2.5.10 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->compile][0m
@@ -8293,6 +8316,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->optional(default)][0m
+[0m[[0mdebug[0m] [0mcircular dependency found: org.avaje.ebeanorm#avaje-ebeanorm;7.6.1->org.avaje.ebeanorm#avaje-ebeanorm-cluster;1.1.1->...[0m
 [0m[[0mdebug[0m] [0mall callers are evicted for commons-logging#commons-logging;1.1.1: evicting too[0m
 [0m[[0mdebug[0m] [0mall callers are evicted for commons-logging#commons-logging;1.1.1: evicting too[0m
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
@@ -8305,12 +8329,13 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java_2.11;2.5.10!play-java_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-netty-server_2.11;2.5.10!play-netty-server_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-logback_2.11;2.5.10!play-logback_2.11.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-jdbc_2.11;2.5.10!play-java-jdbc_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc_2.11;2.5.10!play-jdbc_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-cache_2.11;2.5.10!play-cache_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-ws_2.11;2.5.10!play-java-ws_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc-evolutions_2.11;2.5.10!play-jdbc-evolutions_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-jdbc_2.11;2.5.2!play-java-jdbc_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.avaje.ebeanorm#avaje-ebeanorm;7.6.1!avaje-ebeanorm.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.2!avaje-ebeanorm-agent.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jetbrains#annotations;13.0!annotations.jar[0m
@@ -8384,7 +8409,6 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty-common;4.0.41.Final!netty-common.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] ch.qos.logback#logback-classic;1.1.7!logback-classic.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] ch.qos.logback#logback-core;1.1.7!logback-core.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc_2.11;2.5.10!play-jdbc_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc-api_2.11;2.5.10!play-jdbc-api_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.jolbox#bonecp;0.8.0.RELEASE!bonecp.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.zaxxer#HikariCP;2.5.1!HikariCP.jar(bundle)[0m
@@ -8458,7 +8482,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 4376ms :: artifacts dl 53ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5887ms :: artifacts dl 62ms[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas_2.11;1.0-SNAPSHOT compile produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas_2.11;1.0-SNAPSHOT runtime produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas_2.11;1.0-SNAPSHOT test produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas_2.11-test.xml[0m
@@ -8472,5 +8496,5 @@
 [0m[[0mdebug[0m] [0m	report for recetas#recetas_2.11;1.0-SNAPSHOT docs produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas_2.11;1.0-SNAPSHOT pom produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas_2.11;1.0-SNAPSHOT scala-tool produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (4376ms resolve - 53ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (5887ms resolve - 62ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20161230071731"/>
+		date="20161231231945"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="play-java-ws_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118033153" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="92">
@@ -384,37 +384,24 @@
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="com.typesafe.play" name="play-java-jdbc_2.11">
-			<revision name="2.5.10" status="release" pubdate="20161118033036" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master, runtime(*), master(compile), compile(*)" position="6">
+		<module organisation="com.typesafe.play" name="play-java_2.11">
+			<revision name="2.5.10" status="release" pubdate="20161118033145" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="50">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3224" time="0" location="/Users/mayteecheverry/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jdbc_2.11/2.5.10/play-java-jdbc_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="6878" time="0" location="/Users/mayteecheverry/.ivy2/cache/com.typesafe.play/play-java_2.11/ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java_2.11/2.5.10/play-java_2.11-2.5.10.pom"/>
+				<caller organisation="com.typesafe.play" name="play-java-ws_2.11" conf="default, compile, runtime, master" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="2.5.10"/>
 				<caller organisation="recetas" name="recetas_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
-				<caller organisation="com.typesafe.play" name="play-ebean_2.11" conf="default, compile, runtime, master" rev="2.5.2" rev-constraint-default="2.5.2" rev-constraint-dynamic="2.5.2" callerrev="3.0.2"/>
+				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="compile, runtime" rev="2.5.2" rev-constraint-default="2.5.2" rev-constraint-dynamic="2.5.2" callerrev="2.5.2"/>
 				<artifacts>
-					<artifact name="play-java-jdbc_2.11" type="jar" ext="jar" status="no" details="" size="10711" time="0" location="/Users/mayteecheverry/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.10.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jdbc_2.11/2.5.10/play-java-jdbc_2.11-2.5.10.jar"/>
+					<artifact name="play-java_2.11" type="jar" ext="jar" status="no" details="" size="133079" time="0" location="/Users/mayteecheverry/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.10.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-java_2.11/2.5.10/play-java_2.11-2.5.10.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 			<revision name="2.5.2" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master, default(compile)" position="-1">
 				<evicted-by rev="2.5.10"/>
 				<caller organisation="recetas" name="recetas_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
-				<caller organisation="com.typesafe.play" name="play-ebean_2.11" conf="default, compile, runtime, master" rev="2.5.2" rev-constraint-default="2.5.2" rev-constraint-dynamic="2.5.2" callerrev="3.0.2"/>
+				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="compile, runtime" rev="2.5.2" rev-constraint-default="2.5.2" rev-constraint-dynamic="2.5.2" callerrev="2.5.2"/>
 				<artifacts>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.typesafe.play" name="play-java_2.11">
-			<revision name="2.5.10" status="release" pubdate="20161118033145" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="50">
-				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="6878" time="0" location="/Users/mayteecheverry/.ivy2/cache/com.typesafe.play/play-java_2.11/ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java_2.11/2.5.10/play-java_2.11-2.5.10.pom"/>
-				<caller organisation="com.typesafe.play" name="play-java-ws_2.11" conf="default, compile, runtime, master" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="2.5.10"/>
-				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="compile, runtime" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="2.5.10"/>
-				<caller organisation="recetas" name="recetas_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
-				<artifacts>
-					<artifact name="play-java_2.11" type="jar" ext="jar" status="no" details="" size="133079" time="0" location="/Users/mayteecheverry/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.10.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-java_2.11/2.5.10/play-java_2.11-2.5.10.jar"/>
-					</artifact>
 				</artifacts>
 			</revision>
 		</module>
@@ -443,7 +430,7 @@
 			</revision>
 		</module>
 		<module organisation="net.jodah" name="typetools">
-			<revision name="0.4.4" status="release" pubdate="20151028204345" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/jhalterman/typetools/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="62">
+			<revision name="0.4.4" status="release" pubdate="20151028204345" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/jhalterman/typetools/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="61">
 				<license name="Apache License, Version 2.0" url="http://apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3274" time="0" location="/Users/mayteecheverry/.ivy2/cache/net.jodah/typetools/ivy-0.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/jodah/typetools/0.4.4/typetools-0.4.4.pom"/>
 				<caller organisation="com.typesafe.play" name="play-java_2.11" conf="compile, runtime" rev="0.4.4" rev-constraint-default="0.4.4" rev-constraint-dynamic="0.4.4" callerrev="2.5.10"/>
@@ -576,14 +563,22 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-jdbc_2.11">
-			<revision name="2.5.10" status="release" pubdate="20161118033113" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+			<revision name="2.5.10" status="release" pubdate="20161118033113" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master, runtime(*), master(compile), compile(*)" position="7">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="4248" time="0" location="/Users/mayteecheverry/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc_2.11/2.5.10/play-jdbc_2.11-2.5.10.pom"/>
-				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="compile, runtime" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="2.5.10"/>
+				<caller organisation="recetas" name="recetas_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
+				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="compile, runtime" rev="2.5.2" rev-constraint-default="2.5.2" rev-constraint-dynamic="2.5.2" callerrev="2.5.2"/>
 				<artifacts>
 					<artifact name="play-jdbc_2.11" type="jar" ext="jar" status="no" details="" size="108356" time="0" location="/Users/mayteecheverry/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.10.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc_2.11/2.5.10/play-jdbc_2.11-2.5.10.jar"/>
 					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.5.2" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master, default(compile)" position="-1">
+				<evicted-by rev="2.5.10"/>
+				<caller organisation="recetas" name="recetas_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
+				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="compile, runtime" rev="2.5.2" rev-constraint-default="2.5.2" rev-constraint-dynamic="2.5.2" callerrev="2.5.2"/>
+				<artifacts>
 				</artifacts>
 			</revision>
 		</module>
@@ -705,7 +700,7 @@
 			</revision>
 		</module>
 		<module organisation="com.google.guava" name="guava">
-			<revision name="19.0" status="release" pubdate="20151209215835" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="61">
+			<revision name="19.0" status="release" pubdate="20151209215835" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="62">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="6356" time="0" location="/Users/mayteecheverry/.ivy2/cache/com.google.guava/guava/ivy-19.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/guava/guava/19.0/guava-19.0.pom"/>
 				<caller organisation="org.reflections" name="reflections" conf="compile, runtime" rev="18.0" rev-constraint-default="18.0" rev-constraint-dynamic="18.0" callerrev="0.9.10"/>
@@ -728,11 +723,11 @@
 				<artifacts>
 				</artifacts>
 			</revision>
-			<revision name="18.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+			<revision name="18.0" status="release" pubdate="20140825204834" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<metadata-artifact status="no" details="" size="5409" time="0" location="/Users/mayteecheverry/.ivy2/cache/com.google.guava/guava/ivy-18.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/guava/guava/18.0/guava-18.0.pom"/>
 				<evicted-by rev="19.0"/>
 				<caller organisation="org.reflections" name="reflections" conf="compile, runtime" rev="18.0" rev-constraint-default="18.0" rev-constraint-dynamic="18.0" callerrev="0.9.10"/>
 				<caller organisation="com.google.inject" name="guice" conf="compile, runtime" rev="16.0.1" rev-constraint-default="16.0.1" rev-constraint-dynamic="16.0.1" callerrev="4.0"/>
-				<caller organisation="com.typesafe.play" name="play-java_2.11" conf="compile, runtime" rev="19.0" rev-constraint-default="19.0" rev-constraint-dynamic="19.0" callerrev="2.5.10"/>
 				<caller organisation="com.jolbox" name="bonecp" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="0.8.0.RELEASE"/>
 				<artifacts>
 				</artifacts>
@@ -1483,6 +1478,18 @@
 				</artifacts>
 			</revision>
 		</module>
+		<module organisation="com.typesafe.play" name="play-java-jdbc_2.11">
+			<revision name="2.5.2" status="release" pubdate="20160415012215" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="3220" time="0" location="/Users/mayteecheverry/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/ivy-2.5.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jdbc_2.11/2.5.2/play-java-jdbc_2.11-2.5.2.pom"/>
+				<caller organisation="com.typesafe.play" name="play-ebean_2.11" conf="default, compile, runtime, master" rev="2.5.2" rev-constraint-default="2.5.2" rev-constraint-dynamic="2.5.2" callerrev="3.0.2"/>
+				<artifacts>
+					<artifact name="play-java-jdbc_2.11" type="jar" ext="jar" status="no" details="" size="10712" time="0" location="/Users/mayteecheverry/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jdbc_2.11/2.5.2/play-java-jdbc_2.11-2.5.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="com.typesafe.play" name="twirl-api_2.11">
 			<revision name="1.1.1" status="release" pubdate="20150514070045" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/twirl" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="2">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
@@ -1540,7 +1547,6 @@
 				<caller organisation="com.typesafe.play" name="play-java_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.10"/>
 				<caller organisation="com.typesafe.play" name="play-jdbc_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.10"/>
 				<caller organisation="com.typesafe.play" name="play-jdbc-api_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.10"/>
-				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.10"/>
 				<caller organisation="com.typesafe.play" name="play-streams_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.10"/>
 				<caller organisation="com.typesafe.play" name="twirl-api_2.11" conf="default, compile, runtime, master" rev="2.11.6" rev-constraint-default="2.11.6" rev-constraint-dynamic="2.11.6" callerrev="1.1.1"/>
 				<caller organisation="com.typesafe.play" name="play-server_2.11" conf="default, compile, runtime, master" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.10"/>
@@ -1559,6 +1565,7 @@
 				<caller organisation="recetas" name="recetas_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="1.0-SNAPSHOT"/>
 				<caller organisation="com.typesafe.akka" name="akka-actor_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.4.12"/>
 				<caller organisation="org.scala-lang.modules" name="scala-xml_2.11" conf="compile, runtime" rev="2.11.0" rev-constraint-default="2.11.0" rev-constraint-dynamic="2.11.0" callerrev="1.0.1"/>
+				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.2"/>
 				<caller organisation="org.scala-lang.modules" name="scala-java8-compat_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.0"/>
 				<caller organisation="com.typesafe.akka" name="akka-stream_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.4.12"/>
 				<caller organisation="com.typesafe.play" name="play-cache_2.11" conf="default, compile, runtime, master" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.10"/>
@@ -1576,13 +1583,13 @@
 				<evicted-by rev="2.11.7"/>
 				<caller organisation="com.typesafe.play" name="play-jdbc_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.10"/>
 				<caller organisation="com.typesafe.play" name="play-jdbc-api_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.10"/>
-				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.10"/>
 				<caller organisation="com.typesafe.play" name="play-datacommons_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.10"/>
 				<caller organisation="com.typesafe.play" name="play-streams_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.10"/>
 				<caller organisation="com.typesafe.akka" name="akka-actor_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.4.12"/>
 				<caller organisation="recetas" name="recetas_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="1.0-SNAPSHOT"/>
 				<caller organisation="com.typesafe.play" name="twirl-api_2.11" conf="default, compile, runtime, master" rev="2.11.6" rev-constraint-default="2.11.6" rev-constraint-dynamic="2.11.6" callerrev="1.1.1"/>
 				<caller organisation="org.scala-lang.modules" name="scala-xml_2.11" conf="compile, runtime" rev="2.11.0" rev-constraint-default="2.11.0" rev-constraint-dynamic="2.11.0" callerrev="1.0.1"/>
+				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="2.5.2"/>
 				<caller organisation="org.scala-lang.modules" name="scala-java8-compat_2.11" conf="compile, runtime" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="0.7.0"/>
 				<caller organisation="com.typesafe.akka" name="akka-stream_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.4.12"/>
 				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.4.12"/>
