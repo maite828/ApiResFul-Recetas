@@ -1,5 +1,0 @@
-@(receta: Receta)
-
-<receta id="@receta.getId()">
-	<name>@receta.getName()</name>
-</receta>

@@ -33,6 +33,9 @@
   <logger name="com.avaje.ebeaninternal.server.lib.BackgroundThread" level="ON" />
   <logger name="com.gargoylesoftware.htmlunit.javascript" level="ON" />
   <logger name="org.jdbcdslog.StatementLogger"  level="INFO" />
+  <logger name="com.jolbox.bonecp" level="DEBUG">
+      <appender-ref ref="STDOUT" />
+  </logger>
 
   <root level="INFO">
     <appender-ref ref="ASYNCFILE" />

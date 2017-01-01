@@ -1,22 +1,47 @@
-# Routes
-# This file defines all application routes (Higher priority routes first)
-# ~~~~
+GET     					/assets/*file           			controllers.Assets.versioned(path="/public", file: Asset)
+GET     					/                       			controllers.App.index()
 
-# An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
-# An example controller showing how to use dependency injection
-GET     /count                      controllers.CountController.count
-# An example controller showing how to write asynchronous code
-GET     /message                    controllers.AsyncController.message
 
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+# --------- BODY JSON--------------
 
-# listar todas las recetas
-GET   	/recetas       controllers.RecetasController.list
+# Recipes
+POST 						/recipesJ        					controllers.RecipesController.createJson
 
-# obtener datos de una receta
-GET 	/receta/:id      controllers.RecetasController.retrieve(id: Long)
+GET 						/recipe_cache/:id      				controllers.RecipesController.retrieveCache(id: Long)
 
-# crear un receta
-POST 	/recetas        controllers.RecetasController.create
+GET   						/recipes       						controllers.RecipesController.list
+
+GET 						/recipe/:id      					controllers.RecipesController.retrieve(id: Long)
+
+GET							/recipe/name/:name					controllers.RecipesController.recipesByName(name: String)
+
+DELETE						/recipe/:id							controllers.RecipesController.remove(id: Long)
+
+PUT							/recipe/:id							controllers.RecipesController.update(id: Long)
+
+GET 						/recipe/tag/:name					controllers.RecipesController.recipesByTag(name: String)
+
+
+
+# -----  FORMFACTORY REQUEST---------
+
+# Recipes
+POST   						/recipesF                			controllers.RecipesController.createFactory
+
+# Ingredients
+POST   						/ingredients            			controllers.IngredientsController.createF
+
+GET    						/ingredients/:id        			controllers.IngredientsController.getIngId(id: Long)
+
+GET    						/ingredients            			controllers.IngredientsController.getIngredients
+
+PUT    						/ingredients/:idI/recipe/:idR  		controllers.IngredientsController.addRecipe(idI: Long, idR: Long)
+
+POST   						/ingredients/:idI/task/:idT   		controllers.IngredientsController.createIngTask(idI: Long, idT: Long)
+
+# Tasks
+POST   						/recipes/:idRec/task         		controllers.TasksController.createTask(idRec: Long)
+
+	
+
+

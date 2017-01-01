@@ -1,0 +1,21 @@
+@(recipes: List[Recipe])
+<!-- lista -->
+<recipes>
+	@for(r <- recipes){
+	<recipe id="@r.getId()">
+		<name>@r.getName</name>
+		<createdAt>@r.getDateCreation</createdAt>
+		<portions>@r.getPortions</portions>	
+	</recipe>
+	}
+</recipes>	
+
+
+
+
+<!-- detalle -->
+<recipes>
+	@for(r <- recipes){
+		@recipe(r)
+	}
+</recipes>

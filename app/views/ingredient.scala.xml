@@ -1,0 +1,6 @@
+@(i: Ingredient)
+
+<ingredient id="@i.getId()">
+	<name>@i.getName</name>
+	<portions>@i.getQuantity</portions>
+</ingredient>

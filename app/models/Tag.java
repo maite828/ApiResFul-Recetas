@@ -1,37 +1,66 @@
 package models;
 
+import java.io.Serializable;
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 import com.avaje.ebean.Model;
+import com.avaje.ebean.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import play.data.validation.Constraints.Required;
+import play.libs.Json;
 
 @Entity
-public class Tag extends Model implements Comparable<Tag> {
- 
-    private String name;
+public class Tag extends Model implements Serializable{
+	@Id
+	private Long id;
+	
+	@Required
+	@JsonIgnore
+	private String name;
     
-    public Tag(String name) {
-        this.name = name;
-    }
-    
-	public static Tag findOrCreateByName(String name) {
-	    Tag tag = (Tag) Tag.find("byName", name)/*.first()*/;
-	    if(tag == null) {
-	        tag = new Tag(name);
-	    }
-	    return tag;
+	@ManyToMany(mappedBy = "tags")
+	@JsonIgnore
+    public Set<Recipe> recipes;
+	
+	private static final Find<Long,Tag> find =new Find<Long,Tag>(){};
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
     
-    public int compareTo(Tag otherTag) {
-        return name.compareTo(otherTag.name);
-    }
+	//GESTIÓN TAGS
+	public void addRecipe(Recipe recipe){
+		this.recipes.add(recipe);
+	}
 
-	public static Object find(String string, String name2) {
-		// TODO Auto-generated method stub
-		return null;
+	public static List<Tag> findByName(String name){
+		 return find.where().eq("name", name ).findList(); 
 	}
 	
-    public String toString() {
-        return name;
-    }
+	public JsonNode toJson() {
+		return Json.toJson(this);
+	}
+	
+	public JsonNode toJsonList() {		
+		ObjectNode node = play.libs.Json.newObject();
+		node.put("id", this.id);
+		node.put("name", this.name);
+		return node;	
+	}
+	
+	@Override
+	public String toString() {
+		return "Tag [name=" + name + "]";
+	}	
  
 }
