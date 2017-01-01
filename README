@@ -1,49 +1,123 @@
-This is your new Play application
-=================================
+@(message: String)
 
-This file will be packaged with your application when using `activator dist`.
+@main(message) {
+    <h1>@message</h1>
 
-There are several demonstration files available in this template.
+    <h2>RUTAS DE LA API</h2>
+    <div class="divider"></div>
+    <div id="rutas">
+        <h4>Recetas</h4>
+        <table class="responsive-table highlight striped">
+            <thead>
+                <tr>
+                    <th>Acción</th>
+                    <th>URI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="">CREO LA RECETA PASANDO LOS DATOS EN JSON MEDIANTE BODY (xml/json)</a></td>
+                    <td><strong>POST</strong> curl -H "Content-Type: application/json" -H "Accept: application/xml" -X POST -d '{"name": "albondigas",
+					"ingredients": [{"name": "tomate"},{"name": "cebolla"},{"name": "pan rallado"}],
+					"tags": [{"name": "proteinas"},{"name": "facil"}]}' http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes</td>
+                </tr>
+                <tr>
+                    <td><a href="">RECETA GUARDADA EN CACHÉ</a></td>
+                    <td><strong>GET</strong> curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipecache/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">MUESTRA LA LISTA DE RECETAS (xml/json)</a></td>
+                    <td><strong>GET</strong> curl -i -H "Accept: application/json" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes</td>
+                </tr>
+                <tr>
+                    <td><a href="">RECETAS POR ID (xml/json)</a></td>
+                    <td><strong>GET</strong>curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">RECETAS POR NOMBRE (xml/json)</a></td>
+                    <td><strong>GET</strong>curl -i -H "Accept: application/json" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/name/albondigas</td>
+                </tr>
+                <tr>
+                    <td><a href="">ACTUALIZAR RECETAS (xml/json)</a></td>
+                    <td><strong>PUT</strong>curl -H "Content-Type: application/json" -H "Accept: application/xml" -X PUT -d '{"name": "Rodaballo",
+					"ingredients": [{"name": "m"},{"name": "e"},{"name": "ii"}],
+					"tags": [{"name": "ym"},{"name": "y"}]}' http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">ELIMINAR RECETAS POR ID (xml/json)</a></td>
+                    <td><strong>DELETE</strong>curl -i -H "Accept: application/json" -X DELETE http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">CREO RECETA PASANDO MEDIANTE FORMFACTORY</a></td>
+                    <td><strong>POST</strong>curl -i -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipesF\?name\=pan\&portions\=4</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="divider"></div>
 
-Controllers
-===========
+        <h4>Ingredientes</h4>
+        <table class="responsive-table highlight striped">
+            <thead>
+                <tr>
+                    <th>Acción</th>
+                    <th>URI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="">CREO INGREDIENTE PASANDO MEDIANTE FORMFACTORY</a></td>
+                    <td><strong>POST</strong>curl -i -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients\?name\=harina\&quantity\=450</td>
+                </tr>
+                 <tr>
+                    <td><a href="">RELACION MANUAL ManyToMany RECETAS_INGREDIENTES</a></td>
+                    <td><strong>PUT</strong>curl -i -H "Accept: application/xml" -X PUT http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/recipe/1</td>
+                </tr>
+                <tr>
+                    <td><a href="">MUESTRA LA LISTA DE INGREDIENTES (xml/json)</a></td>
+                    <td><strong>GET</strong>curl -i -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="divider"></div>
 
-- HomeController.java:
+        <h4>Tags</h4>
+        <table class="responsive-table highlight striped">
+            <thead>
+                <tr>
+                    <th>Acción</th>
+                    <th>URI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="">RECETAS POR TAG (xml/json)</a></td>
+                    <td><strong>GET</strong>curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/tag/facil</td>
+                </tr>
 
-  Shows how to handle simple HTTP requests.
-
-- AsyncController.java:
-
-  Shows how to do asynchronous programming when handling a request.
-
-- CountController.java:
-
-  Shows how to inject a component into a controller and use the component when
-  handling requests.
-
-Components
-==========
-
-- Module.java:
-
-  Shows how to use Guice to bind all the components needed by your application.
-
-- Counter.java:
-
-  An example of a component that contains state, in this case a simple counter.
-
-- ApplicationTimer.java:
-
-  An example of a component that starts when the application starts and stops
-  when the application stops.
-
-Filters
-=======
-
-- Filters.java:
-
-  Creates the list of HTTP filters used by your application.
-
-- ExampleFilter.java
-
-  A simple filter that adds a header to every response.
+            </tbody>
+        </table>
+        
+        <h4>Tasks</h4>
+        <table class="responsive-table highlight striped">
+            <thead>
+                <tr>
+                    <th>Acción</th>
+                    <th>URI</th>
+                </tr>
+            </thead>
+            <tbody>
+            	<tr>
+                    <td><a href="">RELACION MANUAL ManyToMany RECETAS_INGREDIENTES</a></td>
+                    <td><strong>POST</strong>"Accept: application/xml" -X PUT http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/recipe/1</td>
+                </tr>
+            	<tr>
+                    <td><a href="">RELACION MANUAL OneToMany RECETA_TASKS</a></td>
+                    <td><strong>POST</strong>curl -i -H "Accept: application/xml" -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes/1/task\?description\=bbbb</td>
+                </tr>
+                <tr>
+                    <td><a href="">//RELAICION MANUAL OneToMany INGREDIENTE_TASKS</a></td>
+                    <td><strong>POST</strong>curl -i -H "Accept: application/xml" -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/task/1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
