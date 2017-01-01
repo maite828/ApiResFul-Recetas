@@ -24,3 +24,12 @@
 2017-01-01 17:05:10,054 [INFO] from org.hibernate.validator.internal.util.Version in ForkJoinPool-2-worker-1 - HV000001: Hibernate Validator 5.2.4.Final
 2017-01-01 17:05:10,178 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-5 - Slf4jLogger started
 2017-01-01 17:05:10,187 [INFO] from play.api.Play in ForkJoinPool-2-worker-1 - Application started (Dev)
+2017-01-01 17:37:48,543 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-6 housekeeper - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=2m36s262ms).
+2017-01-01 17:37:48,543 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-5 housekeeper - HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=2m36s289ms).
+2017-01-01 19:33:01,825 [INFO] from application in pool-16-thread-4 - ApplicationTimer demo: Stopping application at 2017-01-01T18:33:01.824Z after 8872s.
+2017-01-01 19:33:01,833 [INFO] from application in pool-16-thread-4 - Shutting down connection pool.
+2017-01-01 19:33:01,833 [INFO] from com.zaxxer.hikari.pool.HikariPool in pool-16-thread-4 - HikariPool-5 - Close initiated...
+2017-01-01 19:33:01,836 [INFO] from com.zaxxer.hikari.pool.HikariPool in pool-16-thread-4 - HikariPool-5 - Closed.
+2017-01-01 19:33:01,836 [INFO] from application in pool-16-thread-4 - Shutting down connection pool.
+2017-01-01 19:33:01,836 [INFO] from com.zaxxer.hikari.pool.HikariPool in pool-16-thread-4 - HikariPool-6 - Close initiated...
+2017-01-01 19:33:01,839 [INFO] from com.zaxxer.hikari.pool.HikariPool in pool-16-thread-4 - HikariPool-6 - Closed.

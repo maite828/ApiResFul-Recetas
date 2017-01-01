@@ -2,7 +2,7 @@
 
 -	Play Framework con base de datos PostgreSQL
 -	Entrada menú AWS :
--	**AWS** http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com
+-	**AWS** http://ec2-35-156-254-201.eu-central-1.compute.amazonaws.com
 
 ## Métodos
 
@@ -11,10 +11,12 @@
 #### Recetas
 
 CREO LA RECETA PASANDO LOS DATOS EN JSON MEDIANTE BODY (xml/json)
--	**POST** curl -H "Content-Type: application/json" -H "Accept: application/xml" -X POST -d '{"name": "albondigas", "ingredients": [{"name": "tomate"},{"name": "cebolla"},{"name": "pan rallado"}], "tags": [{"name": "proteinas"},{"name": "facil"}]}' http://localhost:9000/recipes
+-	**POST** curl -H "Content-Type: application/json" -H "Accept: application/xml" -X POST -d '{"name": "albondigas", "ingredients": [{"name": "tomate"},{"name": "cebolla"},{"name": "pan rallado"}], "tags": [{"name": "proteinas"},{"name": "facil"}]}' http://ec2-35-156-254-201.eu-central-1.compute.amazonaws.com/recipes
+
+curl -H "Content-Type: application/json" -H "Accept: application/xml" -X POST -d '{"name": "albondigas", "ingredients": [{"name": "tomate"},{"name": "cebolla"},{"name": "pan rallado"}], "tags": [{"name": "proteinas"},{"name": "facil"}]}' http://ec2-35-156-254-201.eu-central-1.compute.amazonaws.com/recipes
 
 RECETA GUARDADA EN CACHÉ
--	**GET** curl -i -H "Accept: application/xml" -X GET http://localhost:9000/recipecache/1
+-	**GET** curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-254-201.eu-central-1.compute.amazonaws.com/recipecache/1
 
 MUESTRA LA LISTA DE RECETAS (xml/json)
 -	**GET**

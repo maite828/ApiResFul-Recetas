@@ -4,7 +4,7 @@
 		module="recetas_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20161231234437"
+		publication="20170101192259"
 	>
 		<description>
 		Recetas
@@ -45,6 +45,7 @@
 		<dependency org="com.typesafe.play" name="play-logback_2.11" rev="2.5.10" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-jdbc_2.11" rev="2.5.10" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-cache_2.11" rev="2.5.10" conf="compile->default(compile)"/>
+		<dependency org="org.postgresql" name="postgresql" rev="9.4-1206-jdbc42" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-ws_2.11" rev="2.5.10" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-jdbc-evolutions_2.11" rev="2.5.10" conf="compile->default(compile)"/>
 	</dependencies>

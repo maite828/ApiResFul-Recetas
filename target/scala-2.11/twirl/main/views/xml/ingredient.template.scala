@@ -55,7 +55,7 @@ Seq[Any](format.raw/*1.17*/("""
 object ingredient extends ingredient_Scope0.ingredient
               /*
                   -- GENERATED --
-                  DATE: Sat Dec 31 23:44:38 CET 2016
+                  DATE: Sun Jan 01 19:23:00 CET 2017
                   SOURCE: /Users/mayteecheverry/MyGitRepos/play/Recetas/app/views/ingredient.scala.xml
                   HASH: 744bdab958e1d788e2a7fc60b28bcfb094a22ba8
                   MATRIX: 753->1|862->16|890->18|933->35|942->36|970->44|1006->55|1015->56|1043->64|1089->84|1098->85|1130->97

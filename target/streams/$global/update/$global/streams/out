@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for recetas#recetas_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@46260011[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5a3e5dd7[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -1294,6 +1294,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.5.10->net.sf.ehcache#ehcache-core;2.6.11 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.11;2.5.10->net.sf.ehcache#ehcache-core;2.6.11 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.postgresql#postgresql;9.4-1206-jdbc42 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.postgresql#postgresql;9.4-1206-jdbc42 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.postgresql#postgresql;9.4-1206-jdbc42[0m
+[0m[[0mdebug[0m] [0m	found org.postgresql#postgresql;9.4-1206-jdbc42 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-java-ws_2.11;2.5.10 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-java-ws_2.11;2.5.10 {compile=[default(compile)]}[0m
@@ -2417,6 +2425,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->compile][0m
@@ -3458,6 +3470,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->compile][0m
@@ -5025,6 +5041,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->compile][0m
@@ -6068,6 +6088,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->compile][0m
@@ -7111,6 +7135,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;[1.7.1,1.7.99) [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.11;2.5.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1206-jdbc42 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies recetas#recetas_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-ws_2.11;2.5.10 [compile->compile][0m
@@ -8331,6 +8359,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-logback_2.11;2.5.10!play-logback_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc_2.11;2.5.10!play-jdbc_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-cache_2.11;2.5.10!play-cache_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.postgresql#postgresql;9.4-1206-jdbc42!postgresql.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-ws_2.11;2.5.10!play-java-ws_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc-evolutions_2.11;2.5.10!play-jdbc-evolutions_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar[0m
@@ -8482,7 +8511,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5720ms :: artifacts dl 64ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5932ms :: artifacts dl 58ms[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas_2.11;1.0-SNAPSHOT compile produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas_2.11;1.0-SNAPSHOT runtime produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas_2.11;1.0-SNAPSHOT test produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas_2.11-test.xml[0m
@@ -8496,5 +8525,5 @@
 [0m[[0mdebug[0m] [0m	report for recetas#recetas_2.11;1.0-SNAPSHOT docs produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas_2.11;1.0-SNAPSHOT pom produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for recetas#recetas_2.11;1.0-SNAPSHOT scala-tool produced in /Users/mayteecheverry/MyGitRepos/play/Recetas/target/resolution-cache/reports/recetas-recetas_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (5720ms resolve - 64ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (5932ms resolve - 58ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

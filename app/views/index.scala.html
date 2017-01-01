@@ -19,37 +19,37 @@
                     <td><a href="">CREO LA RECETA PASANDO LOS DATOS EN JSON MEDIANTE BODY (xml/json)</a></td>
                     <td><strong>POST</strong> curl -H "Content-Type: application/json" -H "Accept: application/xml" -X POST -d '{"name": "albondigas",
 					"ingredients": [{"name": "tomate"},{"name": "cebolla"},{"name": "pan rallado"}],
-					"tags": [{"name": "proteinas"},{"name": "facil"}]}' http://localhost:9000/recipes</td>
+					"tags": [{"name": "proteinas"},{"name": "facil"}]}' http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes</td>
                 </tr>
                 <tr>
                     <td><a href="">RECETA GUARDADA EN CACHÉ</a></td>
-                    <td><strong>GET</strong> curl -i -H "Accept: application/xml" -X GET http://localhost:9000/recipecache/1</td>
+                    <td><strong>GET</strong> curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipecache/1</td>
                 </tr>
                 <tr>
                     <td><a href="">MUESTRA LA LISTA DE RECETAS (xml/json)</a></td>
-                    <td><strong>GET</strong> curl -i -H "Accept: application/json" -X GET http://localhost:9000/recipes</td>
+                    <td><strong>GET</strong> curl -i -H "Accept: application/json" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes</td>
                 </tr>
                 <tr>
                     <td><a href="">RECETAS POR ID (xml/json)</a></td>
-                    <td><strong>GET</strong>curl -i -H "Accept: application/xml" -X GET http://localhost:9000/recipe/1</td>
+                    <td><strong>GET</strong>curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/1</td>
                 </tr>
                 <tr>
                     <td><a href="">RECETAS POR NOMBRE (xml/json)</a></td>
-                    <td><strong>GET</strong>curl -i -H "Accept: application/json" -X GET http://localhost:9000/recipe/name/albondigas</td>
+                    <td><strong>GET</strong>curl -i -H "Accept: application/json" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/name/albondigas</td>
                 </tr>
                 <tr>
                     <td><a href="">ACTUALIZAR RECETAS (xml/json)</a></td>
                     <td><strong>PUT</strong>curl -H "Content-Type: application/json" -H "Accept: application/xml" -X PUT -d '{"name": "Rodaballo",
 					"ingredients": [{"name": "m"},{"name": "e"},{"name": "ii"}],
-					"tags": [{"name": "ym"},{"name": "y"}]}' http://localhost:9000/recipe/1</td>
+					"tags": [{"name": "ym"},{"name": "y"}]}' http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/1</td>
                 </tr>
                 <tr>
                     <td><a href="">ELIMINAR RECETAS POR ID (xml/json)</a></td>
-                    <td><strong>DELETE</strong>curl -i -H "Accept: application/json" -X DELETE http://localhost:9000/recipe/1</td>
+                    <td><strong>DELETE</strong>curl -i -H "Accept: application/json" -X DELETE http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/1</td>
                 </tr>
                 <tr>
                     <td><a href="">CREO RECETA PASANDO MEDIANTE FORMFACTORY</a></td>
-                    <td><strong>POST</strong>curl -i -X POST http://localhost:9000/recipesF\?name\=pan\&portions\=4</td>
+                    <td><strong>POST</strong>curl -i -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipesF\?name\=pan\&portions\=4</td>
                 </tr>
             </tbody>
         </table>
@@ -66,15 +66,15 @@
             <tbody>
                 <tr>
                     <td><a href="">CREO INGREDIENTE PASANDO MEDIANTE FORMFACTORY</a></td>
-                    <td><strong>POST</strong>curl -i -X POST http://localhost:9000/ingredients\?name\=harina\&quantity\=450</td>
+                    <td><strong>POST</strong>curl -i -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients\?name\=harina\&quantity\=450</td>
                 </tr>
                  <tr>
                     <td><a href="">RELACION MANUAL ManyToMany RECETAS_INGREDIENTES</a></td>
-                    <td><strong>PUT</strong>curl -i -H "Accept: application/xml" -X PUT http://localhost:9000/ingredients/1/recipe/1</td>
+                    <td><strong>PUT</strong>curl -i -H "Accept: application/xml" -X PUT http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/recipe/1</td>
                 </tr>
                 <tr>
                     <td><a href="">MUESTRA LA LISTA DE INGREDIENTES (xml/json)</a></td>
-                    <td><strong>GET</strong>curl -i -X GET http://localhost:9000/ingredients</td>
+                    <td><strong>GET</strong>curl -i -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients</td>
                 </tr>
             </tbody>
         </table>
@@ -91,7 +91,7 @@
             <tbody>
                 <tr>
                     <td><a href="">RECETAS POR TAG (xml/json)</a></td>
-                    <td><strong>GET</strong>curl -i -H "Accept: application/xml" -X GET http://localhost:9000/recipe/tag/facil</td>
+                    <td><strong>GET</strong>curl -i -H "Accept: application/xml" -X GET http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipe/tag/facil</td>
                 </tr>
 
             </tbody>
@@ -108,15 +108,15 @@
             <tbody>
             	<tr>
                     <td><a href="">RELACION MANUAL ManyToMany RECETAS_INGREDIENTES</a></td>
-                    <td><strong>POST</strong>curl "Accept: application/xml" -X PUT http://localhost:9000/ingredients/1/recipe/1</td>
+                    <td><strong>POST</strong>curl -i -H "Accept: application/xml" -X PUT http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/recipe/1</td>
                 </tr>
             	<tr>
                     <td><a href="">RELACION MANUAL OneToMany RECETA_TASKS</a></td>
-                    <td><strong>POST</strong>curl -i -H "Accept: application/xml" -X POST http://localhost:9000/recipes/1/task\?description\=bbbb</td>
+                    <td><strong>POST</strong>curl -i -H "Accept: application/xml" -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes/1/task\?description\=bbbb</td>
                 </tr>
                 <tr>
                     <td><a href="">//RELAICION MANUAL OneToMany INGREDIENTE_TASKS</a></td>
-                    <td><strong>POST</strong>curl -i -H "Accept: application/xml" -X POST http://localhost:9000/ingredients/1/task/1</td>
+                    <td><strong>POST</strong>curl -i -H "Accept: application/xml" -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/task/1</td>
                 </tr>
             </tbody>
         </table>
