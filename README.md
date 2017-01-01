@@ -50,13 +50,13 @@ RECETAS POR TAG (xml/json)
 #### Tasks
 
 RELACION MANUAL ManyToMany RECETAS_INGREDIENTES
-**POST**"Accept: application/xml" -X PUT http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/recipe/1</td>
+**POST**"Accept: application/xml" -X PUT http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/recipe/1
 
 RELACION MANUAL OneToMany RECETA_TASKS
-**POST**curl -i -H "Accept: application/xml" -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes/1/task\?description\=bbbb</td>
+**POST**curl -i -H "Accept: application/xml" -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/recipes/1/task\?description\=bbbb
 
 RELACION MANUAL OneToMany INGREDIENTE_TASKS
-**POST**curl -i -H "Accept: application/xml" -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/task/1</td>
+**POST**curl -i -H "Accept: application/xml" -X POST http://ec2-35-156-252-132.eu-central-1.compute.amazonaws.com/ingredients/1/task/1
 
 
 
