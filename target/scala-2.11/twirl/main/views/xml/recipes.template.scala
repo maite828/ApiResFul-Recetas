@@ -30,26 +30,23 @@ class recipes extends BaseScalaTemplate[play.twirl.api.XmlFormat.Appendable,Form
 
 
 Seq[Any](format.raw/*1.25*/("""
-"""),format.raw/*2.1*/("""<!-- lista -->
+									"""),format.raw/*2.10*/("""<!-- lista -->
 <recipes>
 	"""),_display_(/*4.3*/for(r <- recipes) yield /*4.20*/{_display_(Seq[Any](format.raw/*4.21*/("""
 	"""),format.raw/*5.2*/("""<recipe id=""""),_display_(/*5.15*/r/*5.16*/.getId()),format.raw/*5.24*/("""">
 		<name>"""),_display_(/*6.10*/r/*6.11*/.getName),format.raw/*6.19*/("""</name>
-		<createdAt>"""),_display_(/*7.15*/r/*7.16*/.getDateCreation),format.raw/*7.32*/("""</createdAt>
-		<portions>"""),_display_(/*8.14*/r/*8.15*/.getPortions),format.raw/*8.27*/("""</portions>	
+		<portions>"""),_display_(/*7.14*/r/*7.15*/.getPortions),format.raw/*7.27*/("""</portions>	
+		<createdAt>"""),_display_(/*8.15*/r/*8.16*/.getDateCreation),format.raw/*8.32*/("""</createdAt>
 	</recipe>
 	""")))}),format.raw/*10.3*/("""
 """),format.raw/*11.1*/("""</recipes>	
 
-
-
-
-<!-- detalle -->
+									<!-- detalle -->
 <recipes>
-	"""),_display_(/*18.3*/for(r <- recipes) yield /*18.20*/{_display_(Seq[Any](format.raw/*18.21*/("""
-		"""),_display_(/*19.4*/recipe(r)),format.raw/*19.13*/("""
-	""")))}),format.raw/*20.3*/("""
-"""),format.raw/*21.1*/("""</recipes>"""))
+	"""),_display_(/*15.3*/for(r <- recipes) yield /*15.20*/{_display_(Seq[Any](format.raw/*15.21*/("""
+		"""),_display_(/*16.4*/recipe(r)),format.raw/*16.13*/("""
+	""")))}),format.raw/*17.3*/("""
+"""),format.raw/*18.1*/("""</recipes>"""))
       }
     }
   }
@@ -69,11 +66,11 @@ Seq[Any](format.raw/*1.25*/("""
 object recipes extends recipes_Scope0.recipes
               /*
                   -- GENERATED --
-                  DATE: Sun Jan 01 19:23:00 CET 2017
+                  DATE: Tue Jan 03 03:16:26 CET 2017
                   SOURCE: /Users/mayteecheverry/MyGitRepos/play/Recetas/app/views/recipes.scala.xml
-                  HASH: c8c558ae16453b59044cae771c54451f90d16b2d
-                  MATRIX: 749->1|866->24|893->25|945->52|977->69|1015->70|1043->72|1082->85|1091->86|1119->94|1157->106|1166->107|1194->115|1242->137|1251->138|1287->154|1339->180|1348->181|1380->193|1436->219|1464->220|1535->265|1568->282|1607->283|1637->287|1667->296|1700->299|1728->300
-                  LINES: 27->1|32->1|33->2|35->4|35->4|35->4|36->5|36->5|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|39->8|39->8|39->8|41->10|42->11|49->18|49->18|49->18|50->19|50->19|51->20|52->21
+                  HASH: 0224c4c8b28c58cd9d13dc4dddf3faecb68e8131
+                  MATRIX: 749->1|866->24|903->34|955->61|987->78|1025->79|1053->81|1092->94|1101->95|1129->103|1167->115|1176->116|1204->124|1251->145|1260->146|1292->158|1345->185|1354->186|1390->202|1446->228|1474->229|1551->280|1584->297|1623->298|1653->302|1683->311|1716->314|1744->315
+                  LINES: 27->1|32->1|33->2|35->4|35->4|35->4|36->5|36->5|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|39->8|39->8|39->8|41->10|42->11|46->15|46->15|46->15|47->16|47->16|48->17|49->18
                   -- GENERATED --
               */
           

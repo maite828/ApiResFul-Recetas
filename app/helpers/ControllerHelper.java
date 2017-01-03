@@ -31,7 +31,7 @@ public class ControllerHelper {
 		new play.libs.Json();
 		ArrayNode array = Json.newArray();
 		for (Recipe recipe : recipes) {
-			array.add(recipe.toJsonList().);
+			array.add(recipe.toJsonList());
 		}
 		return play.mvc.Results.ok(array);
 	}

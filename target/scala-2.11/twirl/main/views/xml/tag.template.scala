@@ -53,7 +53,7 @@ Seq[Any](format.raw/*1.10*/("""
 object tag extends tag_Scope0.tag
               /*
                   -- GENERATED --
-                  DATE: Sun Jan 01 19:23:00 CET 2017
+                  DATE: Tue Jan 03 03:16:26 CET 2017
                   SOURCE: /Users/mayteecheverry/MyGitRepos/play/Recetas/app/views/tag.scala.xml
                   HASH: be2258631cb87187d6f7c65e083e6a8291abcc95
                   MATRIX: 732->1|834->9|862->11|901->25|910->26|938->34

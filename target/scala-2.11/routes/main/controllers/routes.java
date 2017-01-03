@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mayteecheverry/MyGitRepos/play/Recetas/conf/routes
-// @DATE:Sun Jan 01 19:22:59 CET 2017
+// @DATE:Tue Jan 03 03:16:25 CET 2017
 
 package controllers;
 
