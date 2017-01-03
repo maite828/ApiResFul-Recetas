@@ -1,19 +1,16 @@
 @(recipes: List[Recipe])
-<!-- lista -->
+									<!-- lista -->
 <recipes>
 	@for(r <- recipes){
 	<recipe id="@r.getId()">
 		<name>@r.getName</name>
-		<createdAt>@r.getDateCreation</createdAt>
 		<portions>@r.getPortions</portions>	
+		<createdAt>@r.getDateCreation</createdAt>
 	</recipe>
 	}
 </recipes>	
 
-
-
-
-<!-- detalle -->
+									<!-- detalle -->
 <recipes>
 	@for(r <- recipes){
 		@recipe(r)

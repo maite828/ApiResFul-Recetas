@@ -2,5 +2,5 @@
 
 <ingredient id="@i.getId()">
 	<name>@i.getName</name>
-	<portions>@i.getQuantity</portions>
+	<quantity>@i.getQuantity</quantity>
 </ingredient>

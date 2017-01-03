@@ -27,9 +27,8 @@ public class Ingredient extends Model implements Serializable {
 	@JsonIgnore
 	private String name;
 
-	@Required
 	@JsonIgnore
-	public Float quantity;
+	public String quantity;
 
 	@ManyToMany(mappedBy = "ingredients")
 	@JsonIgnore
@@ -58,11 +57,11 @@ public class Ingredient extends Model implements Serializable {
 		this.name = name;
 	}
 
-	public Float getQuantity() {
+	public String getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(Float quantity) {
+	public void setQuantity(String quantity) {
 		this.quantity = quantity;
 	}
 

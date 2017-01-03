@@ -46,6 +46,7 @@ public class RecipesController extends Controller {
 
 		Recipe recipe = new Recipe();
 		recipe.setName(json.get("name").asText().trim().toUpperCase());
+		recipe.setPortions(json.get("portions").asText());
 		// Ingredients
 		ArrayNode arrayIngr = (ArrayNode) json.get("ingredients");
 		if (arrayIngr.isNull()) {
@@ -54,6 +55,7 @@ public class RecipesController extends Controller {
 			for (JsonNode nodeIng : arrayIngr) {
 				Ingredient ingredient = new Ingredient();
 				ingredient.setName(nodeIng.get("name").asText().trim().toLowerCase());
+				ingredient.setQuantity(nodeIng.get("quantity").asText());
 				ingredient.save();
 				recipe.addIngrRec(ingredient);
 			}
@@ -79,7 +81,7 @@ public class RecipesController extends Controller {
 	public Result createFactory() {
 		Form<Recipe> form = f.form(Recipe.class).bindFromRequest();
 		if (form.hasErrors()) {
-			return badRequest(ControllerHelper.errorJson(2, "incorrect data", form.errorsAsJson()));
+			return badRequest(ControllerHelper.errorJson(2, "Datos incorrectos", form.errorsAsJson()));
 		}
 		Recipe recipe = form.get();
 		recipe.save();
@@ -146,7 +148,7 @@ public class RecipesController extends Controller {
 		}
 
 		if (json.has("portions")) {
-			recipe.setPortions(json.get("portions").asInt());
+			recipe.setPortions(json.get("portions").asText());
 		}
 
 		if (json.has("ingredients")) {

@@ -21,13 +21,13 @@ import play.libs.Json;
 public class Task extends Model implements Serializable {
 
 	@Id
-	private Long id;
+	public Long id;
 
+	@Required
 	@JsonIgnore
-	private String description;
+	public String description;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "task")
-	@JsonIgnore
 	public List<IngredientTask> taskIngredients;
 
 	@ManyToOne
@@ -36,13 +36,6 @@ public class Task extends Model implements Serializable {
 
 	public static final Find<Long, Task> find = new Find<Long, Task>() {
 	};
-
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
 
 	public static Task findById(Long id) {
 		return find.byId(id);

@@ -29,9 +29,8 @@ public class Recipe extends Model implements Serializable {
 	@JsonIgnore
 	private String name;
 
-	@Required
 	@JsonIgnore
-	public Integer portions;
+	public String portions;
 
 	@CreatedTimestamp
 	@JsonIgnore
@@ -81,11 +80,11 @@ public class Recipe extends Model implements Serializable {
 		this.createdAt = fechaCreacion;
 	}
 
-	public Integer getPortions() {
+	public String getPortions() {
 		return portions;
 	}
 
-	public void setPortions(Integer portions) {
+	public void setPortions(String portions) {
 		this.portions = portions;
 	}
 
@@ -119,7 +118,7 @@ public class Recipe extends Model implements Serializable {
 	// GESTION DE TAGS
 	public void addTagRec(Tag tag) {
 		this.tags.add(tag);
-		tag.recipes.add(this);
+		tag.addRecipe(this);
 	}
 
 	public List<Tag> getTags() {

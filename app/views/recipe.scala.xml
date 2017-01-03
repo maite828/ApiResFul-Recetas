@@ -2,6 +2,7 @@
 
 <recipe id="@r.getId()">
 	<name>@r.getName</name>
+	<portions>@r.getPortions</portions>
 	<createdAt>@r.getDateCreation</createdAt>
 	<ingredients>
 	@for(i  <- r.getIngredients){
